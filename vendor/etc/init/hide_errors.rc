@@ -1,0 +1,9 @@
+service vendor.hide_errors /vendor/bin/hide_errors.sh
+    class late_start
+    user system
+    group system
+    oneshot
+    disabled
+
+on property:sys.boot_completed=1
+    start vendor.hide_errors
