@@ -15,7 +15,7 @@ env:
   ARROW_BRANCH: arrow-11.0
   DEVICE: a02
   VENDOR: samsung
-  BUILD_DIR: ${{ github.workspace }}/arrow
+  BUILD_DIR: /mnt/arrow
 
 jobs:
   build-system:
@@ -29,6 +29,12 @@ jobs:
       uses: actions/checkout@v4
       with:
         path: device_vendor_src
+
+    - name: Fix /mnt permissions & check disk
+      run: |
+        sudo chown $USER:$USER /mnt
+        df -h
+        echo "[+] /mnt available: $(df -h /mnt | tail -1 | awk '{print $4}')"
 
     - name: Free disk space
       run: |
