@@ -22,7 +22,6 @@ jobs:
       run: |
         rm -rf out_repo/vendor/samsung/a02
         mkdir -p out_repo/vendor/samsung/a02
-        # FIX: --src pake vendor_src (folder hasil clone blobs)
         python3 out_repo/scripts/setup/setup_vendor.py \
           --src vendor_src \
           --dst out_repo/vendor/samsung/a02
@@ -31,15 +30,15 @@ jobs:
           --vendor-src vendor_src \
           --out out_repo/device/samsung/a02
 
-    - name: Check Generated Files (Anti-PHP)
+    - name: Verifikasi File
       run: |
-        echo "=== Verifikasi File Vendor ==="
-        ls -la out_repo/vendor/samsung/a02/
-        if [ ! -f out_repo/vendor/samsung/a02/a02-vendor.mk ]; then
-          echo "ERROR: a02-vendor.mk GAK ADA!"
+        cd out_repo/vendor/samsung/a02
+        ls -F
+        if [ ! -f a02-vendor.mk ]; then
+          echo "!! ERROR: a02-vendor.mk GAGAL DIBUAT !!"
           exit 1
         fi
-        echo "OK: a02-vendor.mk ditemukan."
+        echo ">> OK: a02-vendor.mk SIAP."
 
     - name: Commit & Push
       run: |
@@ -47,5 +46,5 @@ jobs:
         git config user.name "Arrow Tree Bot"
         git config user.email "bot@arrow.local"
         git add .
-        git commit -m "Fix: Force generate a02-vendor.mk [skip ci]" || exit 0
+        git commit -m "Fix: Generate complete vendor tree [skip ci]" || exit 0
         git push
