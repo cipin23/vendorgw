@@ -20,41 +20,30 @@ jobs:
 
     - name: Generate Trees
       run: |
-        # Bersihin folder lama biar fresh
+        # Bersihin folder lama biar gak tumpang tindih
         rm -rf out_repo/vendor/samsung/a02
         rm -rf out_repo/device/samsung/a02
         mkdir -p out_repo/vendor/samsung/a02
         mkdir -p out_repo/device/samsung/a02
 
-        # Run Setup Vendor (Copy blobs + generate Android.bp & a02-vendor.mk)
+        # Eksekusi script generator
         python3 out_repo/scripts/setup/setup_vendor.py \
           --src vendor_src \
           --dst out_repo/vendor/samsung/a02
         
-        # Run Device Tree Gen
         python3 out_repo/scripts/setup/gen_device_tree.py \
           --vendor-src vendor_src \
           --out out_repo/device/samsung/a02
 
-    - name: Verifikasi File (Wajib Ijo)
+    - name: Deteksi File (Fail if missing)
       run: |
-        echo "=== Cek Folder Vendor ==="
+        echo "=== LIST FILE VENDOR ==="
         ls -F out_repo/vendor/samsung/a02/
         if [ ! -f out_repo/vendor/samsung/a02/a02-vendor.mk ]; then
-          echo "!! ERROR: a02-vendor.mk GAGAL DIBUAT !!"
+          echo "!! ERROR: a02-vendor.mk TIDAK DITEMUKAN !!"
           exit 1
         fi
-        echo ">> OK: a02-vendor.mk Ditemukan."
-
-    - name: Copy zImage
-      run: |
-        mkdir -p out_repo/device/samsung/a02/prebuilt
-        if [ -f vendor_src/zImage ]; then
-          cp vendor_src/zImage out_repo/device/samsung/a02/prebuilt/zImage
-          echo "zImage copied."
-        else
-          echo "zImage not found in vendor_src"
-        fi
+        echo ">> OK: File a02-vendor.mk aman."
 
     - name: Commit & Push
       run: |
@@ -62,5 +51,5 @@ jobs:
         git config user.name "Arrow Tree Bot"
         git config user.email "bot@arrow.local"
         git add .
-        git commit -m "Fix: Full sync vendor tree with a02-vendor.mk [skip ci]" || exit 0
+        git commit -m "Fix: Full sync vendor with a02-vendor.mk [skip ci]" || exit 0
         git push
