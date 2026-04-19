@@ -8,9 +8,6 @@ $(call inherit-product, vendor/samsung/a02/Android.mk)
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
 DEVICE_MATRIX_FILE   := $(DEVICE_PATH)/compatibility_matrix.xml
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
-
 # Display
 PRODUCT_AAPT_CONFIG  := normal
 PRODUCT_AAPT_PREF_CONFIG := xhdpi
