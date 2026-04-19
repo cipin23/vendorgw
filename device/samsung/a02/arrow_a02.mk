@@ -8,6 +8,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Inherit ArrowOS
 $(call inherit-product, vendor/arrow/config/common.mk)
+$(call inherit-product, vendor/samsung/a02/a02-vendor.mk)
 
 PRODUCT_DEVICE := a02
 PRODUCT_NAME   := arrow_a02
