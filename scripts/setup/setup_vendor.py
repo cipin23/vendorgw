@@ -90,7 +90,7 @@ CONFLICT_LIBS = {
 SKIP_ETC = {
     "etc/init", "etc/selinux", "etc/group", "etc/passwd",
     "etc/fs_config_files", "etc/fs_config_dirs", "etc/vintf",
-    "lost+found",  # recovery artifact, bukan bagian vendor
+    "lost+found",
 }
 
 # Extensions yang tidak boleh masuk PRODUCT_COPY_FILES
