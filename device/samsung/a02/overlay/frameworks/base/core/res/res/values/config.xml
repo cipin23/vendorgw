@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <integer name="config_screenDensityDpi">300</integer>
-    <bool name="config_mobile_data_capable">true</bool>
-    <bool name="config_sms_capable">true</bool>
-    <integer name="config_sim_count">2</integer>
 </resources>
