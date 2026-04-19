@@ -1,0 +1,35 @@
+name: 0b. Cleanup Stale Trees
+
+on:
+  workflow_dispatch:
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Remove stale generated trees & old workflows
+      run: |
+        # Hapus hasil generate lama yang nested
+        git rm -rf vendor/samsung/ || true
+        git rm -rf device/samsung/ || true
+
+        # Hapus workflow lama
+        git rm -f .github/workflows/build-arrow.yml || true
+        git rm -f .github/workflows/dete.yml || true
+        git rm -f .github/workflows/main.yml || true
+
+        git status
+
+    - name: Commit & push
+      run: |
+        git config user.email "bot@arrow.local"
+        git config user.name "Arrow Tree Bot"
+        git diff --cached --stat
+        git commit -m "chore: cleanup stale generated trees & old workflows" || echo "Nothing to commit"
+        git push

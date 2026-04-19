@@ -1,0 +1,55 @@
+name: 0. Detect Repo Structure
+
+on:
+  workflow_dispatch:
+
+jobs:
+  detect:
+    runs-on: ubuntu-22.04
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v4
+
+    - name: Generate structure report
+      run: |
+        echo "====== REPO STRUCTURE REPORT ======" > report.txt
+        echo "Date: $(date)" >> report.txt
+        echo "" >> report.txt
+
+        echo "=== ROOT FILES ===" >> report.txt
+        ls -lh >> report.txt
+        echo "" >> report.txt
+
+        echo "=== FULL TREE (max depth 5) ===" >> report.txt
+        find . -not -path './.git/*' -maxdepth 5 | sort >> report.txt
+        echo "" >> report.txt
+
+        echo "=== FILE SIZES ===" >> report.txt
+        du -sh * 2>/dev/null | sort -rh >> report.txt
+        echo "" >> report.txt
+
+        echo "=== vendor/ contents ===" >> report.txt
+        find vendor/ -maxdepth 6 | sort 2>/dev/null || echo "vendor/ not found" >> report.txt
+        echo "" >> report.txt
+
+        echo "=== device/ contents ===" >> report.txt
+        find device/ -maxdepth 6 | sort 2>/dev/null || echo "device/ not found" >> report.txt
+        echo "" >> report.txt
+
+        echo "=== scripts/ contents ===" >> report.txt
+        find scripts/ -maxdepth 4 | sort 2>/dev/null || echo "scripts/ not found" >> report.txt
+        echo "" >> report.txt
+
+        echo "=== .github/ contents ===" >> report.txt
+        find .github/ -maxdepth 4 | sort 2>/dev/null >> report.txt
+        echo "" >> report.txt
+
+        cat report.txt
+
+    - name: Upload report
+      uses: actions/upload-artifact@v4
+      with:
+        name: repo-structure-report
+        path: report.txt
+        retention-days: 7
