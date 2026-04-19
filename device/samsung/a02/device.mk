@@ -1,6 +1,3 @@
-# Platform
-$(call inherit-product, hardware/mediatek/config/platform/mt6739/BoardConfig.mk)
-
 # Dynamic partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
