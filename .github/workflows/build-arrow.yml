@@ -1,4 +1,4 @@
-name: Build system.img
+name: 2. Build system.img
 
 on:
   workflow_dispatch:
@@ -81,6 +81,20 @@ jobs:
         cd $BUILD_DIR
         repo init -u https://github.com/ArrowOS/android_manifest.git \
           -b $ARROW_BRANCH --depth=1
+
+        # Inject local manifest buat exclude project gak perlu
+        mkdir -p .repo/local_manifests
+        cat > .repo/local_manifests/remove.xml << 'EOF'
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remove-project name="platform/external/chromium-webview"/>
+  <remove-project name="platform/packages/apps/Camera2"/>
+  <remove-project name="platform/packages/apps/Music"/>
+  <remove-project name="platform/packages/apps/Gallery2"/>
+  <remove-project name="platform/packages/apps/QuickSearchBox"/>
+</manifest>
+EOF
+
         repo sync -c -j$(nproc) --force-sync --no-clone-bundle --no-tags
 
     - name: Inject device & vendor tree into AOSP source
