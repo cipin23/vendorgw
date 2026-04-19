@@ -1,0 +1,171 @@
+name: 2. Build system.img
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_retries:
+        description: 'Max auto-fix retries'
+        default: '5'
+  # Auto-trigger setelah workflow 1 selesai
+  workflow_run:
+    workflows: ["1. Setup Vendor & Device Tree"]
+    types: [completed]
+
+env:
+  ARROW_BRANCH: arrow-11.0
+  DEVICE: a02
+  VENDOR: samsung
+  BUILD_DIR: /mnt/arrow
+
+jobs:
+  build-system:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 360
+    # Kalau trigger dari workflow_run, skip kalau workflow 1 gagal
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+    - name: Checkout this repo (ambil device & vendor tree)
+      uses: actions/checkout@v4
+      with:
+        path: device_vendor_src
+
+    - name: Fix /mnt permissions & check disk
+      run: |
+        sudo chown $USER:$USER /mnt
+        df -h
+        echo "[+] /mnt available: $(df -h /mnt | tail -1 | awk '{print $4}')"
+
+    - name: Free disk space
+      run: |
+        sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android \
+                    /usr/local/share/boost /usr/share/swift
+        sudo apt-get clean
+        df -h
+
+    - name: Install build dependencies
+      run: |
+        sudo apt-get update -qq
+        sudo apt-get install -y \
+          bc bison build-essential ccache curl flex \
+          g++-multilib gcc-multilib git gnupg gperf imagemagick \
+          lib32ncurses-dev lib32readline-dev lib32z1-dev \
+          liblz4-tool libncurses-dev libsdl1.2-dev libssl-dev \
+          libxml2 libxml2-utils lzop pngcrush rsync \
+          schedtool squashfs-tools xsltproc zip zlib1g-dev \
+          python3 python3-pip openjdk-11-jdk
+
+    - name: Setup repo tool
+      run: |
+        mkdir -p ~/bin
+        curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+        chmod a+x ~/bin/repo
+        echo "$HOME/bin" >> $GITHUB_PATH
+
+    - name: Configure git
+      run: |
+        git config --global user.email "build@arrow.local"
+        git config --global user.name "Arrow Builder"
+        git config --global color.ui false
+
+    - name: Restore ccache
+      uses: actions/cache@v4
+      with:
+        path: ~/.ccache
+        key: ccache-arrow-a02-${{ github.run_number }}
+        restore-keys: ccache-arrow-a02-
+
+    - name: Sync ArrowOS sources
+      run: |
+        mkdir -p $BUILD_DIR
+        cd $BUILD_DIR
+        repo init -u https://github.com/ArrowOS/android_manifest.git \
+          -b $ARROW_BRANCH --depth=1
+
+        repo sync -c -j$(nproc) --force-sync --no-clone-bundle --no-tags
+
+    - name: Inject device & vendor tree into AOSP source
+      run: |
+        # Device tree
+        mkdir -p $BUILD_DIR/device/samsung/a02
+        cp -r device_vendor_src/device/samsung/a02/. $BUILD_DIR/device/samsung/a02/
+
+        # Vendor tree: copy blobs ke vendor/samsung/a02/ di dalam AOSP
+        # Blobs asli ada di device_vendor_src/vendor/ (root repo)
+        mkdir -p $BUILD_DIR/vendor/samsung/a02
+        # Copy semua blobs kecuali generated files dan subfolder samsung/
+        rsync -a --exclude='samsung/' --exclude='Android.bp' --exclude='Android.mk' \
+          device_vendor_src/vendor/ $BUILD_DIR/vendor/samsung/a02/
+
+        # Generate Android.bp + Android.mk dengan path lokal (tanpa ../)
+        python3 device_vendor_src/scripts/setup/setup_vendor.py \
+          --src $BUILD_DIR/vendor/samsung/a02 \
+          --dst $BUILD_DIR/vendor/samsung/a02
+
+        echo "[+] Vendor tree:"
+        ls $BUILD_DIR/vendor/samsung/a02/
+        echo "[+] Device tree:"
+        ls $BUILD_DIR/device/samsung/a02/
+
+    - name: Setup ccache
+      run: |
+        export USE_CCACHE=1
+        export CCACHE_DIR=~/.ccache
+        ccache -M 50G
+
+    - name: Build system.img with auto-fix loop
+      run: |
+        cd $BUILD_DIR
+        export USE_CCACHE=1
+        export CCACHE_DIR=~/.ccache
+
+        source build/envsetup.sh
+        lunch arrow_a02-userdebug
+
+        MAX_RETRIES=${{ github.event.inputs.max_retries || '5' }}
+        RETRY=0
+        BUILD_LOG=${{ github.workspace }}/build.log
+        BUILD_SUCCESS=false
+
+        while [ $RETRY -lt $MAX_RETRIES ]; do
+          echo "=== Build attempt $((RETRY+1))/$MAX_RETRIES ==="
+
+          set +e
+          make systemimage -j$(nproc) 2>&1 | tee $BUILD_LOG
+          EXIT_CODE=${PIPESTATUS[0]}
+          set -e
+
+          if [ $EXIT_CODE -eq 0 ]; then
+            echo "BUILD SUCCESS"
+            BUILD_SUCCESS=true
+            break
+          fi
+
+          echo "Build failed (exit $EXIT_CODE), running auto-fix..."
+          python3 ${{ github.workspace }}/device_vendor_src/scripts/setup/autofix.py \
+            --log $BUILD_LOG \
+            --tree $BUILD_DIR/device/samsung/a02
+
+          RETRY=$((RETRY+1))
+        done
+
+        if [ "$BUILD_SUCCESS" != "true" ]; then
+          echo "=== FAILED after $MAX_RETRIES retries. Last 150 lines: ==="
+          tail -150 $BUILD_LOG
+          exit 1
+        fi
+
+    - name: Upload system.img
+      uses: actions/upload-artifact@v4
+      with:
+        name: system-img-${{ github.run_number }}
+        path: ${{ env.BUILD_DIR }}/out/target/product/a02/system.img
+        retention-days: 7
+
+    - name: Upload build log
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-log-${{ github.run_number }}
+        path: ${{ github.workspace }}/build.log
+        retention-days: 3
