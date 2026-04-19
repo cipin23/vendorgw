@@ -2,7 +2,7 @@
 soong_namespace {}
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.audio.common-util",
+    name: "vendor_a02_android.hardware.audio.common-util",
     srcs: ["vendor/lib/android.hardware.audio.common-util.so"],
     vendor: true,
     strip: { none: true },
@@ -11,7 +11,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.audio.common@2.0-util",
+    name: "vendor_a02_android.hardware.audio.common@2.0-util",
     srcs: ["vendor/lib/android.hardware.audio.common@2.0-util.so"],
     vendor: true,
     strip: { none: true },
@@ -20,7 +20,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.audio.common@6.0-util",
+    name: "vendor_a02_android.hardware.audio.common@6.0-util",
     srcs: ["vendor/lib/android.hardware.audio.common@6.0-util.so"],
     vendor: true,
     strip: { none: true },
@@ -29,7 +29,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.camera.provider@2.4-legacy",
+    name: "vendor_a02_android.hardware.camera.provider@2.4-legacy",
     srcs: ["vendor/lib/android.hardware.camera.provider@2.4-legacy.so"],
     vendor: true,
     strip: { none: true },
@@ -38,7 +38,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.camera.provider@2.5-legacy",
+    name: "vendor_a02_android.hardware.camera.provider@2.5-legacy",
     srcs: ["vendor/lib/android.hardware.camera.provider@2.5-legacy.so"],
     vendor: true,
     strip: { none: true },
@@ -47,7 +47,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.gatekeeper@1.0-impl",
+    name: "vendor_a02_android.hardware.gatekeeper@1.0-impl",
     srcs: ["vendor/lib/android.hardware.gatekeeper@1.0-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -56,7 +56,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.graphics.composer@2.1-resources",
+    name: "vendor_a02_android.hardware.graphics.composer@2.1-resources",
     srcs: ["vendor/lib/android.hardware.graphics.composer@2.1-resources.so"],
     vendor: true,
     strip: { none: true },
@@ -65,7 +65,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.power-service-mediatek",
+    name: "vendor_a02_android.hardware.power-service-mediatek",
     srcs: ["vendor/lib/android.hardware.power-service-mediatek.so"],
     vendor: true,
     strip: { none: true },
@@ -74,7 +74,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "camera.device@1.0-impl",
+    name: "vendor_a02_camera.device@1.0-impl",
     srcs: ["vendor/lib/camera.device@1.0-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -83,7 +83,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "camera.device@3.2-impl",
+    name: "vendor_a02_camera.device@3.2-impl",
     srcs: ["vendor/lib/camera.device@3.2-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -92,7 +92,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "camera.device@3.3-impl",
+    name: "vendor_a02_camera.device@3.3-impl",
     srcs: ["vendor/lib/camera.device@3.3-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -101,7 +101,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "camera.device@3.4-impl",
+    name: "vendor_a02_camera.device@3.4-impl",
     srcs: ["vendor/lib/camera.device@3.4-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -110,7 +110,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "camera.device@3.5-impl",
+    name: "vendor_a02_camera.device@3.5-impl",
     srcs: ["vendor/lib/camera.device@3.5-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -119,7 +119,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libEGL_mtk",
+    name: "vendor_a02_libEGL_mtk",
     srcs: ["vendor/lib/egl/libEGL_mtk.so"],
     vendor: true,
     strip: { none: true },
@@ -128,7 +128,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libGLES_meow",
+    name: "vendor_a02_libGLES_meow",
     srcs: ["vendor/lib/egl/libGLES_meow.so"],
     vendor: true,
     strip: { none: true },
@@ -137,7 +137,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libGLESv1_CM_mtk",
+    name: "vendor_a02_libGLESv1_CM_mtk",
     srcs: ["vendor/lib/egl/libGLESv1_CM_mtk.so"],
     vendor: true,
     strip: { none: true },
@@ -146,7 +146,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libGLESv2_mtk",
+    name: "vendor_a02_libGLESv2_mtk",
     srcs: ["vendor/lib/egl/libGLESv2_mtk.so"],
     vendor: true,
     strip: { none: true },
@@ -155,7 +155,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libMEOW_trace",
+    name: "vendor_a02_libMEOW_trace",
     srcs: ["vendor/lib/egl/libMEOW_trace.so"],
     vendor: true,
     strip: { none: true },
@@ -164,7 +164,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "gc02m1_mipi_raw_IdxMgr",
+    name: "vendor_a02_gc02m1_mipi_raw_IdxMgr",
     srcs: ["vendor/lib/gc02m1_mipi_raw_IdxMgr.so"],
     vendor: true,
     strip: { none: true },
@@ -173,7 +173,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "gc02m1_mipi_raw_tuning",
+    name: "vendor_a02_gc02m1_mipi_raw_tuning",
     srcs: ["vendor/lib/gc02m1_mipi_raw_tuning.so"],
     vendor: true,
     strip: { none: true },
@@ -182,7 +182,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "gc5035_mipi_raw_IdxMgr",
+    name: "vendor_a02_gc5035_mipi_raw_IdxMgr",
     srcs: ["vendor/lib/gc5035_mipi_raw_IdxMgr.so"],
     vendor: true,
     strip: { none: true },
@@ -191,7 +191,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "gc5035_mipi_raw_tuning",
+    name: "vendor_a02_gc5035_mipi_raw_tuning",
     srcs: ["vendor/lib/gc5035_mipi_raw_tuning.so"],
     vendor: true,
     strip: { none: true },
@@ -200,7 +200,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.audio.effect@2.0-impl",
+    name: "vendor_a02_android.hardware.audio.effect@2.0-impl",
     srcs: ["vendor/lib/hw/android.hardware.audio.effect@2.0-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -209,7 +209,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.audio.effect@6.0-impl",
+    name: "vendor_a02_android.hardware.audio.effect@6.0-impl",
     srcs: ["vendor/lib/hw/android.hardware.audio.effect@6.0-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -218,7 +218,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.audio@2.0-impl",
+    name: "vendor_a02_android.hardware.audio@2.0-impl",
     srcs: ["vendor/lib/hw/android.hardware.audio@2.0-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -227,7 +227,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.audio@6.0-impl-mediatek",
+    name: "vendor_a02_android.hardware.audio@6.0-impl-mediatek",
     srcs: ["vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so"],
     vendor: true,
     strip: { none: true },
@@ -236,7 +236,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.bluetooth.audio@2.0-impl",
+    name: "vendor_a02_android.hardware.bluetooth.audio@2.0-impl",
     srcs: ["vendor/lib/hw/android.hardware.bluetooth.audio@2.0-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -245,7 +245,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.bluetooth@1.0-impl-mediatek",
+    name: "vendor_a02_android.hardware.bluetooth@1.0-impl-mediatek",
     srcs: ["vendor/lib/hw/android.hardware.bluetooth@1.0-impl-mediatek.so"],
     vendor: true,
     strip: { none: true },
@@ -254,7 +254,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.gnss@2.1-impl",
+    name: "vendor_a02_android.hardware.gnss@2.1-impl",
     srcs: ["vendor/lib/hw/android.hardware.gnss@2.1-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -263,7 +263,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.graphics.mapper@4.0-impl-mediatek",
+    name: "vendor_a02_android.hardware.graphics.mapper@4.0-impl-mediatek",
     srcs: ["vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so"],
     vendor: true,
     strip: { none: true },
@@ -272,7 +272,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.health@2.0-impl-2.1-samsung",
+    name: "vendor_a02_android.hardware.health@2.0-impl-2.1-samsung",
     srcs: ["vendor/lib/hw/android.hardware.health@2.0-impl-2.1-samsung.so"],
     vendor: true,
     strip: { none: true },
@@ -281,7 +281,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.memtrack@1.0-impl",
+    name: "vendor_a02_android.hardware.memtrack@1.0-impl",
     srcs: ["vendor/lib/hw/android.hardware.memtrack@1.0-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -290,7 +290,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.renderscript@1.0-impl",
+    name: "vendor_a02_android.hardware.renderscript@1.0-impl",
     srcs: ["vendor/lib/hw/android.hardware.renderscript@1.0-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -299,7 +299,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.sensors@1.0-impl",
+    name: "vendor_a02_android.hardware.sensors@1.0-impl",
     srcs: ["vendor/lib/hw/android.hardware.sensors@1.0-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -308,7 +308,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.soundtrigger@2.0-impl",
+    name: "vendor_a02_android.hardware.soundtrigger@2.0-impl",
     srcs: ["vendor/lib/hw/android.hardware.soundtrigger@2.0-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -317,7 +317,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.thermal@1.0-impl",
+    name: "vendor_a02_android.hardware.thermal@1.0-impl",
     srcs: ["vendor/lib/hw/android.hardware.thermal@1.0-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -326,7 +326,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "android.hardware.thermal@2.0-impl",
+    name: "vendor_a02_android.hardware.thermal@2.0-impl",
     srcs: ["vendor/lib/hw/android.hardware.thermal@2.0-impl.so"],
     vendor: true,
     strip: { none: true },
@@ -335,7 +335,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "audio.bluetooth.default",
+    name: "vendor_a02_audio.bluetooth.default",
     srcs: ["vendor/lib/hw/audio.bluetooth.default.so"],
     vendor: true,
     strip: { none: true },
@@ -344,7 +344,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "audio.primary.default",
+    name: "vendor_a02_audio.primary.default",
     srcs: ["vendor/lib/hw/audio.primary.default.so"],
     vendor: true,
     strip: { none: true },
@@ -353,7 +353,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "audio.primary.mt6739",
+    name: "vendor_a02_audio.primary.mt6739",
     srcs: ["vendor/lib/hw/audio.primary.mt6739.so"],
     vendor: true,
     strip: { none: true },
@@ -362,7 +362,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "audio.r_submix.default",
+    name: "vendor_a02_audio.r_submix.default",
     srcs: ["vendor/lib/hw/audio.r_submix.default.so"],
     vendor: true,
     strip: { none: true },
@@ -371,7 +371,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "audio.r_submix.mt6739",
+    name: "vendor_a02_audio.r_submix.mt6739",
     srcs: ["vendor/lib/hw/audio.r_submix.mt6739.so"],
     vendor: true,
     strip: { none: true },
@@ -380,7 +380,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "audio.sec_primary.default",
+    name: "vendor_a02_audio.sec_primary.default",
     srcs: ["vendor/lib/hw/audio.sec_primary.default.so"],
     vendor: true,
     strip: { none: true },
@@ -389,7 +389,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "audio.usb.default",
+    name: "vendor_a02_audio.usb.default",
     srcs: ["vendor/lib/hw/audio.usb.default.so"],
     vendor: true,
     strip: { none: true },
@@ -398,7 +398,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "audio.usb.mt6739",
+    name: "vendor_a02_audio.usb.mt6739",
     srcs: ["vendor/lib/hw/audio.usb.mt6739.so"],
     vendor: true,
     strip: { none: true },
@@ -407,7 +407,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "audio_policy.stub",
+    name: "vendor_a02_audio_policy.stub",
     srcs: ["vendor/lib/hw/audio_policy.stub.so"],
     vendor: true,
     strip: { none: true },
@@ -416,7 +416,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "camera.mt6739",
+    name: "vendor_a02_camera.mt6739",
     srcs: ["vendor/lib/hw/camera.mt6739.so"],
     vendor: true,
     strip: { none: true },
@@ -425,7 +425,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "gatekeeper.mt6739",
+    name: "vendor_a02_gatekeeper.mt6739",
     srcs: ["vendor/lib/hw/gatekeeper.mt6739.so"],
     vendor: true,
     strip: { none: true },
@@ -434,7 +434,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "gps.default",
+    name: "vendor_a02_gps.default",
     srcs: ["vendor/lib/hw/gps.default.so"],
     vendor: true,
     strip: { none: true },
@@ -443,7 +443,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "gralloc.default",
+    name: "vendor_a02_gralloc.default",
     srcs: ["vendor/lib/hw/gralloc.default.so"],
     vendor: true,
     strip: { none: true },
@@ -452,7 +452,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "gralloc.rogue",
+    name: "vendor_a02_gralloc.rogue",
     srcs: ["vendor/lib/hw/gralloc.rogue.so"],
     vendor: true,
     strip: { none: true },
@@ -461,7 +461,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "hwcomposer.mt6739",
+    name: "vendor_a02_hwcomposer.mt6739",
     srcs: ["vendor/lib/hw/hwcomposer.mt6739.so"],
     vendor: true,
     strip: { none: true },
@@ -470,7 +470,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lights.mt6739",
+    name: "vendor_a02_lights.mt6739",
     srcs: ["vendor/lib/hw/lights.mt6739.so"],
     vendor: true,
     strip: { none: true },
@@ -479,7 +479,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "local_time.default",
+    name: "vendor_a02_local_time.default",
     srcs: ["vendor/lib/hw/local_time.default.so"],
     vendor: true,
     strip: { none: true },
@@ -488,7 +488,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "memtrack.mt6739",
+    name: "vendor_a02_memtrack.mt6739",
     srcs: ["vendor/lib/hw/memtrack.mt6739.so"],
     vendor: true,
     strip: { none: true },
@@ -497,7 +497,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "power.default",
+    name: "vendor_a02_power.default",
     srcs: ["vendor/lib/hw/power.default.so"],
     vendor: true,
     strip: { none: true },
@@ -506,7 +506,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "power.mt6739",
+    name: "vendor_a02_power.mt6739",
     srcs: ["vendor/lib/hw/power.mt6739.so"],
     vendor: true,
     strip: { none: true },
@@ -515,7 +515,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "sensors.mt6739",
+    name: "vendor_a02_sensors.mt6739",
     srcs: ["vendor/lib/hw/sensors.mt6739.so"],
     vendor: true,
     strip: { none: true },
@@ -524,7 +524,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "thermal.mt6739",
+    name: "vendor_a02_thermal.mt6739",
     srcs: ["vendor/lib/hw/thermal.mt6739.so"],
     vendor: true,
     strip: { none: true },
@@ -605,7 +605,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vibrator.default",
+    name: "vendor_a02_vibrator.default",
     srcs: ["vendor/lib/hw/vibrator.default.so"],
     vendor: true,
     strip: { none: true },
@@ -614,7 +614,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vulkan.mt6739",
+    name: "vendor_a02_vulkan.mt6739",
     srcs: ["vendor/lib/hw/vulkan.mt6739.so"],
     vendor: true,
     strip: { none: true },
@@ -623,7 +623,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "imx258_mipi_raw_IdxMgr",
+    name: "vendor_a02_imx258_mipi_raw_IdxMgr",
     srcs: ["vendor/lib/imx258_mipi_raw_IdxMgr.so"],
     vendor: true,
     strip: { none: true },
@@ -632,7 +632,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "imx258_mipi_raw_tuning",
+    name: "vendor_a02_imx258_mipi_raw_tuning",
     srcs: ["vendor/lib/imx258_mipi_raw_tuning.so"],
     vendor: true,
     strip: { none: true },
@@ -641,7 +641,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib3a.ae.core",
+    name: "vendor_a02_lib3a.ae.core",
     srcs: ["vendor/lib/lib3a.ae.core.so"],
     vendor: true,
     strip: { none: true },
@@ -650,7 +650,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib3a.ae",
+    name: "vendor_a02_lib3a.ae",
     srcs: ["vendor/lib/lib3a.ae.so"],
     vendor: true,
     strip: { none: true },
@@ -659,7 +659,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib3a.af.core",
+    name: "vendor_a02_lib3a.af.core",
     srcs: ["vendor/lib/lib3a.af.core.so"],
     vendor: true,
     strip: { none: true },
@@ -668,7 +668,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib3a.af",
+    name: "vendor_a02_lib3a.af",
     srcs: ["vendor/lib/lib3a.af.so"],
     vendor: true,
     strip: { none: true },
@@ -677,7 +677,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib3a.awb.core",
+    name: "vendor_a02_lib3a.awb.core",
     srcs: ["vendor/lib/lib3a.awb.core.so"],
     vendor: true,
     strip: { none: true },
@@ -686,7 +686,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib3a.awb",
+    name: "vendor_a02_lib3a.awb",
     srcs: ["vendor/lib/lib3a.awb.so"],
     vendor: true,
     strip: { none: true },
@@ -695,7 +695,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib3a.flash",
+    name: "vendor_a02_lib3a.flash",
     srcs: ["vendor/lib/lib3a.flash.so"],
     vendor: true,
     strip: { none: true },
@@ -704,7 +704,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib3a.log",
+    name: "vendor_a02_lib3a.log",
     srcs: ["vendor/lib/lib3a.log.so"],
     vendor: true,
     strip: { none: true },
@@ -713,7 +713,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libDR",
+    name: "vendor_a02_libDR",
     srcs: ["vendor/lib/libDR.so"],
     vendor: true,
     strip: { none: true },
@@ -722,7 +722,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libHMT",
+    name: "vendor_a02_libHMT",
     srcs: ["vendor/lib/libHMT.so"],
     vendor: true,
     strip: { none: true },
@@ -731,7 +731,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libIMGegl",
+    name: "vendor_a02_libIMGegl",
     srcs: ["vendor/lib/libIMGegl.so"],
     vendor: true,
     strip: { none: true },
@@ -740,7 +740,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libJpgDecPipe",
+    name: "vendor_a02_libJpgDecPipe",
     srcs: ["vendor/lib/libJpgDecPipe.so"],
     vendor: true,
     strip: { none: true },
@@ -749,7 +749,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libJpgEncPipe",
+    name: "vendor_a02_libJpgEncPipe",
     srcs: ["vendor/lib/libJpgEncPipe.so"],
     vendor: true,
     strip: { none: true },
@@ -758,7 +758,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libMcClient",
+    name: "vendor_a02_libMcClient",
     srcs: ["vendor/lib/libMcClient.so"],
     vendor: true,
     strip: { none: true },
@@ -767,7 +767,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libMtkOmxAdpcmDec",
+    name: "vendor_a02_libMtkOmxAdpcmDec",
     srcs: ["vendor/lib/libMtkOmxAdpcmDec.so"],
     vendor: true,
     strip: { none: true },
@@ -776,7 +776,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libMtkOmxCore",
+    name: "vendor_a02_libMtkOmxCore",
     srcs: ["vendor/lib/libMtkOmxCore.so"],
     vendor: true,
     strip: { none: true },
@@ -785,7 +785,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libMtkOmxGsmDec",
+    name: "vendor_a02_libMtkOmxGsmDec",
     srcs: ["vendor/lib/libMtkOmxGsmDec.so"],
     vendor: true,
     strip: { none: true },
@@ -794,7 +794,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libMtkOmxMp3Dec",
+    name: "vendor_a02_libMtkOmxMp3Dec",
     srcs: ["vendor/lib/libMtkOmxMp3Dec.so"],
     vendor: true,
     strip: { none: true },
@@ -803,7 +803,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libMtkOmxVdecEx",
+    name: "vendor_a02_libMtkOmxVdecEx",
     srcs: ["vendor/lib/libMtkOmxVdecEx.so"],
     vendor: true,
     strip: { none: true },
@@ -812,7 +812,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libMtkOmxVenc",
+    name: "vendor_a02_libMtkOmxVenc",
     srcs: ["vendor/lib/libMtkOmxVenc.so"],
     vendor: true,
     strip: { none: true },
@@ -821,7 +821,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libMtkSpeechEnh",
+    name: "vendor_a02_libMtkSpeechEnh",
     srcs: ["vendor/lib/libMtkSpeechEnh.so"],
     vendor: true,
     strip: { none: true },
@@ -830,7 +830,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libOpenCL",
+    name: "vendor_a02_libOpenCL",
     srcs: ["vendor/lib/libOpenCL.so"],
     vendor: true,
     strip: { none: true },
@@ -839,7 +839,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libOpenCv.camera.samsung",
+    name: "vendor_a02_libOpenCv.camera.samsung",
     srcs: ["vendor/lib/libOpenCv.camera.samsung.so"],
     vendor: true,
     strip: { none: true },
@@ -848,7 +848,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libPVRMtkutils",
+    name: "vendor_a02_libPVRMtkutils",
     srcs: ["vendor/lib/libPVRMtkutils.so"],
     vendor: true,
     strip: { none: true },
@@ -857,7 +857,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libPVROCL",
+    name: "vendor_a02_libPVROCL",
     srcs: ["vendor/lib/libPVROCL.so"],
     vendor: true,
     strip: { none: true },
@@ -866,7 +866,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libPVRScopeServices",
+    name: "vendor_a02_libPVRScopeServices",
     srcs: ["vendor/lib/libPVRScopeServices.so"],
     vendor: true,
     strip: { none: true },
@@ -875,7 +875,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libSecC2ComponentStore",
+    name: "vendor_a02_libSecC2ComponentStore",
     srcs: ["vendor/lib/libSecC2ComponentStore.so"],
     vendor: true,
     strip: { none: true },
@@ -884,7 +884,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libSonyIMX230PdafLibrary",
+    name: "vendor_a02_libSonyIMX230PdafLibrary",
     srcs: ["vendor/lib/libSonyIMX230PdafLibrary.so"],
     vendor: true,
     strip: { none: true },
@@ -893,7 +893,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libSonyIMX230PdafLibraryWrapper",
+    name: "vendor_a02_libSonyIMX230PdafLibraryWrapper",
     srcs: ["vendor/lib/libSonyIMX230PdafLibraryWrapper.so"],
     vendor: true,
     strip: { none: true },
@@ -902,7 +902,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libSonyIMX338PdafLibrary",
+    name: "vendor_a02_libSonyIMX338PdafLibrary",
     srcs: ["vendor/lib/libSonyIMX338PdafLibrary.so"],
     vendor: true,
     strip: { none: true },
@@ -911,7 +911,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libSonyIMX338PdafLibraryWrapper",
+    name: "vendor_a02_libSonyIMX338PdafLibraryWrapper",
     srcs: ["vendor/lib/libSonyIMX338PdafLibraryWrapper.so"],
     vendor: true,
     strip: { none: true },
@@ -920,7 +920,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libSonyIMX386PdafLibrary",
+    name: "vendor_a02_libSonyIMX386PdafLibrary",
     srcs: ["vendor/lib/libSonyIMX386PdafLibrary.so"],
     vendor: true,
     strip: { none: true },
@@ -929,7 +929,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libSonyIMX386PdafLibraryWrapper",
+    name: "vendor_a02_libSonyIMX386PdafLibraryWrapper",
     srcs: ["vendor/lib/libSonyIMX386PdafLibraryWrapper.so"],
     vendor: true,
     strip: { none: true },
@@ -938,7 +938,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libSonyIMX519PdafLibrary",
+    name: "vendor_a02_libSonyIMX519PdafLibrary",
     srcs: ["vendor/lib/libSonyIMX519PdafLibrary.so"],
     vendor: true,
     strip: { none: true },
@@ -947,7 +947,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libSonyIMX519PdafLibraryWrapper",
+    name: "vendor_a02_libSonyIMX519PdafLibraryWrapper",
     srcs: ["vendor/lib/libSonyIMX519PdafLibraryWrapper.so"],
     vendor: true,
     strip: { none: true },
@@ -956,7 +956,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libSwJpgCodec",
+    name: "vendor_a02_libSwJpgCodec",
     srcs: ["vendor/lib/libSwJpgCodec.so"],
     vendor: true,
     strip: { none: true },
@@ -965,7 +965,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib_SamsungRec_07010",
+    name: "vendor_a02_lib_SamsungRec_07010",
     srcs: ["vendor/lib/lib_SamsungRec_07010.so"],
     vendor: true,
     strip: { none: true },
@@ -974,7 +974,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib_SoundAlive_3DPosition_ver202",
+    name: "vendor_a02_lib_SoundAlive_3DPosition_ver202",
     srcs: ["vendor/lib/lib_SoundAlive_3DPosition_ver202.so"],
     vendor: true,
     strip: { none: true },
@@ -983,7 +983,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib_SoundAlive_AlbumArt_ver105",
+    name: "vendor_a02_lib_SoundAlive_AlbumArt_ver105",
     srcs: ["vendor/lib/lib_SoundAlive_AlbumArt_ver105.so"],
     vendor: true,
     strip: { none: true },
@@ -992,7 +992,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib_SoundAlive_play_plus_ver400",
+    name: "vendor_a02_lib_SoundAlive_play_plus_ver400",
     srcs: ["vendor/lib/lib_SoundAlive_play_plus_ver400.so"],
     vendor: true,
     strip: { none: true },
@@ -1001,7 +1001,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib_SoundBooster_ver1050",
+    name: "vendor_a02_lib_SoundBooster_ver1050",
     srcs: ["vendor/lib/lib_SoundBooster_ver1050.so"],
     vendor: true,
     strip: { none: true },
@@ -1010,7 +1010,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib_iir",
+    name: "vendor_a02_lib_iir",
     srcs: ["vendor/lib/lib_iir.so"],
     vendor: true,
     strip: { none: true },
@@ -1019,7 +1019,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lib_speech_enh",
+    name: "vendor_a02_lib_speech_enh",
     srcs: ["vendor/lib/lib_speech_enh.so"],
     vendor: true,
     strip: { none: true },
@@ -1028,7 +1028,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libacdk",
+    name: "vendor_a02_libacdk",
     srcs: ["vendor/lib/libacdk.so"],
     vendor: true,
     strip: { none: true },
@@ -1037,7 +1037,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaedv",
+    name: "vendor_a02_libaedv",
     srcs: ["vendor/lib/libaedv.so"],
     vendor: true,
     strip: { none: true },
@@ -1055,7 +1055,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudio-ril",
+    name: "vendor_a02_libaudio-ril",
     srcs: ["vendor/lib/libaudio-ril.so"],
     vendor: true,
     strip: { none: true },
@@ -1064,7 +1064,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudio_param_parser-vnd",
+    name: "vendor_a02_libaudio_param_parser-vnd",
     srcs: ["vendor/lib/libaudio_param_parser-vnd.so"],
     vendor: true,
     strip: { none: true },
@@ -1073,7 +1073,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudiocompensationfilter_vendor",
+    name: "vendor_a02_libaudiocompensationfilter_vendor",
     srcs: ["vendor/lib/libaudiocompensationfilter_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -1082,7 +1082,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudiocompensationfilterc",
+    name: "vendor_a02_libaudiocompensationfilterc",
     srcs: ["vendor/lib/libaudiocompensationfilterc.so"],
     vendor: true,
     strip: { none: true },
@@ -1091,7 +1091,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudiocomponentengine_vendor",
+    name: "vendor_a02_libaudiocomponentengine_vendor",
     srcs: ["vendor/lib/libaudiocomponentengine_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -1100,7 +1100,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudiocomponentenginec",
+    name: "vendor_a02_libaudiocomponentenginec",
     srcs: ["vendor/lib/libaudiocomponentenginec.so"],
     vendor: true,
     strip: { none: true },
@@ -1109,7 +1109,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudiocustparam_vendor",
+    name: "vendor_a02_libaudiocustparam_vendor",
     srcs: ["vendor/lib/libaudiocustparam_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -1118,7 +1118,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudiodcrflt_vendor",
+    name: "vendor_a02_libaudiodcrflt_vendor",
     srcs: ["vendor/lib/libaudiodcrflt_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -1127,7 +1127,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudiofmtconv",
+    name: "vendor_a02_libaudiofmtconv",
     srcs: ["vendor/lib/libaudiofmtconv.so"],
     vendor: true,
     strip: { none: true },
@@ -1136,7 +1136,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudiofoundation",
+    name: "vendor_a02_libaudiofoundation",
     srcs: ["vendor/lib/libaudiofoundation.so"],
     vendor: true,
     strip: { none: true },
@@ -1145,7 +1145,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudioloudc",
+    name: "vendor_a02_libaudioloudc",
     srcs: ["vendor/lib/libaudioloudc.so"],
     vendor: true,
     strip: { none: true },
@@ -1154,7 +1154,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudioprimarydevicehalifclient",
+    name: "vendor_a02_libaudioprimarydevicehalifclient",
     srcs: ["vendor/lib/libaudioprimarydevicehalifclient.so"],
     vendor: true,
     strip: { none: true },
@@ -1163,7 +1163,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudiotoolkit_vendor",
+    name: "vendor_a02_libaudiotoolkit_vendor",
     srcs: ["vendor/lib/libaudiotoolkit_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -1172,7 +1172,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaurisysdemo",
+    name: "vendor_a02_libaurisysdemo",
     srcs: ["vendor/lib/libaurisysdemo.so"],
     vendor: true,
     strip: { none: true },
@@ -1181,7 +1181,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libavservices_minijail",
+    name: "vendor_a02_libavservices_minijail",
     srcs: ["vendor/lib/libavservices_minijail.so"],
     vendor: true,
     strip: { none: true },
@@ -1190,7 +1190,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libbessound_hd_mtk_vendor",
+    name: "vendor_a02_libbessound_hd_mtk_vendor",
     srcs: ["vendor/lib/libbessound_hd_mtk_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -1199,7 +1199,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libblisrc32_vendor",
+    name: "vendor_a02_libblisrc32_vendor",
     srcs: ["vendor/lib/libblisrc32_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -1217,7 +1217,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libbluetooth_audio_session_mediatek",
+    name: "vendor_a02_libbluetooth_audio_session_mediatek",
     srcs: ["vendor/lib/libbluetooth_audio_session_mediatek.so"],
     vendor: true,
     strip: { none: true },
@@ -1226,7 +1226,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libbluetooth_hw_test",
+    name: "vendor_a02_libbluetooth_hw_test",
     srcs: ["vendor/lib/libbluetooth_hw_test.so"],
     vendor: true,
     strip: { none: true },
@@ -1235,7 +1235,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libbluetooth_mtk",
+    name: "vendor_a02_libbluetooth_mtk",
     srcs: ["vendor/lib/libbluetooth_mtk.so"],
     vendor: true,
     strip: { none: true },
@@ -1244,7 +1244,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libbluetooth_mtk_pure",
+    name: "vendor_a02_libbluetooth_mtk_pure",
     srcs: ["vendor/lib/libbluetooth_mtk_pure.so"],
     vendor: true,
     strip: { none: true },
@@ -1253,7 +1253,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libbluetooth_relayer",
+    name: "vendor_a02_libbluetooth_relayer",
     srcs: ["vendor/lib/libbluetooth_relayer.so"],
     vendor: true,
     strip: { none: true },
@@ -1262,7 +1262,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libbluetoothem_mtk",
+    name: "vendor_a02_libbluetoothem_mtk",
     srcs: ["vendor/lib/libbluetoothem_mtk.so"],
     vendor: true,
     strip: { none: true },
@@ -1271,7 +1271,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libbt-vendor",
+    name: "vendor_a02_libbt-vendor",
     srcs: ["vendor/lib/libbt-vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -1280,7 +1280,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libbwc",
+    name: "vendor_a02_libbwc",
     srcs: ["vendor/lib/libbwc.so"],
     vendor: true,
     strip: { none: true },
@@ -1289,7 +1289,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcam.feature_utils",
+    name: "vendor_a02_libcam.feature_utils",
     srcs: ["vendor/lib/libcam.feature_utils.so"],
     vendor: true,
     strip: { none: true },
@@ -1298,7 +1298,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcam.hal3a.cctsvr",
+    name: "vendor_a02_libcam.hal3a.cctsvr",
     srcs: ["vendor/lib/libcam.hal3a.cctsvr.so"],
     vendor: true,
     strip: { none: true },
@@ -1307,7 +1307,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcam.hal3a.log",
+    name: "vendor_a02_libcam.hal3a.log",
     srcs: ["vendor/lib/libcam.hal3a.log.so"],
     vendor: true,
     strip: { none: true },
@@ -1316,7 +1316,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcam.hal3a.v3.dng",
+    name: "vendor_a02_libcam.hal3a.v3.dng",
     srcs: ["vendor/lib/libcam.hal3a.v3.dng.so"],
     vendor: true,
     strip: { none: true },
@@ -1325,7 +1325,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcam.hal3a.v3.lsctbl",
+    name: "vendor_a02_libcam.hal3a.v3.lsctbl",
     srcs: ["vendor/lib/libcam.hal3a.v3.lsctbl.so"],
     vendor: true,
     strip: { none: true },
@@ -1334,7 +1334,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcam.hal3a.v3.nvram",
+    name: "vendor_a02_libcam.hal3a.v3.nvram",
     srcs: ["vendor/lib/libcam.hal3a.v3.nvram.so"],
     vendor: true,
     strip: { none: true },
@@ -1343,7 +1343,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcam.hal3a.v3",
+    name: "vendor_a02_libcam.hal3a.v3",
     srcs: ["vendor/lib/libcam.hal3a.v3.so"],
     vendor: true,
     strip: { none: true },
@@ -1352,7 +1352,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcam.halisp",
+    name: "vendor_a02_libcam.halisp",
     srcs: ["vendor/lib/libcam.halisp.so"],
     vendor: true,
     strip: { none: true },
@@ -1361,7 +1361,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcam.halsensor",
+    name: "vendor_a02_libcam.halsensor",
     srcs: ["vendor/lib/libcam.halsensor.so"],
     vendor: true,
     strip: { none: true },
@@ -1370,7 +1370,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcam.iopipe",
+    name: "vendor_a02_libcam.iopipe",
     srcs: ["vendor/lib/libcam.iopipe.so"],
     vendor: true,
     strip: { none: true },
@@ -1379,7 +1379,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcam.pdtblgen",
+    name: "vendor_a02_libcam.pdtblgen",
     srcs: ["vendor/lib/libcam.pdtblgen.so"],
     vendor: true,
     strip: { none: true },
@@ -1388,7 +1388,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcam.utils.sensorprovider",
+    name: "vendor_a02_libcam.utils.sensorprovider",
     srcs: ["vendor/lib/libcam.utils.sensorprovider.so"],
     vendor: true,
     strip: { none: true },
@@ -1397,7 +1397,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcam.vhdr",
+    name: "vendor_a02_libcam.vhdr",
     srcs: ["vendor/lib/libcam.vhdr.so"],
     vendor: true,
     strip: { none: true },
@@ -1406,7 +1406,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcam3a_imem",
+    name: "vendor_a02_libcam3a_imem",
     srcs: ["vendor/lib/libcam3a_imem.so"],
     vendor: true,
     strip: { none: true },
@@ -1415,7 +1415,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo.3dnr",
+    name: "vendor_a02_libcamalgo.3dnr",
     srcs: ["vendor/lib/libcamalgo.3dnr.so"],
     vendor: true,
     strip: { none: true },
@@ -1424,7 +1424,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo.asd",
+    name: "vendor_a02_libcamalgo.asd",
     srcs: ["vendor/lib/libcamalgo.asd.so"],
     vendor: true,
     strip: { none: true },
@@ -1433,7 +1433,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo.dngop",
+    name: "vendor_a02_libcamalgo.dngop",
     srcs: ["vendor/lib/libcamalgo.dngop.so"],
     vendor: true,
     strip: { none: true },
@@ -1442,7 +1442,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo.eis",
+    name: "vendor_a02_libcamalgo.eis",
     srcs: ["vendor/lib/libcamalgo.eis.so"],
     vendor: true,
     strip: { none: true },
@@ -1451,7 +1451,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo.fdft",
+    name: "vendor_a02_libcamalgo.fdft",
     srcs: ["vendor/lib/libcamalgo.fdft.so"],
     vendor: true,
     strip: { none: true },
@@ -1460,7 +1460,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo.flicker",
+    name: "vendor_a02_libcamalgo.flicker",
     srcs: ["vendor/lib/libcamalgo.flicker.so"],
     vendor: true,
     strip: { none: true },
@@ -1469,7 +1469,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo.fsc",
+    name: "vendor_a02_libcamalgo.fsc",
     srcs: ["vendor/lib/libcamalgo.fsc.so"],
     vendor: true,
     strip: { none: true },
@@ -1478,7 +1478,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo.gyro",
+    name: "vendor_a02_libcamalgo.gyro",
     srcs: ["vendor/lib/libcamalgo.gyro.so"],
     vendor: true,
     strip: { none: true },
@@ -1487,7 +1487,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo.ispfeature",
+    name: "vendor_a02_libcamalgo.ispfeature",
     srcs: ["vendor/lib/libcamalgo.ispfeature.so"],
     vendor: true,
     strip: { none: true },
@@ -1496,7 +1496,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo.lmv",
+    name: "vendor_a02_libcamalgo.lmv",
     srcs: ["vendor/lib/libcamalgo.lmv.so"],
     vendor: true,
     strip: { none: true },
@@ -1505,7 +1505,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo.lsc",
+    name: "vendor_a02_libcamalgo.lsc",
     srcs: ["vendor/lib/libcamalgo.lsc.so"],
     vendor: true,
     strip: { none: true },
@@ -1514,7 +1514,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo.nr",
+    name: "vendor_a02_libcamalgo.nr",
     srcs: ["vendor/lib/libcamalgo.nr.so"],
     vendor: true,
     strip: { none: true },
@@ -1523,7 +1523,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo",
+    name: "vendor_a02_libcamalgo",
     srcs: ["vendor/lib/libcamalgo.so"],
     vendor: true,
     strip: { none: true },
@@ -1532,7 +1532,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo.utility",
+    name: "vendor_a02_libcamalgo.utility",
     srcs: ["vendor/lib/libcamalgo.utility.so"],
     vendor: true,
     strip: { none: true },
@@ -1541,7 +1541,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamalgo.warp",
+    name: "vendor_a02_libcamalgo.warp",
     srcs: ["vendor/lib/libcamalgo.warp.so"],
     vendor: true,
     strip: { none: true },
@@ -1550,7 +1550,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamdrv",
+    name: "vendor_a02_libcamdrv",
     srcs: ["vendor/lib/libcamdrv.so"],
     vendor: true,
     strip: { none: true },
@@ -1559,7 +1559,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcamdrv_tuning_mgr",
+    name: "vendor_a02_libcamdrv_tuning_mgr",
     srcs: ["vendor/lib/libcamdrv_tuning_mgr.so"],
     vendor: true,
     strip: { none: true },
@@ -1568,7 +1568,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcameracustom",
+    name: "vendor_a02_libcameracustom",
     srcs: ["vendor/lib/libcameracustom.so"],
     vendor: true,
     strip: { none: true },
@@ -1577,7 +1577,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcares_naptr",
+    name: "vendor_a02_libcares_naptr",
     srcs: ["vendor/lib/libcares_naptr.so"],
     vendor: true,
     strip: { none: true },
@@ -1586,7 +1586,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libccci_util",
+    name: "vendor_a02_libccci_util",
     srcs: ["vendor/lib/libccci_util.so"],
     vendor: true,
     strip: { none: true },
@@ -1595,7 +1595,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_hidl@1.0",
+    name: "vendor_a02_libcodec2_hidl@1.0",
     srcs: ["vendor/lib/libcodec2_hidl@1.0.so"],
     vendor: true,
     strip: { none: true },
@@ -1604,7 +1604,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_hidl@1.1",
+    name: "vendor_a02_libcodec2_hidl@1.1",
     srcs: ["vendor/lib/libcodec2_hidl@1.1.so"],
     vendor: true,
     strip: { none: true },
@@ -1613,7 +1613,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_sec_aacenc",
+    name: "vendor_a02_libcodec2_sec_aacenc",
     srcs: ["vendor/lib/libcodec2_sec_aacenc.so"],
     vendor: true,
     strip: { none: true },
@@ -1622,7 +1622,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_sec_amrnbdec",
+    name: "vendor_a02_libcodec2_sec_amrnbdec",
     srcs: ["vendor/lib/libcodec2_sec_amrnbdec.so"],
     vendor: true,
     strip: { none: true },
@@ -1631,7 +1631,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_sec_amrwbdec",
+    name: "vendor_a02_libcodec2_sec_amrwbdec",
     srcs: ["vendor/lib/libcodec2_sec_amrwbdec.so"],
     vendor: true,
     strip: { none: true },
@@ -1640,7 +1640,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_sec_flacdec",
+    name: "vendor_a02_libcodec2_sec_flacdec",
     srcs: ["vendor/lib/libcodec2_sec_flacdec.so"],
     vendor: true,
     strip: { none: true },
@@ -1649,7 +1649,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_sec_imadec",
+    name: "vendor_a02_libcodec2_sec_imadec",
     srcs: ["vendor/lib/libcodec2_sec_imadec.so"],
     vendor: true,
     strip: { none: true },
@@ -1658,7 +1658,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_sec_mp3dec",
+    name: "vendor_a02_libcodec2_sec_mp3dec",
     srcs: ["vendor/lib/libcodec2_sec_mp3dec.so"],
     vendor: true,
     strip: { none: true },
@@ -1667,7 +1667,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_sec_mp43dec",
+    name: "vendor_a02_libcodec2_sec_mp43dec",
     srcs: ["vendor/lib/libcodec2_sec_mp43dec.so"],
     vendor: true,
     strip: { none: true },
@@ -1676,7 +1676,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_sec_mp4vdec",
+    name: "vendor_a02_libcodec2_sec_mp4vdec",
     srcs: ["vendor/lib/libcodec2_sec_mp4vdec.so"],
     vendor: true,
     strip: { none: true },
@@ -1685,7 +1685,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_sec_soft_common",
+    name: "vendor_a02_libcodec2_sec_soft_common",
     srcs: ["vendor/lib/libcodec2_sec_soft_common.so"],
     vendor: true,
     strip: { none: true },
@@ -1694,7 +1694,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_sec_vc1dec",
+    name: "vendor_a02_libcodec2_sec_vc1dec",
     srcs: ["vendor/lib/libcodec2_sec_vc1dec.so"],
     vendor: true,
     strip: { none: true },
@@ -1703,7 +1703,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_sec_wmadec",
+    name: "vendor_a02_libcodec2_sec_wmadec",
     srcs: ["vendor/lib/libcodec2_sec_wmadec.so"],
     vendor: true,
     strip: { none: true },
@@ -1712,7 +1712,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_sec_wmv7dec",
+    name: "vendor_a02_libcodec2_sec_wmv7dec",
     srcs: ["vendor/lib/libcodec2_sec_wmv7dec.so"],
     vendor: true,
     strip: { none: true },
@@ -1721,7 +1721,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_sec_wmv8dec",
+    name: "vendor_a02_libcodec2_sec_wmv8dec",
     srcs: ["vendor/lib/libcodec2_sec_wmv8dec.so"],
     vendor: true,
     strip: { none: true },
@@ -1730,7 +1730,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_simple_component",
+    name: "vendor_a02_libcodec2_simple_component",
     srcs: ["vendor/lib/libcodec2_simple_component.so"],
     vendor: true,
     strip: { none: true },
@@ -1739,7 +1739,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_soft_ac4dec",
+    name: "vendor_a02_libcodec2_soft_ac4dec",
     srcs: ["vendor/lib/libcodec2_soft_ac4dec.so"],
     vendor: true,
     strip: { none: true },
@@ -1748,7 +1748,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_soft_common",
+    name: "vendor_a02_libcodec2_soft_common",
     srcs: ["vendor/lib/libcodec2_soft_common.so"],
     vendor: true,
     strip: { none: true },
@@ -1757,7 +1757,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_soft_eac3dec",
+    name: "vendor_a02_libcodec2_soft_eac3dec",
     srcs: ["vendor/lib/libcodec2_soft_eac3dec.so"],
     vendor: true,
     strip: { none: true },
@@ -1766,7 +1766,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodec2_vndk",
+    name: "vendor_a02_libcodec2_vndk",
     srcs: ["vendor/lib/libcodec2_vndk.so"],
     vendor: true,
     strip: { none: true },
@@ -1775,7 +1775,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcodecsolutionhelper_vendor",
+    name: "vendor_a02_libcodecsolutionhelper_vendor",
     srcs: ["vendor/lib/libcodecsolutionhelper_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -1784,7 +1784,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcustom_nvram",
+    name: "vendor_a02_libcustom_nvram",
     srcs: ["vendor/lib/libcustom_nvram.so"],
     vendor: true,
     strip: { none: true },
@@ -1793,7 +1793,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libcvsd_mtk",
+    name: "vendor_a02_libcvsd_mtk",
     srcs: ["vendor/lib/libcvsd_mtk.so"],
     vendor: true,
     strip: { none: true },
@@ -1802,7 +1802,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libdeccfg",
+    name: "vendor_a02_libdeccfg",
     srcs: ["vendor/lib/libdeccfg.so"],
     vendor: true,
     strip: { none: true },
@@ -1811,7 +1811,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libdiamondvoice",
+    name: "vendor_a02_libdiamondvoice",
     srcs: ["vendor/lib/libdiamondvoice.so"],
     vendor: true,
     strip: { none: true },
@@ -1820,7 +1820,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libdk_vnd_service_core",
+    name: "vendor_a02_libdk_vnd_service_core",
     srcs: ["vendor/lib/libdk_vnd_service_core.so"],
     vendor: true,
     strip: { none: true },
@@ -1829,7 +1829,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libdpframework",
+    name: "vendor_a02_libdpframework",
     srcs: ["vendor/lib/libdpframework.so"],
     vendor: true,
     strip: { none: true },
@@ -1838,7 +1838,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libdrm",
+    name: "vendor_a02_libdrm",
     srcs: ["vendor/lib/libdrm.so"],
     vendor: true,
     strip: { none: true },
@@ -1847,7 +1847,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libeffecthal.base",
+    name: "vendor_a02_libeffecthal.base",
     srcs: ["vendor/lib/libeffecthal.base.so"],
     vendor: true,
     strip: { none: true },
@@ -1856,7 +1856,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libeffects",
+    name: "vendor_a02_libeffects",
     srcs: ["vendor/lib/libeffects.so"],
     vendor: true,
     strip: { none: true },
@@ -1865,7 +1865,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libeffectsconfig",
+    name: "vendor_a02_libeffectsconfig",
     srcs: ["vendor/lib/libeffectsconfig.so"],
     vendor: true,
     strip: { none: true },
@@ -1874,7 +1874,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libengmode15",
+    name: "vendor_a02_libengmode15",
     srcs: ["vendor/lib/libengmode15.so"],
     vendor: true,
     strip: { none: true },
@@ -1883,7 +1883,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libengmode_client",
+    name: "vendor_a02_libengmode_client",
     srcs: ["vendor/lib/libengmode_client.so"],
     vendor: true,
     strip: { none: true },
@@ -1892,7 +1892,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libengmode_server",
+    name: "vendor_a02_libengmode_server",
     srcs: ["vendor/lib/libengmode_server.so"],
     vendor: true,
     strip: { none: true },
@@ -1901,7 +1901,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libengmode_tlc",
+    name: "vendor_a02_libengmode_tlc",
     srcs: ["vendor/lib/libengmode_tlc.so"],
     vendor: true,
     strip: { none: true },
@@ -1910,7 +1910,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libfeature.face",
+    name: "vendor_a02_libfeature.face",
     srcs: ["vendor/lib/libfeature.face.so"],
     vendor: true,
     strip: { none: true },
@@ -1919,7 +1919,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libfeature.stereo.provider",
+    name: "vendor_a02_libfeature.stereo.provider",
     srcs: ["vendor/lib/libfeature.stereo.provider.so"],
     vendor: true,
     strip: { none: true },
@@ -1928,7 +1928,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libfeature_3dnr",
+    name: "vendor_a02_libfeature_3dnr",
     srcs: ["vendor/lib/libfeature_3dnr.so"],
     vendor: true,
     strip: { none: true },
@@ -1937,7 +1937,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libfeature_fsc",
+    name: "vendor_a02_libfeature_fsc",
     srcs: ["vendor/lib/libfeature_fsc.so"],
     vendor: true,
     strip: { none: true },
@@ -1946,7 +1946,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libfeature_lmv",
+    name: "vendor_a02_libfeature_lmv",
     srcs: ["vendor/lib/libfeature_lmv.so"],
     vendor: true,
     strip: { none: true },
@@ -1955,7 +1955,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libfeature_rss",
+    name: "vendor_a02_libfeature_rss",
     srcs: ["vendor/lib/libfeature_rss.so"],
     vendor: true,
     strip: { none: true },
@@ -1964,7 +1964,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libfeatureiodrv_mem",
+    name: "vendor_a02_libfeatureiodrv_mem",
     srcs: ["vendor/lib/libfeatureiodrv_mem.so"],
     vendor: true,
     strip: { none: true },
@@ -1973,7 +1973,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libfft_vendor",
+    name: "vendor_a02_libfft_vendor",
     srcs: ["vendor/lib/libfft_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -1982,7 +1982,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libfile_op",
+    name: "vendor_a02_libfile_op",
     srcs: ["vendor/lib/libfile_op.so"],
     vendor: true,
     strip: { none: true },
@@ -1991,7 +1991,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libfloatingfeature",
+    name: "vendor_a02_libfloatingfeature",
     srcs: ["vendor/lib/libfloatingfeature.so"],
     vendor: true,
     strip: { none: true },
@@ -2000,7 +2000,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libforkexecwrap",
+    name: "vendor_a02_libforkexecwrap",
     srcs: ["vendor/lib/libforkexecwrap.so"],
     vendor: true,
     strip: { none: true },
@@ -2009,7 +2009,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libfv",
+    name: "vendor_a02_libfv",
     srcs: ["vendor/lib/libfv.so"],
     vendor: true,
     strip: { none: true },
@@ -2018,7 +2018,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libged",
+    name: "vendor_a02_libged",
     srcs: ["vendor/lib/libged.so"],
     vendor: true,
     strip: { none: true },
@@ -2027,7 +2027,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libglslcompiler",
+    name: "vendor_a02_libglslcompiler",
     srcs: ["vendor/lib/libglslcompiler.so"],
     vendor: true,
     strip: { none: true },
@@ -2036,7 +2036,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libgpu_aux",
+    name: "vendor_a02_libgpu_aux",
     srcs: ["vendor/lib/libgpu_aux.so"],
     vendor: true,
     strip: { none: true },
@@ -2045,7 +2045,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libgpud",
+    name: "vendor_a02_libgpud",
     srcs: ["vendor/lib/libgpud.so"],
     vendor: true,
     strip: { none: true },
@@ -2054,7 +2054,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libgralloc_extra",
+    name: "vendor_a02_libgralloc_extra",
     srcs: ["vendor/lib/libgralloc_extra.so"],
     vendor: true,
     strip: { none: true },
@@ -2063,7 +2063,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libgralloc_metadata",
+    name: "vendor_a02_libgralloc_metadata",
     srcs: ["vendor/lib/libgralloc_metadata.so"],
     vendor: true,
     strip: { none: true },
@@ -2072,7 +2072,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libgralloctypes_mtk",
+    name: "vendor_a02_libgralloctypes_mtk",
     srcs: ["vendor/lib/libgralloctypes_mtk.so"],
     vendor: true,
     strip: { none: true },
@@ -2081,7 +2081,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libh264dec_customize",
+    name: "vendor_a02_libh264dec_customize",
     srcs: ["vendor/lib/libh264dec_customize.so"],
     vendor: true,
     strip: { none: true },
@@ -2090,7 +2090,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libh264dec_sa.ca7",
+    name: "vendor_a02_libh264dec_sa.ca7",
     srcs: ["vendor/lib/libh264dec_sa.ca7.so"],
     vendor: true,
     strip: { none: true },
@@ -2099,7 +2099,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libh264dec_sd.ca7",
+    name: "vendor_a02_libh264dec_sd.ca7",
     srcs: ["vendor/lib/libh264dec_sd.ca7.so"],
     vendor: true,
     strip: { none: true },
@@ -2108,7 +2108,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libh264dec_se.ca7",
+    name: "vendor_a02_libh264dec_se.ca7",
     srcs: ["vendor/lib/libh264dec_se.ca7.so"],
     vendor: true,
     strip: { none: true },
@@ -2117,7 +2117,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libh264enc_sa.ca7",
+    name: "vendor_a02_libh264enc_sa.ca7",
     srcs: ["vendor/lib/libh264enc_sa.ca7.so"],
     vendor: true,
     strip: { none: true },
@@ -2126,7 +2126,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libhevce_sb.ca7.android",
+    name: "vendor_a02_libhevce_sb.ca7.android",
     srcs: ["vendor/lib/libhevce_sb.ca7.android.so"],
     vendor: true,
     strip: { none: true },
@@ -2135,7 +2135,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libhidltransport",
+    name: "vendor_a02_libhidltransport",
     srcs: ["vendor/lib/libhidltransport.so"],
     vendor: true,
     strip: { none: true },
@@ -2144,7 +2144,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libhqm_hwparam",
+    name: "vendor_a02_libhqm_hwparam",
     srcs: ["vendor/lib/libhqm_hwparam.so"],
     vendor: true,
     strip: { none: true },
@@ -2153,7 +2153,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libhwbinder",
+    name: "vendor_a02_libhwbinder",
     srcs: ["vendor/lib/libhwbinder.so"],
     vendor: true,
     strip: { none: true },
@@ -2162,7 +2162,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libhwc2on1adapter",
+    name: "vendor_a02_libhwc2on1adapter",
     srcs: ["vendor/lib/libhwc2on1adapter.so"],
     vendor: true,
     strip: { none: true },
@@ -2171,7 +2171,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libhwc2onfbadapter",
+    name: "vendor_a02_libhwc2onfbadapter",
     srcs: ["vendor/lib/libhwc2onfbadapter.so"],
     vendor: true,
     strip: { none: true },
@@ -2180,7 +2180,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libhwm",
+    name: "vendor_a02_libhwm",
     srcs: ["vendor/lib/libhwm.so"],
     vendor: true,
     strip: { none: true },
@@ -2189,7 +2189,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libhwminijail",
+    name: "vendor_a02_libhwminijail",
     srcs: ["vendor/lib/libhwminijail.so"],
     vendor: true,
     strip: { none: true },
@@ -2198,7 +2198,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libhyper",
+    name: "vendor_a02_libhyper",
     srcs: ["vendor/lib/libhyper.so"],
     vendor: true,
     strip: { none: true },
@@ -2207,7 +2207,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libifcutils_mtk",
+    name: "vendor_a02_libifcutils_mtk",
     srcs: ["vendor/lib/libifcutils_mtk.so"],
     vendor: true,
     strip: { none: true },
@@ -2216,7 +2216,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libimageio",
+    name: "vendor_a02_libimageio",
     srcs: ["vendor/lib/libimageio.so"],
     vendor: true,
     strip: { none: true },
@@ -2225,7 +2225,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libimageio_plat_drv",
+    name: "vendor_a02_libimageio_plat_drv",
     srcs: ["vendor/lib/libimageio_plat_drv.so"],
     vendor: true,
     strip: { none: true },
@@ -2234,7 +2234,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libimageio_plat_pipe",
+    name: "vendor_a02_libimageio_plat_pipe",
     srcs: ["vendor/lib/libimageio_plat_pipe.so"],
     vendor: true,
     strip: { none: true },
@@ -2243,7 +2243,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libimgsensorca",
+    name: "vendor_a02_libimgsensorca",
     srcs: ["vendor/lib/libimgsensorca.so"],
     vendor: true,
     strip: { none: true },
@@ -2252,7 +2252,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libion_mtk",
+    name: "vendor_a02_libion_mtk",
     srcs: ["vendor/lib/libion_mtk.so"],
     vendor: true,
     strip: { none: true },
@@ -2261,7 +2261,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libion_ulit",
+    name: "vendor_a02_libion_ulit",
     srcs: ["vendor/lib/libion_ulit.so"],
     vendor: true,
     strip: { none: true },
@@ -2270,7 +2270,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libipsec_ims_shr",
+    name: "vendor_a02_libipsec_ims_shr",
     srcs: ["vendor/lib/libipsec_ims_shr.so"],
     vendor: true,
     strip: { none: true },
@@ -2279,7 +2279,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libispcameraca",
+    name: "vendor_a02_libispcameraca",
     srcs: ["vendor/lib/libispcameraca.so"],
     vendor: true,
     strip: { none: true },
@@ -2288,7 +2288,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libiwt",
+    name: "vendor_a02_libiwt",
     srcs: ["vendor/lib/libiwt.so"],
     vendor: true,
     strip: { none: true },
@@ -2297,7 +2297,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libjpeg-alpha-oal_vendor",
+    name: "vendor_a02_libjpeg-alpha-oal_vendor",
     srcs: ["vendor/lib/libjpeg-alpha-oal_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -2306,7 +2306,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libjpeg-alpha_vendor",
+    name: "vendor_a02_libjpeg-alpha_vendor",
     srcs: ["vendor/lib/libjpeg-alpha_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -2315,7 +2315,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libkeymaster4",
+    name: "vendor_a02_libkeymaster4",
     srcs: ["vendor/lib/libkeymaster4.so"],
     vendor: true,
     strip: { none: true },
@@ -2324,7 +2324,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libkeymaster4_1support",
+    name: "vendor_a02_libkeymaster4_1support",
     srcs: ["vendor/lib/libkeymaster4_1support.so"],
     vendor: true,
     strip: { none: true },
@@ -2333,7 +2333,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libkeymaster4support",
+    name: "vendor_a02_libkeymaster4support",
     srcs: ["vendor/lib/libkeymaster4support.so"],
     vendor: true,
     strip: { none: true },
@@ -2342,7 +2342,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libkeymaster_helper",
+    name: "vendor_a02_libkeymaster_helper",
     srcs: ["vendor/lib/libkeymaster_helper.so"],
     vendor: true,
     strip: { none: true },
@@ -2351,7 +2351,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libkeymaster_messages",
+    name: "vendor_a02_libkeymaster_messages",
     srcs: ["vendor/lib/libkeymaster_messages.so"],
     vendor: true,
     strip: { none: true },
@@ -2360,7 +2360,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libkeymaster_portable",
+    name: "vendor_a02_libkeymaster_portable",
     srcs: ["vendor/lib/libkeymaster_portable.so"],
     vendor: true,
     strip: { none: true },
@@ -2369,7 +2369,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libkeystore-engine-wifi-hidl",
+    name: "vendor_a02_libkeystore-engine-wifi-hidl",
     srcs: ["vendor/lib/libkeystore-engine-wifi-hidl.so"],
     vendor: true,
     strip: { none: true },
@@ -2378,7 +2378,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libkeystore-wifi-hidl",
+    name: "vendor_a02_libkeystore-wifi-hidl",
     srcs: ["vendor/lib/libkeystore-wifi-hidl.so"],
     vendor: true,
     strip: { none: true },
@@ -2387,7 +2387,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libladder",
+    name: "vendor_a02_libladder",
     srcs: ["vendor/lib/libladder.so"],
     vendor: true,
     strip: { none: true },
@@ -2396,7 +2396,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "liblpcnr",
+    name: "vendor_a02_liblpcnr",
     srcs: ["vendor/lib/liblpcnr.so"],
     vendor: true,
     strip: { none: true },
@@ -2405,7 +2405,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmdf",
+    name: "vendor_a02_libmdf",
     srcs: ["vendor/lib/libmdf.so"],
     vendor: true,
     strip: { none: true },
@@ -2414,7 +2414,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmemtrack_GL",
+    name: "vendor_a02_libmemtrack_GL",
     srcs: ["vendor/lib/libmemtrack_GL.so"],
     vendor: true,
     strip: { none: true },
@@ -2423,7 +2423,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmhalImageCodec",
+    name: "vendor_a02_libmhalImageCodec",
     srcs: ["vendor/lib/libmhalImageCodec.so"],
     vendor: true,
     strip: { none: true },
@@ -2432,7 +2432,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libminiui",
+    name: "vendor_a02_libminiui",
     srcs: ["vendor/lib/libminiui.so"],
     vendor: true,
     strip: { none: true },
@@ -2441,7 +2441,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmmprofile",
+    name: "vendor_a02_libmmprofile",
     srcs: ["vendor/lib/libmmprofile.so"],
     vendor: true,
     strip: { none: true },
@@ -2450,7 +2450,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmnl",
+    name: "vendor_a02_libmnl",
     srcs: ["vendor/lib/libmnl.so"],
     vendor: true,
     strip: { none: true },
@@ -2459,7 +2459,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmp4enc_sa.ca7",
+    name: "vendor_a02_libmp4enc_sa.ca7",
     srcs: ["vendor/lib/libmp4enc_sa.ca7.so"],
     vendor: true,
     strip: { none: true },
@@ -2468,7 +2468,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmp4enc_xa.ca7",
+    name: "vendor_a02_libmp4enc_xa.ca7",
     srcs: ["vendor/lib/libmp4enc_xa.ca7.so"],
     vendor: true,
     strip: { none: true },
@@ -2477,7 +2477,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmpvr",
+    name: "vendor_a02_libmpvr",
     srcs: ["vendor/lib/libmpvr.so"],
     vendor: true,
     strip: { none: true },
@@ -2486,7 +2486,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmsbc_mtk",
+    name: "vendor_a02_libmsbc_mtk",
     srcs: ["vendor/lib/libmsbc_mtk.so"],
     vendor: true,
     strip: { none: true },
@@ -2495,7 +2495,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmsnr",
+    name: "vendor_a02_libmsnr",
     srcs: ["vendor/lib/libmsnr.so"],
     vendor: true,
     strip: { none: true },
@@ -2504,7 +2504,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmtcloader",
+    name: "vendor_a02_libmtcloader",
     srcs: ["vendor/lib/libmtcloader.so"],
     vendor: true,
     strip: { none: true },
@@ -3107,7 +3107,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libnbaio_mono",
+    name: "vendor_a02_libnbaio_mono",
     srcs: ["vendor/lib/libnbaio_mono.so"],
     vendor: true,
     strip: { none: true },
@@ -3116,7 +3116,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libneuropilot_hal_utils",
+    name: "vendor_a02_libneuropilot_hal_utils",
     srcs: ["vendor/lib/libneuropilot_hal_utils.so"],
     vendor: true,
     strip: { none: true },
@@ -3125,7 +3125,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libnvram",
+    name: "vendor_a02_libnvram",
     srcs: ["vendor/lib/libnvram.so"],
     vendor: true,
     strip: { none: true },
@@ -3134,7 +3134,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libnvram_daemon_callback",
+    name: "vendor_a02_libnvram_daemon_callback",
     srcs: ["vendor/lib/libnvram_daemon_callback.so"],
     vendor: true,
     strip: { none: true },
@@ -3143,7 +3143,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libnvram_platform",
+    name: "vendor_a02_libnvram_platform",
     srcs: ["vendor/lib/libnvram_platform.so"],
     vendor: true,
     strip: { none: true },
@@ -3152,7 +3152,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libnvram_sec",
+    name: "vendor_a02_libnvram_sec",
     srcs: ["vendor/lib/libnvram_sec.so"],
     vendor: true,
     strip: { none: true },
@@ -3161,7 +3161,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libnvramagentclient",
+    name: "vendor_a02_libnvramagentclient",
     srcs: ["vendor/lib/libnvramagentclient.so"],
     vendor: true,
     strip: { none: true },
@@ -3170,7 +3170,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libopus",
+    name: "vendor_a02_libopus",
     srcs: ["vendor/lib/libopus.so"],
     vendor: true,
     strip: { none: true },
@@ -3179,7 +3179,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libpadm",
+    name: "vendor_a02_libpadm",
     srcs: ["vendor/lib/libpadm.so"],
     vendor: true,
     strip: { none: true },
@@ -3188,7 +3188,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libperfctl_vendor",
+    name: "vendor_a02_libperfctl_vendor",
     srcs: ["vendor/lib/libperfctl_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -3197,7 +3197,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libpixelflinger",
+    name: "vendor_a02_libpixelflinger",
     srcs: ["vendor/lib/libpixelflinger.so"],
     vendor: true,
     strip: { none: true },
@@ -3206,7 +3206,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libpowerhal",
+    name: "vendor_a02_libpowerhal",
     srcs: ["vendor/lib/libpowerhal.so"],
     vendor: true,
     strip: { none: true },
@@ -3215,7 +3215,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libpowerhalwrap_vendor",
+    name: "vendor_a02_libpowerhalwrap_vendor",
     srcs: ["vendor/lib/libpowerhalwrap_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -3224,7 +3224,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libpq_cust_base",
+    name: "vendor_a02_libpq_cust_base",
     srcs: ["vendor/lib/libpq_cust_base.so"],
     vendor: true,
     strip: { none: true },
@@ -3233,7 +3233,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libpq_prot",
+    name: "vendor_a02_libpq_prot",
     srcs: ["vendor/lib/libpq_prot.so"],
     vendor: true,
     strip: { none: true },
@@ -3242,7 +3242,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libprofileparamstorage",
+    name: "vendor_a02_libprofileparamstorage",
     srcs: ["vendor/lib/libprofileparamstorage.so"],
     vendor: true,
     strip: { none: true },
@@ -3251,7 +3251,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libprotobuf-cpp-full-3.9.1",
+    name: "vendor_a02_libprotobuf-cpp-full-3.9.1",
     srcs: ["vendor/lib/libprotobuf-cpp-full-3.9.1.so"],
     vendor: true,
     strip: { none: true },
@@ -3260,7 +3260,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libprotobuf-cpp-lite-3.9.1",
+    name: "vendor_a02_libprotobuf-cpp-lite-3.9.1",
     srcs: ["vendor/lib/libprotobuf-cpp-lite-3.9.1.so"],
     vendor: true,
     strip: { none: true },
@@ -3269,7 +3269,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libpuresoftkeymasterdevice",
+    name: "vendor_a02_libpuresoftkeymasterdevice",
     srcs: ["vendor/lib/libpuresoftkeymasterdevice.so"],
     vendor: true,
     strip: { none: true },
@@ -3278,7 +3278,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libratconfig",
+    name: "vendor_a02_libratconfig",
     srcs: ["vendor/lib/libratconfig.so"],
     vendor: true,
     strip: { none: true },
@@ -3287,7 +3287,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "librecordalive",
+    name: "vendor_a02_librecordalive",
     srcs: ["vendor/lib/librecordalive.so"],
     vendor: true,
     strip: { none: true },
@@ -3296,7 +3296,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libreference-ril",
+    name: "vendor_a02_libreference-ril",
     srcs: ["vendor/lib/libreference-ril.so"],
     vendor: true,
     strip: { none: true },
@@ -3305,7 +3305,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "librgbwlightsensor",
+    name: "vendor_a02_librgbwlightsensor",
     srcs: ["vendor/lib/librgbwlightsensor.so"],
     vendor: true,
     strip: { none: true },
@@ -3323,7 +3323,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "librilutils",
+    name: "vendor_a02_librilutils",
     srcs: ["vendor/lib/librilutils.so"],
     vendor: true,
     strip: { none: true },
@@ -3332,7 +3332,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "librt_extamp_intf",
+    name: "vendor_a02_librt_extamp_intf",
     srcs: ["vendor/lib/librt_extamp_intf.so"],
     vendor: true,
     strip: { none: true },
@@ -3341,7 +3341,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsavsac",
+    name: "vendor_a02_libsavsac",
     srcs: ["vendor/lib/libsavsac.so"],
     vendor: true,
     strip: { none: true },
@@ -3350,7 +3350,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsavscmn",
+    name: "vendor_a02_libsavscmn",
     srcs: ["vendor/lib/libsavscmn.so"],
     vendor: true,
     strip: { none: true },
@@ -3359,7 +3359,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsavsvc",
+    name: "vendor_a02_libsavsvc",
     srcs: ["vendor/lib/libsavsvc.so"],
     vendor: true,
     strip: { none: true },
@@ -3449,7 +3449,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsemnativecarrierfeature",
+    name: "vendor_a02_libsemnativecarrierfeature",
     srcs: ["vendor/lib/libsemnativecarrierfeature.so"],
     vendor: true,
     strip: { none: true },
@@ -3458,7 +3458,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsensorndkbridge",
+    name: "vendor_a02_libsensorndkbridge",
     srcs: ["vendor/lib/libsensorndkbridge.so"],
     vendor: true,
     strip: { none: true },
@@ -3467,7 +3467,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsfplugin_ccodec_utils",
+    name: "vendor_a02_libsfplugin_ccodec_utils",
     srcs: ["vendor/lib/libsfplugin_ccodec_utils.so"],
     vendor: true,
     strip: { none: true },
@@ -3476,7 +3476,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libskeymaster4device",
+    name: "vendor_a02_libskeymaster4device",
     srcs: ["vendor/lib/libskeymaster4device.so"],
     vendor: true,
     strip: { none: true },
@@ -3485,7 +3485,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsnaace",
+    name: "vendor_a02_libsnaace",
     srcs: ["vendor/lib/libsnaace.so"],
     vendor: true,
     strip: { none: true },
@@ -3494,7 +3494,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsnamrnb",
+    name: "vendor_a02_libsnamrnb",
     srcs: ["vendor/lib/libsnamrnb.so"],
     vendor: true,
     strip: { none: true },
@@ -3503,7 +3503,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsnamrwb",
+    name: "vendor_a02_libsnamrwb",
     srcs: ["vendor/lib/libsnamrwb.so"],
     vendor: true,
     strip: { none: true },
@@ -3512,7 +3512,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsoft_attestation_cert",
+    name: "vendor_a02_libsoft_attestation_cert",
     srcs: ["vendor/lib/libsoft_attestation_cert.so"],
     vendor: true,
     strip: { none: true },
@@ -3521,7 +3521,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomx263dsw",
+    name: "vendor_a02_libsomx263dsw",
     srcs: ["vendor/lib/libsomx263dsw.so"],
     vendor: true,
     strip: { none: true },
@@ -3530,7 +3530,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomx264dsw",
+    name: "vendor_a02_libsomx264dsw",
     srcs: ["vendor/lib/libsomx264dsw.so"],
     vendor: true,
     strip: { none: true },
@@ -3539,7 +3539,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomxadpcmd",
+    name: "vendor_a02_libsomxadpcmd",
     srcs: ["vendor/lib/libsomxadpcmd.so"],
     vendor: true,
     strip: { none: true },
@@ -3548,7 +3548,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomxamrd",
+    name: "vendor_a02_libsomxamrd",
     srcs: ["vendor/lib/libsomxamrd.so"],
     vendor: true,
     strip: { none: true },
@@ -3557,7 +3557,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomxcmn",
+    name: "vendor_a02_libsomxcmn",
     srcs: ["vendor/lib/libsomxcmn.so"],
     vendor: true,
     strip: { none: true },
@@ -3566,7 +3566,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomxcore_vendor",
+    name: "vendor_a02_libsomxcore_vendor",
     srcs: ["vendor/lib/libsomxcore_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -3575,7 +3575,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomxflacd",
+    name: "vendor_a02_libsomxflacd",
     srcs: ["vendor/lib/libsomxflacd.so"],
     vendor: true,
     strip: { none: true },
@@ -3584,7 +3584,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomxhevcdsw",
+    name: "vendor_a02_libsomxhevcdsw",
     srcs: ["vendor/lib/libsomxhevcdsw.so"],
     vendor: true,
     strip: { none: true },
@@ -3593,7 +3593,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomxmp3d",
+    name: "vendor_a02_libsomxmp3d",
     srcs: ["vendor/lib/libsomxmp3d.so"],
     vendor: true,
     strip: { none: true },
@@ -3602,7 +3602,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomxmp4vdsw",
+    name: "vendor_a02_libsomxmp4vdsw",
     srcs: ["vendor/lib/libsomxmp4vdsw.so"],
     vendor: true,
     strip: { none: true },
@@ -3611,7 +3611,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomxnaace",
+    name: "vendor_a02_libsomxnaace",
     srcs: ["vendor/lib/libsomxnaace.so"],
     vendor: true,
     strip: { none: true },
@@ -3620,7 +3620,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomxvc1dsw",
+    name: "vendor_a02_libsomxvc1dsw",
     srcs: ["vendor/lib/libsomxvc1dsw.so"],
     vendor: true,
     strip: { none: true },
@@ -3629,7 +3629,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsomxvp8d",
+    name: "vendor_a02_libsomxvp8d",
     srcs: ["vendor/lib/libsomxvp8d.so"],
     vendor: true,
     strip: { none: true },
@@ -3638,7 +3638,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libspeakercalibration",
+    name: "vendor_a02_libspeakercalibration",
     srcs: ["vendor/lib/libspeakercalibration.so"],
     vendor: true,
     strip: { none: true },
@@ -3647,7 +3647,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libspeech_enh_lib",
+    name: "vendor_a02_libspeech_enh_lib",
     srcs: ["vendor/lib/libspeech_enh_lib.so"],
     vendor: true,
     strip: { none: true },
@@ -3656,7 +3656,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libspeechparser_vendor",
+    name: "vendor_a02_libspeechparser_vendor",
     srcs: ["vendor/lib/libspeechparser_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -3665,7 +3665,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsrv_um",
+    name: "vendor_a02_libsrv_um",
     srcs: ["vendor/lib/libsrv_um.so"],
     vendor: true,
     strip: { none: true },
@@ -3683,7 +3683,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_bufferpool@2.0.1",
+    name: "vendor_a02_libstagefright_bufferpool@2.0.1",
     srcs: ["vendor/lib/libstagefright_bufferpool@2.0.1.so"],
     vendor: true,
     strip: { none: true },
@@ -3692,7 +3692,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_bufferqueue_helper_vendor",
+    name: "vendor_a02_libstagefright_bufferqueue_helper_vendor",
     srcs: ["vendor/lib/libstagefright_bufferqueue_helper_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -3701,7 +3701,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_enc_common",
+    name: "vendor_a02_libstagefright_enc_common",
     srcs: ["vendor/lib/libstagefright_enc_common.so"],
     vendor: true,
     strip: { none: true },
@@ -3710,7 +3710,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_flacdec",
+    name: "vendor_a02_libstagefright_flacdec",
     srcs: ["vendor/lib/libstagefright_flacdec.so"],
     vendor: true,
     strip: { none: true },
@@ -3719,7 +3719,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_omx_vendor",
+    name: "vendor_a02_libstagefright_omx_vendor",
     srcs: ["vendor/lib/libstagefright_omx_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -3728,7 +3728,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_aacdec",
+    name: "vendor_a02_libstagefright_soft_aacdec",
     srcs: ["vendor/lib/libstagefright_soft_aacdec.so"],
     vendor: true,
     strip: { none: true },
@@ -3737,7 +3737,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_aacenc",
+    name: "vendor_a02_libstagefright_soft_aacenc",
     srcs: ["vendor/lib/libstagefright_soft_aacenc.so"],
     vendor: true,
     strip: { none: true },
@@ -3746,7 +3746,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_ac4dec",
+    name: "vendor_a02_libstagefright_soft_ac4dec",
     srcs: ["vendor/lib/libstagefright_soft_ac4dec.so"],
     vendor: true,
     strip: { none: true },
@@ -3755,7 +3755,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_amrdec",
+    name: "vendor_a02_libstagefright_soft_amrdec",
     srcs: ["vendor/lib/libstagefright_soft_amrdec.so"],
     vendor: true,
     strip: { none: true },
@@ -3764,7 +3764,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_amrnbenc",
+    name: "vendor_a02_libstagefright_soft_amrnbenc",
     srcs: ["vendor/lib/libstagefright_soft_amrnbenc.so"],
     vendor: true,
     strip: { none: true },
@@ -3773,7 +3773,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_amrwbenc",
+    name: "vendor_a02_libstagefright_soft_amrwbenc",
     srcs: ["vendor/lib/libstagefright_soft_amrwbenc.so"],
     vendor: true,
     strip: { none: true },
@@ -3782,7 +3782,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_avcdec",
+    name: "vendor_a02_libstagefright_soft_avcdec",
     srcs: ["vendor/lib/libstagefright_soft_avcdec.so"],
     vendor: true,
     strip: { none: true },
@@ -3791,7 +3791,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_avcenc",
+    name: "vendor_a02_libstagefright_soft_avcenc",
     srcs: ["vendor/lib/libstagefright_soft_avcenc.so"],
     vendor: true,
     strip: { none: true },
@@ -3800,7 +3800,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_ddpdec",
+    name: "vendor_a02_libstagefright_soft_ddpdec",
     srcs: ["vendor/lib/libstagefright_soft_ddpdec.so"],
     vendor: true,
     strip: { none: true },
@@ -3809,7 +3809,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_flacdec",
+    name: "vendor_a02_libstagefright_soft_flacdec",
     srcs: ["vendor/lib/libstagefright_soft_flacdec.so"],
     vendor: true,
     strip: { none: true },
@@ -3818,7 +3818,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_flacenc",
+    name: "vendor_a02_libstagefright_soft_flacenc",
     srcs: ["vendor/lib/libstagefright_soft_flacenc.so"],
     vendor: true,
     strip: { none: true },
@@ -3827,7 +3827,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_g711dec",
+    name: "vendor_a02_libstagefright_soft_g711dec",
     srcs: ["vendor/lib/libstagefright_soft_g711dec.so"],
     vendor: true,
     strip: { none: true },
@@ -3836,7 +3836,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_gsmdec",
+    name: "vendor_a02_libstagefright_soft_gsmdec",
     srcs: ["vendor/lib/libstagefright_soft_gsmdec.so"],
     vendor: true,
     strip: { none: true },
@@ -3845,7 +3845,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_hevcdec",
+    name: "vendor_a02_libstagefright_soft_hevcdec",
     srcs: ["vendor/lib/libstagefright_soft_hevcdec.so"],
     vendor: true,
     strip: { none: true },
@@ -3854,7 +3854,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_mp3dec",
+    name: "vendor_a02_libstagefright_soft_mp3dec",
     srcs: ["vendor/lib/libstagefright_soft_mp3dec.so"],
     vendor: true,
     strip: { none: true },
@@ -3863,7 +3863,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_mpeg2dec",
+    name: "vendor_a02_libstagefright_soft_mpeg2dec",
     srcs: ["vendor/lib/libstagefright_soft_mpeg2dec.so"],
     vendor: true,
     strip: { none: true },
@@ -3872,7 +3872,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_mpeg4dec",
+    name: "vendor_a02_libstagefright_soft_mpeg4dec",
     srcs: ["vendor/lib/libstagefright_soft_mpeg4dec.so"],
     vendor: true,
     strip: { none: true },
@@ -3881,7 +3881,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_mpeg4enc",
+    name: "vendor_a02_libstagefright_soft_mpeg4enc",
     srcs: ["vendor/lib/libstagefright_soft_mpeg4enc.so"],
     vendor: true,
     strip: { none: true },
@@ -3890,7 +3890,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_opusdec",
+    name: "vendor_a02_libstagefright_soft_opusdec",
     srcs: ["vendor/lib/libstagefright_soft_opusdec.so"],
     vendor: true,
     strip: { none: true },
@@ -3899,7 +3899,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_rawdec",
+    name: "vendor_a02_libstagefright_soft_rawdec",
     srcs: ["vendor/lib/libstagefright_soft_rawdec.so"],
     vendor: true,
     strip: { none: true },
@@ -3908,7 +3908,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_vorbisdec",
+    name: "vendor_a02_libstagefright_soft_vorbisdec",
     srcs: ["vendor/lib/libstagefright_soft_vorbisdec.so"],
     vendor: true,
     strip: { none: true },
@@ -3917,7 +3917,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_vpxdec",
+    name: "vendor_a02_libstagefright_soft_vpxdec",
     srcs: ["vendor/lib/libstagefright_soft_vpxdec.so"],
     vendor: true,
     strip: { none: true },
@@ -3926,7 +3926,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_soft_vpxenc",
+    name: "vendor_a02_libstagefright_soft_vpxenc",
     srcs: ["vendor/lib/libstagefright_soft_vpxenc.so"],
     vendor: true,
     strip: { none: true },
@@ -3935,7 +3935,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_softomx",
+    name: "vendor_a02_libstagefright_softomx",
     srcs: ["vendor/lib/libstagefright_softomx.so"],
     vendor: true,
     strip: { none: true },
@@ -3944,7 +3944,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_softomx_plugin",
+    name: "vendor_a02_libstagefright_softomx_plugin",
     srcs: ["vendor/lib/libstagefright_softomx_plugin.so"],
     vendor: true,
     strip: { none: true },
@@ -3953,7 +3953,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefrighthw",
+    name: "vendor_a02_libstagefrighthw",
     srcs: ["vendor/lib/libstagefrighthw.so"],
     vendor: true,
     strip: { none: true },
@@ -3962,7 +3962,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstereoinfoaccessor_vsdof",
+    name: "vendor_a02_libstereoinfoaccessor_vsdof",
     srcs: ["vendor/lib/libstereoinfoaccessor_vsdof.so"],
     vendor: true,
     strip: { none: true },
@@ -3971,7 +3971,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstorage_otp",
+    name: "vendor_a02_libstorage_otp",
     srcs: ["vendor/lib/libstorage_otp.so"],
     vendor: true,
     strip: { none: true },
@@ -3980,7 +3980,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libsysenv",
+    name: "vendor_a02_libsysenv",
     srcs: ["vendor/lib/libsysenv.so"],
     vendor: true,
     strip: { none: true },
@@ -3989,7 +3989,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libteecl",
+    name: "vendor_a02_libteecl",
     srcs: ["vendor/lib/libteecl.so"],
     vendor: true,
     strip: { none: true },
@@ -3998,7 +3998,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libthha",
+    name: "vendor_a02_libthha",
     srcs: ["vendor/lib/libthha.so"],
     vendor: true,
     strip: { none: true },
@@ -4007,7 +4007,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libtinycompress",
+    name: "vendor_a02_libtinycompress",
     srcs: ["vendor/lib/libtinycompress.so"],
     vendor: true,
     strip: { none: true },
@@ -4016,7 +4016,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libtinyxml",
+    name: "vendor_a02_libtinyxml",
     srcs: ["vendor/lib/libtinyxml.so"],
     vendor: true,
     strip: { none: true },
@@ -4025,7 +4025,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libtqvalidate",
+    name: "vendor_a02_libtqvalidate",
     srcs: ["vendor/lib/libtqvalidate.so"],
     vendor: true,
     strip: { none: true },
@@ -4034,7 +4034,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libudf",
+    name: "vendor_a02_libudf",
     srcs: ["vendor/lib/libudf.so"],
     vendor: true,
     strip: { none: true },
@@ -4043,7 +4043,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libufwriter",
+    name: "vendor_a02_libufwriter",
     srcs: ["vendor/lib/libufwriter.so"],
     vendor: true,
     strip: { none: true },
@@ -4052,7 +4052,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libusc",
+    name: "vendor_a02_libusc",
     srcs: ["vendor/lib/libusc.so"],
     vendor: true,
     strip: { none: true },
@@ -4061,7 +4061,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libuuid",
+    name: "vendor_a02_libuuid",
     srcs: ["vendor/lib/libuuid.so"],
     vendor: true,
     strip: { none: true },
@@ -4070,7 +4070,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvc1dec_sa.ca7",
+    name: "vendor_a02_libvc1dec_sa.ca7",
     srcs: ["vendor/lib/libvc1dec_sa.ca7.so"],
     vendor: true,
     strip: { none: true },
@@ -4079,7 +4079,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvcodec_oal",
+    name: "vendor_a02_libvcodec_oal",
     srcs: ["vendor/lib/libvcodec_oal.so"],
     vendor: true,
     strip: { none: true },
@@ -4088,7 +4088,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvcodec_utility",
+    name: "vendor_a02_libvcodec_utility",
     srcs: ["vendor/lib/libvcodec_utility.so"],
     vendor: true,
     strip: { none: true },
@@ -4097,7 +4097,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvcodecdrv",
+    name: "vendor_a02_libvcodecdrv",
     srcs: ["vendor/lib/libvcodecdrv.so"],
     vendor: true,
     strip: { none: true },
@@ -4106,7 +4106,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvkmanager_vendor",
+    name: "vendor_a02_libvkmanager_vendor",
     srcs: ["vendor/lib/libvkmanager_vendor.so"],
     vendor: true,
     strip: { none: true },
@@ -4115,7 +4115,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvkservice",
+    name: "vendor_a02_libvkservice",
     srcs: ["vendor/lib/libvkservice.so"],
     vendor: true,
     strip: { none: true },
@@ -4124,7 +4124,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvorbisidec",
+    name: "vendor_a02_libvorbisidec",
     srcs: ["vendor/lib/libvorbisidec.so"],
     vendor: true,
     strip: { none: true },
@@ -4133,7 +4133,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvp8dec_sa.ca7",
+    name: "vendor_a02_libvp8dec_sa.ca7",
     srcs: ["vendor/lib/libvp8dec_sa.ca7.so"],
     vendor: true,
     strip: { none: true },
@@ -4142,7 +4142,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvp8enc_sa.ca7",
+    name: "vendor_a02_libvp8enc_sa.ca7",
     srcs: ["vendor/lib/libvp8enc_sa.ca7.so"],
     vendor: true,
     strip: { none: true },
@@ -4151,7 +4151,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvp9dec_sa.ca7",
+    name: "vendor_a02_libvp9dec_sa.ca7",
     srcs: ["vendor/lib/libvp9dec_sa.ca7.so"],
     vendor: true,
     strip: { none: true },
@@ -4160,7 +4160,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvpx",
+    name: "vendor_a02_libvpx",
     srcs: ["vendor/lib/libvpx.so"],
     vendor: true,
     strip: { none: true },
@@ -4169,7 +4169,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvt_custom",
+    name: "vendor_a02_libvt_custom",
     srcs: ["vendor/lib/libvt_custom.so"],
     vendor: true,
     strip: { none: true },
@@ -4178,7 +4178,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libwebrtc_audio_preprocessing",
+    name: "vendor_a02_libwebrtc_audio_preprocessing",
     srcs: ["vendor/lib/libwebrtc_audio_preprocessing.so"],
     vendor: true,
     strip: { none: true },
@@ -4187,7 +4187,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libwifi-hal",
+    name: "vendor_a02_libwifi-hal",
     srcs: ["vendor/lib/libwifi-hal.so"],
     vendor: true,
     strip: { none: true },
@@ -4196,7 +4196,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libwpa_client",
+    name: "vendor_a02_libwpa_client",
     srcs: ["vendor/lib/libwpa_client.so"],
     vendor: true,
     strip: { none: true },
@@ -4205,7 +4205,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libwvhidl",
+    name: "vendor_a02_libwvhidl",
     srcs: ["vendor/lib/libwvhidl.so"],
     vendor: true,
     strip: { none: true },
@@ -4214,7 +4214,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libclearkeycasplugin",
+    name: "vendor_a02_libclearkeycasplugin",
     srcs: ["vendor/lib/mediacas/libclearkeycasplugin.so"],
     vendor: true,
     strip: { none: true },
@@ -4223,7 +4223,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libdrmclearkeyplugin",
+    name: "vendor_a02_libdrmclearkeyplugin",
     srcs: ["vendor/lib/mediadrm/libdrmclearkeyplugin.so"],
     vendor: true,
     strip: { none: true },
@@ -4232,7 +4232,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmockdrmcryptoplugin",
+    name: "vendor_a02_libmockdrmcryptoplugin",
     srcs: ["vendor/lib/mediadrm/libmockdrmcryptoplugin.so"],
     vendor: true,
     strip: { none: true },
@@ -4241,7 +4241,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libwvdrmengine",
+    name: "vendor_a02_libwvdrmengine",
     srcs: ["vendor/lib/mediadrm/libwvdrmengine.so"],
     vendor: true,
     strip: { none: true },
@@ -4250,7 +4250,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudioeffectoffload",
+    name: "vendor_a02_libaudioeffectoffload",
     srcs: ["vendor/lib/soundfx/libaudioeffectoffload.so"],
     vendor: true,
     strip: { none: true },
@@ -4259,7 +4259,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudiopreprocessing",
+    name: "vendor_a02_libaudiopreprocessing",
     srcs: ["vendor/lib/soundfx/libaudiopreprocessing.so"],
     vendor: true,
     strip: { none: true },
@@ -4268,7 +4268,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudiopreprocessing_mtk",
+    name: "vendor_a02_libaudiopreprocessing_mtk",
     srcs: ["vendor/lib/soundfx/libaudiopreprocessing_mtk.so"],
     vendor: true,
     strip: { none: true },
@@ -4277,7 +4277,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libaudiosaplus_sec",
+    name: "vendor_a02_libaudiosaplus_sec",
     srcs: ["vendor/lib/soundfx/libaudiosaplus_sec.so"],
     vendor: true,
     strip: { none: true },
@@ -4286,7 +4286,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libbundlewrapper",
+    name: "vendor_a02_libbundlewrapper",
     srcs: ["vendor/lib/soundfx/libbundlewrapper.so"],
     vendor: true,
     strip: { none: true },
@@ -4304,7 +4304,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libdynproc",
+    name: "vendor_a02_libdynproc",
     srcs: ["vendor/lib/soundfx/libdynproc.so"],
     vendor: true,
     strip: { none: true },
@@ -4313,7 +4313,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libeffectproxy",
+    name: "vendor_a02_libeffectproxy",
     srcs: ["vendor/lib/soundfx/libeffectproxy.so"],
     vendor: true,
     strip: { none: true },
@@ -4322,7 +4322,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libgearvr",
+    name: "vendor_a02_libgearvr",
     srcs: ["vendor/lib/soundfx/libgearvr.so"],
     vendor: true,
     strip: { none: true },
@@ -4331,7 +4331,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libldnhncr",
+    name: "vendor_a02_libldnhncr",
     srcs: ["vendor/lib/soundfx/libldnhncr.so"],
     vendor: true,
     strip: { none: true },
@@ -4340,7 +4340,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmysound",
+    name: "vendor_a02_libmysound",
     srcs: ["vendor/lib/soundfx/libmysound.so"],
     vendor: true,
     strip: { none: true },
@@ -4349,7 +4349,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libmyspace",
+    name: "vendor_a02_libmyspace",
     srcs: ["vendor/lib/soundfx/libmyspace.so"],
     vendor: true,
     strip: { none: true },
@@ -4358,7 +4358,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libplaybackrecorder",
+    name: "vendor_a02_libplaybackrecorder",
     srcs: ["vendor/lib/soundfx/libplaybackrecorder.so"],
     vendor: true,
     strip: { none: true },
@@ -4367,7 +4367,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libreverbwrapper",
+    name: "vendor_a02_libreverbwrapper",
     srcs: ["vendor/lib/soundfx/libreverbwrapper.so"],
     vendor: true,
     strip: { none: true },
@@ -4385,7 +4385,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libswdap",
+    name: "vendor_a02_libswdap",
     srcs: ["vendor/lib/soundfx/libswdap.so"],
     vendor: true,
     strip: { none: true },
@@ -4394,7 +4394,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libvisualizer",
+    name: "vendor_a02_libvisualizer",
     srcs: ["vendor/lib/soundfx/libvisualizer.so"],
     vendor: true,
     strip: { none: true },
@@ -4835,7 +4835,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "vintf-codecsolution-V1-ndk_platform",
+    name: "vendor_a02_vintf-codecsolution-V1-ndk_platform",
     srcs: ["vendor/lib/vintf-codecsolution-V1-ndk_platform.so"],
     vendor: true,
     strip: { none: true },
@@ -4844,7 +4844,7 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "libstagefright_foundation",
+    name: "vendor_a02_libstagefright_foundation",
     srcs: ["vendor/lib/vndk/libstagefright_foundation.so"],
     vendor: true,
     strip: { none: true },
