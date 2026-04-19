@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import argparse, shutil
+import argparse, shutil, os
 from pathlib import Path
 
 CONFLICT_LIBS = {"libalsautils.so", "libril.so", "libvpx.so", "libdrm.so", "libz.so", "libjpeg.so", "libpng.so"}
@@ -24,11 +24,13 @@ def main():
     dst = Path(args.dst).resolve()
     src = Path(args.src).resolve()
     
+    # Force copy semua dari vendor_src ke out_repo
     for f in src.rglob("*"):
         if f.is_file() and ".git" not in f.parts and f.name != "zImage":
             rel = f.relative_to(src)
-            (dst / rel).parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(f, dst / rel)
+            target = dst / rel
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(f, target)
 
     all_f = [f.relative_to(dst) for f in dst.rglob("*") if f.is_file()]
     so_libs = [f for f in all_f if f.suffix == ".so" and f.name not in CONFLICT_LIBS]
@@ -37,6 +39,7 @@ def main():
     write_bp(dst, so_libs)
     write_vendor_mk(dst, etc_files)
     (dst / "Android.mk").write_text("LOCAL_PATH := $(call my-dir)\n\ninclude $(CLEAR_VARS)\n")
+    print(f"DONE: BP={len(so_libs)}, ETC={len(etc_files)}")
 
 if __name__ == "__main__":
     main()
