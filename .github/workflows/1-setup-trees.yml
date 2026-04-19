@@ -30,11 +30,16 @@ jobs:
 
     - name: Generate vendor tree
       run: |
-        # Hapus hasil generate lama dulu biar bersih
-        rm -rf out_repo/vendor/samsung
+        rm -rf out_repo/vendor/samsung/a02
         mkdir -p out_repo/vendor/samsung/a02
+
+        # Copy blobs dari vendor_src ke vendor/samsung/a02 dulu
+        rsync -a --exclude='samsung/' \
+          vendor_src/ out_repo/vendor/samsung/a02/
+
+        # Generate Android.bp + Android.mk dari blobs yang udah ada
         python3 out_repo/scripts/setup/setup_vendor.py \
-          --src out_repo \
+          --src out_repo/vendor/samsung/a02 \
           --dst out_repo/vendor/samsung/a02
 
     - name: Generate device tree
