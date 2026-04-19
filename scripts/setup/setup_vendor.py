@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
-setup_vendor.py - FIXED: Memisahkan Android.mk dan Product Copy Files
+setup_vendor.py - FIXED: Memisahkan Android.mk dan a02-vendor.mk
 """
 import argparse
 from pathlib import Path
 
 CONFLICT_LIBS = {
-    "android.hardware.camera.provider@2.4.so", "libalsautils.so", "libril.so",
-    "libvpx.so", "libdrm.so", "libz.so", "libjpeg.so"
+    "android.hardware.camera.provider@2.4.so", "android.hardware.camera.provider@2.5.so",
+    "android.hardware.camera.provider@2.6.so", "libalsautils.so", "libril.so",
+    "libvpx.so", "libdrm.so", "libz.so", "libjpeg.so", "libpng.so"
 }
 
 def write_bp(dst: Path, so_libs: list):
@@ -26,18 +27,17 @@ def write_bp(dst: Path, so_libs: list):
     (dst / "Android.bp").write_text("\n".join(lines))
 
 def write_mk(dst: Path):
-    # Android.mk sekarang cuma buat include sub-dirs atau modul, bukan copy files
     lines = [
         "LOCAL_PATH := $(call my-dir)",
         "",
         "include $(CLEAR_VARS)",
-        "# Kosongkan dari PRODUCT_COPY_FILES untuk menghindari error readonly",
+        "# File ini sengaja dikosongkan dari PRODUCT_COPY_FILES untuk fix readonly error",
         ""
     ]
     (dst / "Android.mk").write_text("\n".join(lines))
 
 def write_vendor_mk(dst: Path, etc_files: list):
-    # File ini yang bakal di-inherit oleh device tree
+    # File ini yang bakal di-inherit di device/samsung/a02/arrow_a02.mk
     lines = [
         "# Vendor blobs copy files - SM-A022F",
         "PRODUCT_COPY_FILES += \\"
@@ -45,7 +45,12 @@ def write_vendor_mk(dst: Path, etc_files: list):
     entries = []
     for fname, rel_str in etc_files:
         entries.append(f"    vendor/samsung/a02/{rel_str}:$(TARGET_COPY_OUT_VENDOR)/{rel_str}")
-    lines.append(" \\\n".join(entries))
+    
+    if entries:
+        lines.append(" \\\n".join(entries))
+    else:
+        lines.append(" # No files to copy")
+        
     (dst / "a02-vendor.mk").write_text("\n".join(lines))
 
 def main():
@@ -55,9 +60,12 @@ def main():
     args = ap.parse_args()
 
     dst = Path(args.dst).resolve()
-    all_files = list(dst.rglob("*"))
+    # Pastikan folder tujuan ada
+    dst.mkdir(parents=True, exist_ok=True)
+    
+    all_files = [f for f in dst.rglob("*") if f.is_file()]
     so_libs = [f for f in all_files if f.suffix == ".so" and f.name not in CONFLICT_LIBS]
-    etc_files = [(f.name, str(f.relative_to(dst))) for f in all_files if f.is_file() and f.suffix != ".so"]
+    etc_files = [(f.name, str(f.relative_to(dst))) for f in all_files if f.suffix != ".so" and f.name not in ["Android.bp", "Android.mk", "a02-vendor.mk"]]
 
     write_bp(dst, so_libs)
     write_mk(dst)
