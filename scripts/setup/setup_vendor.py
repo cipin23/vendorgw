@@ -18,6 +18,8 @@ CONFLICT_LIBS = {
     "libdownmix.so",
     "libril.so",
     "libstagefright_amrnb_common.so",
+    "libvpx.so",
+    "libdrm.so",
 }
 
 SKIP_ETC = {
