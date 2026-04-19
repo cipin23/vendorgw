@@ -10,16 +10,45 @@ import argparse
 from pathlib import Path
 
 CONFLICT_LIBS = {
+    # Camera HAL
     "android.hardware.camera.provider@2.4.so",
     "android.hardware.camera.provider@2.5.so",
     "android.hardware.camera.provider@2.6.so",
+    # Audio
     "libalsautils.so",
     "libbluetooth_audio_session.so",
     "libdownmix.so",
-    "libril.so",
     "libstagefright_amrnb_common.so",
+    # RIL
+    "libril.so",
+    # Media / codec (ada di external/)
     "libvpx.so",
     "libdrm.so",
+    "libopus.so",
+    "libFLAC.so",
+    "libaom.so",
+    "libvorbisidec.so",
+    "libwebm.so",
+    "libspeex.so",
+    "libgsm.so",
+    "libogg.so",
+    "libvorbis.so",
+    "libxml2.so",
+    "libexpat.so",
+    "libz.so",
+    "libjpeg.so",
+    "libpng.so",
+    "libgif.so",
+    "libwebp.so",
+    "libicuuc.so",
+    "libicui18n.so",
+    "libssl.so",
+    "libcrypto.so",
+    "libpcre.so",
+    "libpcre2.so",
+    "libsqlite.so",
+    "libc++.so",
+    "libunwind.so",
 }
 
 SKIP_ETC = {
