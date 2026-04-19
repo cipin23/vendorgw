@@ -6,10 +6,6 @@ on:
       max_retries:
         description: 'Max auto-fix retries'
         default: '5'
-  # Auto-trigger setelah workflow 1 selesai
-  workflow_run:
-    workflows: ["1. Setup Vendor & Device Tree"]
-    types: [completed]
 
 env:
   ARROW_BRANCH: arrow-11.0
@@ -21,8 +17,6 @@ jobs:
   build-system:
     runs-on: ubuntu-22.04
     timeout-minutes: 360
-    # Kalau trigger dari workflow_run, skip kalau workflow 1 gagal
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
 
     steps:
     - name: Checkout this repo (ambil device & vendor tree)
