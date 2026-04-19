@@ -1,0 +1,156 @@
+name: Build System
+
+on:
+  workflow_dispatch:
+    inputs:
+      retry_count:
+        description: 'Max auto-fix retries'
+        default: '5'
+
+env:
+  ARROW_BRANCH: arrow-11.0
+  DEVICE: a02
+  VENDOR: samsung
+  TARGET: system
+  VENDOR_REPO: cipin23/vendorgw
+  VENDOR_RELEASE: v0.1
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    timeout-minutes: 360
+
+    steps:
+    - name: Free disk space
+      run: |
+        sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/lib/android
+        sudo apt-get clean
+        df -h
+
+    - name: Install dependencies
+      run: |
+        sudo apt-get update -qq
+        sudo apt-get install -y \
+          bc bison build-essential ccache curl flex g++-multilib gcc-multilib \
+          git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev \
+          lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev \
+          libwxgtk3.0-gtk3-dev libxml2 libxml2-utils lzop pngcrush rsync \
+          schedtool squashfs-tools xsltproc zip zlib1g-dev python3 python3-pip \
+          openjdk-11-jdk repo
+
+    - name: Setup repo tool
+      run: |
+        mkdir -p ~/bin
+        curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+        chmod a+x ~/bin/repo
+        echo "$HOME/bin" >> $GITHUB_PATH
+
+    - name: Configure git
+      run: |
+        git config --global user.email "build@arrow.local"
+        git config --global user.name "Arrow Builder"
+        git config --global color.ui false
+
+    - name: Sync ArrowOS sources
+      run: |
+        mkdir -p /mnt/arrow
+        cd /mnt/arrow
+        repo init -u https://github.com/ArrowOS/android_manifest.git \
+          -b $ARROW_BRANCH --depth=1
+        repo sync -c -j$(nproc) --force-sync --no-clone-bundle --no-tags \
+          2>&1 | tail -20
+
+    - name: Download vendor blobs from release
+      run: |
+        cd /mnt/arrow
+        mkdir -p .downloads
+        # Download all release assets
+        ASSETS=$(curl -s https://api.github.com/repos/$VENDOR_REPO/releases/tags/$VENDOR_RELEASE \
+          | python3 -c "import sys,json; [print(a['browser_download_url']) for a in json.load(sys.stdin)['assets']]")
+        for url in $ASSETS; do
+          echo "Downloading: $url"
+          wget -q -P .downloads "$url"
+        done
+        ls -lh .downloads/
+
+    - name: Checkout device tree generator
+      uses: actions/checkout@v3
+      with:
+        path: /mnt/arrow/scripts/setup
+
+    - name: Setup vendor tree
+      run: |
+        cd /mnt/arrow
+        mkdir -p vendor/samsung/a02
+        # Clone vendor blobs repo
+        git clone --depth=1 https://github.com/$VENDOR_REPO.git .vendor_src
+
+        # Copy blobs into vendor tree
+        python3 scripts/setup/setup_vendor.py \
+          --src .vendor_src \
+          --dst vendor/samsung/a02
+
+    - name: Setup device tree
+      run: |
+        cd /mnt/arrow
+        mkdir -p device/samsung/a02
+        python3 scripts/setup/gen_device_tree.py \
+          --vendor-src .vendor_src \
+          --out device/samsung/a02
+
+    - name: Setup ccache
+      uses: actions/cache@v3
+      with:
+        path: ~/.ccache
+        key: ccache-arrow-a02-${{ github.run_number }}
+        restore-keys: |
+          ccache-arrow-a02-
+
+    - name: Build system.img with auto-fix loop
+      run: |
+        cd /mnt/arrow
+        export USE_CCACHE=1
+        export CCACHE_DIR=~/.ccache
+        ccache -M 50G
+
+        source build/envsetup.sh
+        lunch arrow_a02-userdebug
+
+        MAX_RETRIES=${{ github.event.inputs.retry_count }}
+        RETRY=0
+        BUILD_LOG=/tmp/build.log
+
+        while [ $RETRY -lt $MAX_RETRIES ]; do
+          echo "=== Build attempt $((RETRY+1))/$MAX_RETRIES ==="
+          
+          make systemimage -j$(nproc) 2>&1 | tee $BUILD_LOG
+          
+          if [ ${PIPESTATUS[0]} -eq 0 ]; then
+            echo "BUILD SUCCESS"
+            break
+          fi
+          
+          echo "Build failed, running auto-fix..."
+          python3 scripts/setup/autofix.py --log $BUILD_LOG --tree device/samsung/a02
+          RETRY=$((RETRY+1))
+        done
+
+        if [ $RETRY -eq $MAX_RETRIES ]; then
+          echo "Max retries reached. Last 100 lines:"
+          tail -100 $BUILD_LOG
+          exit 1
+        fi
+
+    - name: Upload system.img
+      uses: actions/upload-artifact@v3
+      with:
+        name: system-img-${{ github.run_number }}
+        path: /mnt/arrow/out/target/product/a02/system.img
+        retention-days: 7
+
+    - name: Upload build log
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: build-log-${{ github.run_number }}
+        path: /tmp/build.log
