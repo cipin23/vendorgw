@@ -53,8 +53,20 @@ def collect_blobs(src: Path):
     for f in sorted(vendor_root.rglob("*")):
         if not f.is_file():
             continue
-        rel = f.relative_to(src if not (src / "vendor").exists() else src)
+        # Pastiin file masih di bawah vendor_root
+        try:
+            rel = f.relative_to(vendor_root)
+        except ValueError:
+            print(f"[skip] path outside vendor_root: {f}")
+            continue
         rel_str = str(rel)
+        # Skip jika path mulai dengan .. (escape dari vendor_root)
+        if rel_str.startswith(".."):
+            print(f"[skip] relative escape path: {rel_str}")
+            continue
+        # Skip generated files dari run sebelumnya
+        if f.name in ("Android.bp", "Android.mk", "BoardConfigVendor.mk"):
+            continue
         if should_skip(rel_str):
             continue
         ext = f.suffix
@@ -110,7 +122,10 @@ def write_android_mk(dst: Path, blobs: dict):
     for category in ("etc", "other"):
         for f, rel in blobs[category]:
             rel_str = str(rel).replace("\\", "/")
-            copy_entries.append(f'    $(LOCAL_PATH)/{rel_str}:{rel_str}')
+            # Skip jika path tidak valid
+            if rel_str.startswith("..") or rel_str.startswith("/"):
+                continue
+            copy_entries.append(f'    $(LOCAL_PATH)/{rel_str}:$(TARGET_COPY_OUT_VENDOR)/{rel_str}')
 
     lines.append(" \\\n".join(copy_entries))
     lines.append("")
