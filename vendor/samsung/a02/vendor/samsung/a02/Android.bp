@@ -9702,3 +9702,4854 @@ cc_prebuilt_library_shared {
     check_elf_files: false,
     prefer: true,
 }
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio.common-util",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/android.hardware.audio.common-util.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio.common@2.0-util",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/android.hardware.audio.common@2.0-util.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio.common@6.0-util",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/android.hardware.audio.common@6.0-util.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.camera.provider@2.4-legacy",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/android.hardware.camera.provider@2.4-legacy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.camera.provider@2.5-legacy",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/android.hardware.camera.provider@2.5-legacy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.gatekeeper@1.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/android.hardware.gatekeeper@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.graphics.composer@2.1-resources",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/android.hardware.graphics.composer@2.1-resources.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.power-service-mediatek",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/android.hardware.power-service-mediatek.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.device@1.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/camera.device@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.device@3.2-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/camera.device@3.2-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.device@3.3-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/camera.device@3.3-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.device@3.4-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/camera.device@3.4-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.device@3.5-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/camera.device@3.5-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libEGL_mtk",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/egl/libEGL_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libGLES_meow",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/egl/libGLES_meow.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libGLESv1_CM_mtk",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/egl/libGLESv1_CM_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libGLESv2_mtk",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/egl/libGLESv2_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMEOW_trace",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/egl/libMEOW_trace.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "gc02m1_mipi_raw_IdxMgr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/gc02m1_mipi_raw_IdxMgr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "gc02m1_mipi_raw_tuning",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/gc02m1_mipi_raw_tuning.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "gc5035_mipi_raw_IdxMgr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/gc5035_mipi_raw_IdxMgr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "gc5035_mipi_raw_tuning",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/gc5035_mipi_raw_tuning.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio.effect@2.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/android.hardware.audio.effect@2.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio.effect@6.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/android.hardware.audio.effect@6.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio@2.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/android.hardware.audio@2.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.audio@6.0-impl-mediatek",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/android.hardware.audio@6.0-impl-mediatek.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.bluetooth.audio@2.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/android.hardware.bluetooth.audio@2.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.bluetooth@1.0-impl-mediatek",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/android.hardware.bluetooth@1.0-impl-mediatek.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.gnss@2.1-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/android.hardware.gnss@2.1-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.graphics.mapper@4.0-impl-mediatek",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.health@2.0-impl-2.1-samsung",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/android.hardware.health@2.0-impl-2.1-samsung.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.memtrack@1.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/android.hardware.memtrack@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.renderscript@1.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/android.hardware.renderscript@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.sensors@1.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/android.hardware.sensors@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.soundtrigger@2.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/android.hardware.soundtrigger@2.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.thermal@1.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/android.hardware.thermal@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "android.hardware.thermal@2.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/android.hardware.thermal@2.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio.bluetooth.default",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/audio.bluetooth.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio.primary.default",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/audio.primary.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio.primary.mt6739",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/audio.primary.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio.r_submix.default",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/audio.r_submix.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio.r_submix.mt6739",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/audio.r_submix.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio.sec_primary.default",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/audio.sec_primary.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio.usb.default",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/audio.usb.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio.usb.mt6739",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/audio.usb.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "audio_policy.stub",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/audio_policy.stub.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "camera.mt6739",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/camera.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "gatekeeper.mt6739",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/gatekeeper.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "gps.default",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/gps.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "gralloc.default",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/gralloc.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "gralloc.rogue",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/gralloc.rogue.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "hwcomposer.mt6739",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/hwcomposer.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lights.mt6739",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/lights.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "local_time.default",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/local_time.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "memtrack.mt6739",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/memtrack.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "power.default",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/power.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "power.mt6739",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/power.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "sensors.mt6739",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/sensors.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "thermal.mt6739",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/thermal.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.bluetooth.audio@2.1-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.camera.lomoeffect@1.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mms@1.5-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/vendor.mediatek.hardware.mms@1.5-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mtkpower@1.1-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/vendor.mediatek.hardware.mtkpower@1.1-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.nvram@1.1-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.audio@1.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/vendor.samsung.hardware.audio@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.camera.provider@4.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.gnss@2.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/vendor.samsung.hardware.gnss@2.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vibrator.default",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/vibrator.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vulkan.mt6739",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/hw/vulkan.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "imx258_mipi_raw_IdxMgr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/imx258_mipi_raw_IdxMgr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "imx258_mipi_raw_tuning",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/imx258_mipi_raw_tuning.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib3a.ae.core",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/lib3a.ae.core.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib3a.ae",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/lib3a.ae.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib3a.af.core",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/lib3a.af.core.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib3a.af",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/lib3a.af.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib3a.awb.core",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/lib3a.awb.core.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib3a.awb",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/lib3a.awb.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib3a.flash",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/lib3a.flash.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib3a.log",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/lib3a.log.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libDR",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libDR.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libHMT",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libHMT.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libIMGegl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libIMGegl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libJpgDecPipe",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libJpgDecPipe.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libJpgEncPipe",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libJpgEncPipe.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMcClient",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libMcClient.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMtkOmxAdpcmDec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libMtkOmxAdpcmDec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMtkOmxCore",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libMtkOmxCore.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMtkOmxGsmDec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libMtkOmxGsmDec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMtkOmxMp3Dec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libMtkOmxMp3Dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMtkOmxVdecEx",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libMtkOmxVdecEx.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMtkOmxVenc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libMtkOmxVenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libMtkSpeechEnh",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libMtkSpeechEnh.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOpenCL",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libOpenCL.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libOpenCv.camera.samsung",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libOpenCv.camera.samsung.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libPVRMtkutils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libPVRMtkutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libPVROCL",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libPVROCL.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libPVRScopeServices",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libPVRScopeServices.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSecC2ComponentStore",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libSecC2ComponentStore.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSonyIMX230PdafLibrary",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libSonyIMX230PdafLibrary.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSonyIMX230PdafLibraryWrapper",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libSonyIMX230PdafLibraryWrapper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSonyIMX338PdafLibrary",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libSonyIMX338PdafLibrary.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSonyIMX338PdafLibraryWrapper",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libSonyIMX338PdafLibraryWrapper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSonyIMX386PdafLibrary",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libSonyIMX386PdafLibrary.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSonyIMX386PdafLibraryWrapper",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libSonyIMX386PdafLibraryWrapper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSonyIMX519PdafLibrary",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libSonyIMX519PdafLibrary.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSonyIMX519PdafLibraryWrapper",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libSonyIMX519PdafLibraryWrapper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libSwJpgCodec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libSwJpgCodec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib_SamsungRec_07010",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/lib_SamsungRec_07010.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib_SoundAlive_3DPosition_ver202",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/lib_SoundAlive_3DPosition_ver202.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib_SoundAlive_AlbumArt_ver105",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/lib_SoundAlive_AlbumArt_ver105.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib_SoundAlive_play_plus_ver400",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/lib_SoundAlive_play_plus_ver400.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib_SoundBooster_ver1050",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/lib_SoundBooster_ver1050.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib_iir",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/lib_iir.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "lib_speech_enh",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/lib_speech_enh.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libacdk",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libacdk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaedv",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libaedv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libalsautils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libalsautils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudio-ril",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libaudio-ril.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudio_param_parser-vnd",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libaudio_param_parser-vnd.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudiocompensationfilter_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libaudiocompensationfilter_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudiocompensationfilterc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libaudiocompensationfilterc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudiocomponentengine_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libaudiocomponentengine_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudiocomponentenginec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libaudiocomponentenginec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudiocustparam_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libaudiocustparam_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudiodcrflt_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libaudiodcrflt_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudiofmtconv",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libaudiofmtconv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudiofoundation",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libaudiofoundation.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudioloudc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libaudioloudc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudioprimarydevicehalifclient",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libaudioprimarydevicehalifclient.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudiotoolkit_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libaudiotoolkit_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaurisysdemo",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libaurisysdemo.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libavservices_minijail",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libavservices_minijail.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbessound_hd_mtk_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libbessound_hd_mtk_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libblisrc32_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libblisrc32_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libbluetooth_audio_session",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libbluetooth_audio_session.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbluetooth_audio_session_mediatek",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libbluetooth_audio_session_mediatek.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbluetooth_hw_test",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libbluetooth_hw_test.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbluetooth_mtk",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libbluetooth_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbluetooth_mtk_pure",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libbluetooth_mtk_pure.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbluetooth_relayer",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libbluetooth_relayer.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbluetoothem_mtk",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libbluetoothem_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbt-vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libbt-vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbwc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libbwc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcam.feature_utils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcam.feature_utils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcam.hal3a.cctsvr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcam.hal3a.cctsvr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcam.hal3a.log",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcam.hal3a.log.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcam.hal3a.v3.dng",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcam.hal3a.v3.dng.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcam.hal3a.v3.lsctbl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcam.hal3a.v3.lsctbl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcam.hal3a.v3.nvram",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcam.hal3a.v3.nvram.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcam.hal3a.v3",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcam.hal3a.v3.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcam.halisp",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcam.halisp.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcam.halsensor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcam.halsensor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcam.iopipe",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcam.iopipe.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcam.pdtblgen",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcam.pdtblgen.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcam.utils.sensorprovider",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcam.utils.sensorprovider.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcam.vhdr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcam.vhdr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcam3a_imem",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcam3a_imem.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamalgo.3dnr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamalgo.3dnr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamalgo.asd",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamalgo.asd.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamalgo.dngop",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamalgo.dngop.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamalgo.eis",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamalgo.eis.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamalgo.fdft",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamalgo.fdft.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamalgo.flicker",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamalgo.flicker.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamalgo.fsc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamalgo.fsc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamalgo.gyro",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamalgo.gyro.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamalgo.ispfeature",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamalgo.ispfeature.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamalgo.lmv",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamalgo.lmv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamalgo.lsc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamalgo.lsc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamalgo.nr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamalgo.nr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamalgo",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamalgo.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamalgo.utility",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamalgo.utility.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamalgo.warp",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamalgo.warp.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamdrv",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamdrv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcamdrv_tuning_mgr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcamdrv_tuning_mgr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcameracustom",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcameracustom.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcares_naptr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcares_naptr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libccci_util",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libccci_util.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_hidl@1.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_hidl@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_hidl@1.1",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_hidl@1.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_sec_aacenc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_sec_aacenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_sec_amrnbdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_sec_amrnbdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_sec_amrwbdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_sec_amrwbdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_sec_flacdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_sec_flacdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_sec_imadec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_sec_imadec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_sec_mp3dec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_sec_mp3dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_sec_mp43dec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_sec_mp43dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_sec_mp4vdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_sec_mp4vdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_sec_soft_common",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_sec_soft_common.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_sec_vc1dec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_sec_vc1dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_sec_wmadec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_sec_wmadec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_sec_wmv7dec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_sec_wmv7dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_sec_wmv8dec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_sec_wmv8dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_simple_component",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_simple_component.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_soft_ac4dec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_soft_ac4dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_soft_common",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_soft_common.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_soft_eac3dec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_soft_eac3dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodec2_vndk",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodec2_vndk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcodecsolutionhelper_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcodecsolutionhelper_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcustom_nvram",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcustom_nvram.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libcvsd_mtk",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libcvsd_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdeccfg",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libdeccfg.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdiamondvoice",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libdiamondvoice.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdk_vnd_service_core",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libdk_vnd_service_core.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdpframework",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libdpframework.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdrm",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libdrm.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libeffecthal.base",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libeffecthal.base.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libeffects",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libeffects.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libeffectsconfig",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libeffectsconfig.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libengmode15",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libengmode15.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libengmode_client",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libengmode_client.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libengmode_server",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libengmode_server.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libengmode_tlc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libengmode_tlc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libfeature.face",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libfeature.face.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libfeature.stereo.provider",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libfeature.stereo.provider.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libfeature_3dnr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libfeature_3dnr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libfeature_fsc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libfeature_fsc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libfeature_lmv",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libfeature_lmv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libfeature_rss",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libfeature_rss.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libfeatureiodrv_mem",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libfeatureiodrv_mem.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libfft_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libfft_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libfile_op",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libfile_op.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libfloatingfeature",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libfloatingfeature.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libforkexecwrap",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libforkexecwrap.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libfv",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libfv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libged",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libged.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libglslcompiler",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libglslcompiler.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgpu_aux",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libgpu_aux.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgpud",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libgpud.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgralloc_extra",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libgralloc_extra.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgralloc_metadata",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libgralloc_metadata.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgralloctypes_mtk",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libgralloctypes_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libh264dec_customize",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libh264dec_customize.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libh264dec_sa.ca7",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libh264dec_sa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libh264dec_sd.ca7",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libh264dec_sd.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libh264dec_se.ca7",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libh264dec_se.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libh264enc_sa.ca7",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libh264enc_sa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhevce_sb.ca7.android",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libhevce_sb.ca7.android.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhidltransport",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libhidltransport.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhqm_hwparam",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libhqm_hwparam.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhwbinder",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libhwbinder.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhwc2on1adapter",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libhwc2on1adapter.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhwc2onfbadapter",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libhwc2onfbadapter.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhwm",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libhwm.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhwminijail",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libhwminijail.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libhyper",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libhyper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libifcutils_mtk",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libifcutils_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libimageio",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libimageio.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libimageio_plat_drv",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libimageio_plat_drv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libimageio_plat_pipe",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libimageio_plat_pipe.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libimgsensorca",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libimgsensorca.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libion_mtk",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libion_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libion_ulit",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libion_ulit.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libipsec_ims_shr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libipsec_ims_shr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libispcameraca",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libispcameraca.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libiwt",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libiwt.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libjpeg-alpha-oal_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libjpeg-alpha-oal_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libjpeg-alpha_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libjpeg-alpha_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libkeymaster4",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libkeymaster4.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libkeymaster4_1support",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libkeymaster4_1support.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libkeymaster4support",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libkeymaster4support.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libkeymaster_helper",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libkeymaster_helper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libkeymaster_messages",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libkeymaster_messages.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libkeymaster_portable",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libkeymaster_portable.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libkeystore-engine-wifi-hidl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libkeystore-engine-wifi-hidl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libkeystore-wifi-hidl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libkeystore-wifi-hidl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libladder",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libladder.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "liblpcnr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/liblpcnr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmdf",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmdf.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmemtrack_GL",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmemtrack_GL.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmhalImageCodec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmhalImageCodec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libminiui",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libminiui.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmmprofile",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmmprofile.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmnl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmnl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmp4enc_sa.ca7",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmp4enc_sa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmp4enc_xa.ca7",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmp4enc_xa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmpvr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmpvr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmsbc_mtk",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmsbc_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmsnr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmsnr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtcloader",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtcloader.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtk_drvb",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtk_drvb.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkares",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkares.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam.eventcallback",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam.eventcallback.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam.featurepipe.capture",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam.featurepipe.capture.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam.featurepipe.streaming",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam.featurepipe.streaming.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam.featurepipe.vsdof_util",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam.featurepipe.vsdof_util.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam.logicalmodule",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam.logicalmodule.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_3rdparty.core",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_3rdparty.core.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_3rdparty.customer",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_3rdparty.customer.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_3rdparty.mtk",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_3rdparty.mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_3rdparty",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_3rdparty.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_calibration_convertor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_calibration_convertor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_calibration_provider",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_calibration_provider.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_debugutils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_debugutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_device3_app",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_device3_app.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_device3_hal",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_device3_hal.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_device3_legacy",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_device3_legacy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_device3_utils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_device3_utils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_devicesessionpolicy",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_devicesessionpolicy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_diputils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_diputils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_exif",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_exif.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_featurepolicy",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_featurepolicy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_featureutils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_featureutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_fwkutils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_fwkutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_grallocutils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_grallocutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_hwnode",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_hwnode.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_hwutils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_hwutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_imgbuf",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_imgbuf.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_metadata",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_metadata.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_metastore",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_metastore.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_modulefactory_aaa",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_modulefactory_aaa.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_modulefactory_custom",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_modulefactory_custom.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_modulefactory_drv",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_modulefactory_drv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_modulefactory_feature",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_modulefactory_feature.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_modulefactory_utils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_modulefactory_utils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_modulehelper",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_modulehelper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipeline",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_pipeline.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipeline_fbm",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_pipeline_fbm.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinemodel",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_pipelinemodel.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinemodel_adapter",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_pipelinemodel_adapter.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinemodel_capture",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_pipelinemodel_capture.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinemodel_session",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_pipelinemodel_session.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinemodel_utils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_pipelinemodel_utils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinemodel_zsl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_pipelinemodel_zsl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinepolicy-security",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_pipelinepolicy-security.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinepolicy-smvr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_pipelinepolicy-smvr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinepolicy",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_pipelinepolicy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinepolicy_factory",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_pipelinepolicy_factory.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_prerelease",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_prerelease.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_rsc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_rsc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_stdutils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_stdutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_streamutils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_streamutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_synchelper",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_synchelper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_sysutils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_sysutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_tuning_utils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_tuning_utils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_ulog",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcam_ulog.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcutils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkcutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkhardware_legacy",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkhardware_legacy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtklimiter_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtklimiter_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtknetutils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtknetutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkperf_client_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkperf_client_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkproperty",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkproperty.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkrillog",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkrillog.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkshifter_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkshifter_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtksysutils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtksysutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkutils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libmtkutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libnbaio_mono",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libnbaio_mono.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libneuropilot_hal_utils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libneuropilot_hal_utils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libnvram",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libnvram.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libnvram_daemon_callback",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libnvram_daemon_callback.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libnvram_platform",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libnvram_platform.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libnvram_sec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libnvram_sec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libnvramagentclient",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libnvramagentclient.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libopus",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libopus.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libpadm",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libpadm.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libperfctl_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libperfctl_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libpixelflinger",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libpixelflinger.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libpowerhal",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libpowerhal.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libpowerhalwrap_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libpowerhalwrap_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libpq_cust_base",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libpq_cust_base.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libpq_prot",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libpq_prot.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libprofileparamstorage",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libprofileparamstorage.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-full-3.9.1",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libprotobuf-cpp-full-3.9.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libprotobuf-cpp-lite-3.9.1",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libprotobuf-cpp-lite-3.9.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libpuresoftkeymasterdevice",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libpuresoftkeymasterdevice.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libratconfig",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libratconfig.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "librecordalive",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/librecordalive.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libreference-ril",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libreference-ril.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "librgbwlightsensor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/librgbwlightsensor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libril",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libril.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "librilutils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/librilutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "librt_extamp_intf",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/librt_extamp_intf.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsavsac",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsavsac.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsavscmn",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsavscmn.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsavsvc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsavsvc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsec-ril-dsds",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsec-ril-dsds.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsec-ril",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsec-ril.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsec2mtk_conversion",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsec2mtk_conversion.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsecaudiocoreutils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsecaudiocoreutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsecaudioinfo",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsecaudioinfo.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libseccam_util",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libseccam_util.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsecnativefeature",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsecnativefeature.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsecril-client",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsecril-client.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsecure_storage",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsecure_storage.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsemnativecarrierfeature",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsemnativecarrierfeature.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsensorndkbridge",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsensorndkbridge.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsfplugin_ccodec_utils",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsfplugin_ccodec_utils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libskeymaster4device",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libskeymaster4device.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsnaace",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsnaace.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsnamrnb",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsnamrnb.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsnamrwb",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsnamrwb.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsoft_attestation_cert",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsoft_attestation_cert.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomx263dsw",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsomx263dsw.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomx264dsw",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsomx264dsw.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomxadpcmd",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsomxadpcmd.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomxamrd",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsomxamrd.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomxcmn",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsomxcmn.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomxcore_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsomxcore_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomxflacd",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsomxflacd.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomxhevcdsw",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsomxhevcdsw.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomxmp3d",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsomxmp3d.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomxmp4vdsw",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsomxmp4vdsw.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomxnaace",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsomxnaace.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomxvc1dsw",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsomxvc1dsw.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsomxvp8d",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsomxvp8d.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libspeakercalibration",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libspeakercalibration.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libspeech_enh_lib",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libspeech_enh_lib.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libspeechparser_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libspeechparser_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsrv_um",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsrv_um.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_amrnb_common",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_amrnb_common.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_bufferpool@2.0.1",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_bufferpool@2.0.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_bufferqueue_helper_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_bufferqueue_helper_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_enc_common",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_enc_common.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_flacdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_flacdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_omx_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_omx_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_aacdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_aacdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_aacenc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_aacenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_ac4dec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_ac4dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_amrdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_amrdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_amrnbenc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_amrnbenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_amrwbenc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_amrwbenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_avcdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_avcdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_avcenc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_avcenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_ddpdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_ddpdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_flacdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_flacdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_flacenc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_flacenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_g711dec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_g711dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_gsmdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_gsmdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_hevcdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_hevcdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_mp3dec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_mp3dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_mpeg2dec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_mpeg2dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_mpeg4dec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_mpeg4dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_mpeg4enc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_mpeg4enc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_opusdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_opusdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_rawdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_rawdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_vorbisdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_vorbisdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_vpxdec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_vpxdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_soft_vpxenc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_soft_vpxenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_softomx",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_softomx.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_softomx_plugin",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefright_softomx_plugin.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefrighthw",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstagefrighthw.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstereoinfoaccessor_vsdof",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstereoinfoaccessor_vsdof.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstorage_otp",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libstorage_otp.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsysenv",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libsysenv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libteecl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libteecl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libthha",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libthha.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libtinycompress",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libtinycompress.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libtinyxml",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libtinyxml.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libtqvalidate",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libtqvalidate.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libudf",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libudf.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libufwriter",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libufwriter.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libusc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libusc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libuuid",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libuuid.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvc1dec_sa.ca7",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libvc1dec_sa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvcodec_oal",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libvcodec_oal.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvcodec_utility",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libvcodec_utility.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvcodecdrv",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libvcodecdrv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvkmanager_vendor",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libvkmanager_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvkservice",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libvkservice.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvorbisidec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libvorbisidec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvp8dec_sa.ca7",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libvp8dec_sa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvp8enc_sa.ca7",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libvp8enc_sa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvp9dec_sa.ca7",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libvp9dec_sa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvpx",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libvpx.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvt_custom",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libvt_custom.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwebrtc_audio_preprocessing",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libwebrtc_audio_preprocessing.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwifi-hal",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libwifi-hal.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwpa_client",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libwpa_client.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwvhidl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/libwvhidl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libclearkeycasplugin",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/mediacas/libclearkeycasplugin.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdrmclearkeyplugin",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/mediadrm/libdrmclearkeyplugin.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmockdrmcryptoplugin",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/mediadrm/libmockdrmcryptoplugin.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libwvdrmengine",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/mediadrm/libwvdrmengine.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudioeffectoffload",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libaudioeffectoffload.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudiopreprocessing",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libaudiopreprocessing.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudiopreprocessing_mtk",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libaudiopreprocessing_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libaudiosaplus_sec",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libaudiosaplus_sec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libbundlewrapper",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libbundlewrapper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libdownmix",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libdownmix.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libdynproc",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libdynproc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libeffectproxy",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libeffectproxy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libgearvr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libgearvr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libldnhncr",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libldnhncr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmysound",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libmysound.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmyspace",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libmyspace.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libplaybackrecorder",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libplaybackrecorder.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libreverbwrapper",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libreverbwrapper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsamsungSoundbooster_plus",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libsamsungSoundbooster_plus.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libswdap",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libswdap.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libvisualizer",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/soundfx/libvisualizer.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.audio@6.1",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.audio@6.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.bluetooth.audio@2.1",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.camera.isphal@1.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.camera.isphal@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.camera.lomoeffect@1.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.camera.lomoeffect@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.gpu@1.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.gpu@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mdmonitor@1.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.mdmonitor@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mms@1.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.mms@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mms@1.1",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.mms@1.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mms@1.2",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.mms@1.2.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mms@1.3",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.mms@1.3.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mms@1.4",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.mms@1.4.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mms@1.5",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.mms@1.5.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mtkpower@1.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.mtkpower@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mtkpower@1.1",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.mtkpower@1.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.netdagent@1.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.netdagent@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.nvram@1.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.nvram@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.nvram@1.1",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.nvram@1.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.power@2.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.mediatek.hardware.power@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.audio@1.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.audio@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.bluetooth@2.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.bluetooth@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.camera.device@5.0-impl",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.camera.device@5.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.camera.device@5.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.camera.device@5.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.camera.provider@4.0-legacy",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.camera.provider@4.0-legacy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.camera.provider@4.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.camera.provider@4.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.gnss@2.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.gnss@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.health@2.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.health@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.hqm@1.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.hqm@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.hyper-V1-ndk_platform",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.hyper-V1-ndk_platform.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.light-V1-ndk_platform",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.light-V1-ndk_platform.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.miscpower@2.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.miscpower@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.radio.bridge@2.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.radio.bridge@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.radio.channel@2.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.radio.channel@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.radio@2.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.radio@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.radio@2.1",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.radio@2.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.security.drk@2.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.security.drk@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.security.engmode@1.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.security.engmode@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.security.vaultkeeper@2.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.security.vaultkeeper@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.security.widevine.keyprov@1.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.security.widevine.keyprov@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.sysinput@1.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.sysinput@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.sysinput@1.1",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.sysinput@1.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.thermal@1.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.thermal@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.vibrator@2.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.vibrator@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.vibrator@2.1",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.vibrator@2.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.vibrator@2.2",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.vibrator@2.2.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.wifi.hostapd@3.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.wifi.hostapd@3.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.wifi.supplicant@3.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.wifi.supplicant@3.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.wifi@2.0",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.wifi@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.wifi@2.1",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vendor.samsung.hardware.wifi@2.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vintf-codecsolution-V1-ndk_platform",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vintf-codecsolution-V1-ndk_platform.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libstagefright_foundation",
+    srcs: ["vendor/samsung/a02/vendor/samsung/a02/vendor/lib/vndk/libstagefright_foundation.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
