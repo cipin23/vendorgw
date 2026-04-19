@@ -5,26 +5,35 @@ on:
 
 env:
   VENDOR_REPO: cipin23/vendorgw
-  VENDOR_RELEASE: v0.1
 
 jobs:
   setup-trees:
     runs-on: ubuntu-22.04
     steps:
-    - name: Checkout this repo
+    - name: Checkout target repo
       uses: actions/checkout@v4
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
         path: out_repo
 
-    - name: Clone vendor blobs repo
+    - name: Clone vendor blobs
       run: git clone --depth=1 https://github.com/$VENDOR_REPO.git vendor_src
 
-    - name: Generate vendor tree
+    - name: Generate Trees
       run: |
-        python3 out_repo/scripts/setup/setup_vendor.py --src out_repo/vendor/samsung/a02
-        
-        # Generate Device Tree
+        # Hapus sisa build lama biar ga bentrok
+        rm -rf out_repo/vendor/samsung/a02
+        rm -rf out_repo/device/samsung/a02
+        mkdir -p out_repo/vendor/samsung/a02
+        mkdir -p out_repo/device/samsung/a02
+
+        # Setup Vendor (Copy blobs + generate Android.bp & a02-vendor.mk)
+        # --src nembak ke vendor_src (hasil clone)
+        # --dst nembak ke out_repo/vendor/... (target push)
+        python3 out_repo/scripts/setup/setup_vendor.py \
+          --src vendor_src \
+          --dst out_repo/vendor/samsung/a02
+
+        # Setup Device Tree
         python3 out_repo/scripts/setup/gen_device_tree.py \
           --vendor-src vendor_src \
           --out out_repo/device/samsung/a02
@@ -34,11 +43,11 @@ jobs:
         mkdir -p out_repo/device/samsung/a02/prebuilt
         cp vendor_src/zImage out_repo/device/samsung/a02/prebuilt/zImage
 
-    - name: Commit & Push
+    - name: Push to GitHub
       run: |
         cd out_repo
-        git config user.email "bot@arrow.local"
         git config user.name "Arrow Tree Bot"
+        git config user.email "bot@arrow.local"
         git add .
-        git commit -m "Update vendor and device trees [skip ci]" || exit 0
+        git commit -m "Fix: Re-generate vendor and device trees [skip ci]" || exit 0
         git push
