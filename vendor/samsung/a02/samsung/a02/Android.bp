@@ -1,0 +1,4853 @@
+// AUTO-GENERATED - DO NOT EDIT
+soong_namespace {}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.audio.common-util",
+    srcs: ["lib/android.hardware.audio.common-util.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.audio.common@2.0-util",
+    srcs: ["lib/android.hardware.audio.common@2.0-util.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.audio.common@6.0-util",
+    srcs: ["lib/android.hardware.audio.common@6.0-util.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.camera.provider@2.4-legacy",
+    srcs: ["lib/android.hardware.camera.provider@2.4-legacy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.camera.provider@2.5-legacy",
+    srcs: ["lib/android.hardware.camera.provider@2.5-legacy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.gatekeeper@1.0-impl",
+    srcs: ["lib/android.hardware.gatekeeper@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.graphics.composer@2.1-resources",
+    srcs: ["lib/android.hardware.graphics.composer@2.1-resources.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.power-service-mediatek",
+    srcs: ["lib/android.hardware.power-service-mediatek.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_camera.device@1.0-impl",
+    srcs: ["lib/camera.device@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_camera.device@3.2-impl",
+    srcs: ["lib/camera.device@3.2-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_camera.device@3.3-impl",
+    srcs: ["lib/camera.device@3.3-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_camera.device@3.4-impl",
+    srcs: ["lib/camera.device@3.4-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_camera.device@3.5-impl",
+    srcs: ["lib/camera.device@3.5-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libEGL_mtk",
+    srcs: ["lib/egl/libEGL_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libGLES_meow",
+    srcs: ["lib/egl/libGLES_meow.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libGLESv1_CM_mtk",
+    srcs: ["lib/egl/libGLESv1_CM_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libGLESv2_mtk",
+    srcs: ["lib/egl/libGLESv2_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libMEOW_trace",
+    srcs: ["lib/egl/libMEOW_trace.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_gc02m1_mipi_raw_IdxMgr",
+    srcs: ["lib/gc02m1_mipi_raw_IdxMgr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_gc02m1_mipi_raw_tuning",
+    srcs: ["lib/gc02m1_mipi_raw_tuning.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_gc5035_mipi_raw_IdxMgr",
+    srcs: ["lib/gc5035_mipi_raw_IdxMgr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_gc5035_mipi_raw_tuning",
+    srcs: ["lib/gc5035_mipi_raw_tuning.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.audio.effect@2.0-impl",
+    srcs: ["lib/hw/android.hardware.audio.effect@2.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.audio.effect@6.0-impl",
+    srcs: ["lib/hw/android.hardware.audio.effect@6.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.audio@2.0-impl",
+    srcs: ["lib/hw/android.hardware.audio@2.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.audio@6.0-impl-mediatek",
+    srcs: ["lib/hw/android.hardware.audio@6.0-impl-mediatek.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.bluetooth.audio@2.0-impl",
+    srcs: ["lib/hw/android.hardware.bluetooth.audio@2.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.bluetooth@1.0-impl-mediatek",
+    srcs: ["lib/hw/android.hardware.bluetooth@1.0-impl-mediatek.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.gnss@2.1-impl",
+    srcs: ["lib/hw/android.hardware.gnss@2.1-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.graphics.mapper@4.0-impl-mediatek",
+    srcs: ["lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.health@2.0-impl-2.1-samsung",
+    srcs: ["lib/hw/android.hardware.health@2.0-impl-2.1-samsung.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.memtrack@1.0-impl",
+    srcs: ["lib/hw/android.hardware.memtrack@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.renderscript@1.0-impl",
+    srcs: ["lib/hw/android.hardware.renderscript@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.sensors@1.0-impl",
+    srcs: ["lib/hw/android.hardware.sensors@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.soundtrigger@2.0-impl",
+    srcs: ["lib/hw/android.hardware.soundtrigger@2.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.thermal@1.0-impl",
+    srcs: ["lib/hw/android.hardware.thermal@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_android.hardware.thermal@2.0-impl",
+    srcs: ["lib/hw/android.hardware.thermal@2.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_audio.bluetooth.default",
+    srcs: ["lib/hw/audio.bluetooth.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_audio.primary.default",
+    srcs: ["lib/hw/audio.primary.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_audio.primary.mt6739",
+    srcs: ["lib/hw/audio.primary.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_audio.r_submix.default",
+    srcs: ["lib/hw/audio.r_submix.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_audio.r_submix.mt6739",
+    srcs: ["lib/hw/audio.r_submix.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_audio.sec_primary.default",
+    srcs: ["lib/hw/audio.sec_primary.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_audio.usb.default",
+    srcs: ["lib/hw/audio.usb.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_audio.usb.mt6739",
+    srcs: ["lib/hw/audio.usb.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_audio_policy.stub",
+    srcs: ["lib/hw/audio_policy.stub.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_camera.mt6739",
+    srcs: ["lib/hw/camera.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_gatekeeper.mt6739",
+    srcs: ["lib/hw/gatekeeper.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_gps.default",
+    srcs: ["lib/hw/gps.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_gralloc.default",
+    srcs: ["lib/hw/gralloc.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_gralloc.rogue",
+    srcs: ["lib/hw/gralloc.rogue.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_hwcomposer.mt6739",
+    srcs: ["lib/hw/hwcomposer.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lights.mt6739",
+    srcs: ["lib/hw/lights.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_local_time.default",
+    srcs: ["lib/hw/local_time.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_memtrack.mt6739",
+    srcs: ["lib/hw/memtrack.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_power.default",
+    srcs: ["lib/hw/power.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_power.mt6739",
+    srcs: ["lib/hw/power.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_sensors.mt6739",
+    srcs: ["lib/hw/sensors.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_thermal.mt6739",
+    srcs: ["lib/hw/thermal.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.bluetooth.audio@2.1-impl",
+    srcs: ["lib/hw/vendor.mediatek.hardware.bluetooth.audio@2.1-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.camera.lomoeffect@1.0-impl",
+    srcs: ["lib/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mms@1.5-impl",
+    srcs: ["lib/hw/vendor.mediatek.hardware.mms@1.5-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mtkpower@1.1-impl",
+    srcs: ["lib/hw/vendor.mediatek.hardware.mtkpower@1.1-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.nvram@1.1-impl",
+    srcs: ["lib/hw/vendor.mediatek.hardware.nvram@1.1-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.audio@1.0-impl",
+    srcs: ["lib/hw/vendor.samsung.hardware.audio@1.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.camera.provider@4.0-impl",
+    srcs: ["lib/hw/vendor.samsung.hardware.camera.provider@4.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.gnss@2.0-impl",
+    srcs: ["lib/hw/vendor.samsung.hardware.gnss@2.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_vibrator.default",
+    srcs: ["lib/hw/vibrator.default.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_vulkan.mt6739",
+    srcs: ["lib/hw/vulkan.mt6739.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_imx258_mipi_raw_IdxMgr",
+    srcs: ["lib/imx258_mipi_raw_IdxMgr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_imx258_mipi_raw_tuning",
+    srcs: ["lib/imx258_mipi_raw_tuning.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lib3a.ae.core",
+    srcs: ["lib/lib3a.ae.core.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lib3a.ae",
+    srcs: ["lib/lib3a.ae.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lib3a.af.core",
+    srcs: ["lib/lib3a.af.core.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lib3a.af",
+    srcs: ["lib/lib3a.af.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lib3a.awb.core",
+    srcs: ["lib/lib3a.awb.core.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lib3a.awb",
+    srcs: ["lib/lib3a.awb.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lib3a.flash",
+    srcs: ["lib/lib3a.flash.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lib3a.log",
+    srcs: ["lib/lib3a.log.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libDR",
+    srcs: ["lib/libDR.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libHMT",
+    srcs: ["lib/libHMT.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libIMGegl",
+    srcs: ["lib/libIMGegl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libJpgDecPipe",
+    srcs: ["lib/libJpgDecPipe.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libJpgEncPipe",
+    srcs: ["lib/libJpgEncPipe.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libMcClient",
+    srcs: ["lib/libMcClient.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libMtkOmxAdpcmDec",
+    srcs: ["lib/libMtkOmxAdpcmDec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libMtkOmxCore",
+    srcs: ["lib/libMtkOmxCore.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libMtkOmxGsmDec",
+    srcs: ["lib/libMtkOmxGsmDec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libMtkOmxMp3Dec",
+    srcs: ["lib/libMtkOmxMp3Dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libMtkOmxVdecEx",
+    srcs: ["lib/libMtkOmxVdecEx.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libMtkOmxVenc",
+    srcs: ["lib/libMtkOmxVenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libMtkSpeechEnh",
+    srcs: ["lib/libMtkSpeechEnh.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libOpenCL",
+    srcs: ["lib/libOpenCL.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libOpenCv.camera.samsung",
+    srcs: ["lib/libOpenCv.camera.samsung.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libPVRMtkutils",
+    srcs: ["lib/libPVRMtkutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libPVROCL",
+    srcs: ["lib/libPVROCL.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libPVRScopeServices",
+    srcs: ["lib/libPVRScopeServices.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libSecC2ComponentStore",
+    srcs: ["lib/libSecC2ComponentStore.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libSonyIMX230PdafLibrary",
+    srcs: ["lib/libSonyIMX230PdafLibrary.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libSonyIMX230PdafLibraryWrapper",
+    srcs: ["lib/libSonyIMX230PdafLibraryWrapper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libSonyIMX338PdafLibrary",
+    srcs: ["lib/libSonyIMX338PdafLibrary.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libSonyIMX338PdafLibraryWrapper",
+    srcs: ["lib/libSonyIMX338PdafLibraryWrapper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libSonyIMX386PdafLibrary",
+    srcs: ["lib/libSonyIMX386PdafLibrary.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libSonyIMX386PdafLibraryWrapper",
+    srcs: ["lib/libSonyIMX386PdafLibraryWrapper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libSonyIMX519PdafLibrary",
+    srcs: ["lib/libSonyIMX519PdafLibrary.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libSonyIMX519PdafLibraryWrapper",
+    srcs: ["lib/libSonyIMX519PdafLibraryWrapper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libSwJpgCodec",
+    srcs: ["lib/libSwJpgCodec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lib_SamsungRec_07010",
+    srcs: ["lib/lib_SamsungRec_07010.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lib_SoundAlive_3DPosition_ver202",
+    srcs: ["lib/lib_SoundAlive_3DPosition_ver202.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lib_SoundAlive_AlbumArt_ver105",
+    srcs: ["lib/lib_SoundAlive_AlbumArt_ver105.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lib_SoundAlive_play_plus_ver400",
+    srcs: ["lib/lib_SoundAlive_play_plus_ver400.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lib_SoundBooster_ver1050",
+    srcs: ["lib/lib_SoundBooster_ver1050.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lib_iir",
+    srcs: ["lib/lib_iir.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_lib_speech_enh",
+    srcs: ["lib/lib_speech_enh.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libacdk",
+    srcs: ["lib/libacdk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaedv",
+    srcs: ["lib/libaedv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libalsautils",
+    srcs: ["lib/libalsautils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudio-ril",
+    srcs: ["lib/libaudio-ril.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudio_param_parser-vnd",
+    srcs: ["lib/libaudio_param_parser-vnd.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudiocompensationfilter_vendor",
+    srcs: ["lib/libaudiocompensationfilter_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudiocompensationfilterc",
+    srcs: ["lib/libaudiocompensationfilterc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudiocomponentengine_vendor",
+    srcs: ["lib/libaudiocomponentengine_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudiocomponentenginec",
+    srcs: ["lib/libaudiocomponentenginec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudiocustparam_vendor",
+    srcs: ["lib/libaudiocustparam_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudiodcrflt_vendor",
+    srcs: ["lib/libaudiodcrflt_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudiofmtconv",
+    srcs: ["lib/libaudiofmtconv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudiofoundation",
+    srcs: ["lib/libaudiofoundation.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudioloudc",
+    srcs: ["lib/libaudioloudc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudioprimarydevicehalifclient",
+    srcs: ["lib/libaudioprimarydevicehalifclient.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudiotoolkit_vendor",
+    srcs: ["lib/libaudiotoolkit_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaurisysdemo",
+    srcs: ["lib/libaurisysdemo.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libavservices_minijail",
+    srcs: ["lib/libavservices_minijail.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libbessound_hd_mtk_vendor",
+    srcs: ["lib/libbessound_hd_mtk_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libblisrc32_vendor",
+    srcs: ["lib/libblisrc32_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libbluetooth_audio_session",
+    srcs: ["lib/libbluetooth_audio_session.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libbluetooth_audio_session_mediatek",
+    srcs: ["lib/libbluetooth_audio_session_mediatek.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libbluetooth_hw_test",
+    srcs: ["lib/libbluetooth_hw_test.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libbluetooth_mtk",
+    srcs: ["lib/libbluetooth_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libbluetooth_mtk_pure",
+    srcs: ["lib/libbluetooth_mtk_pure.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libbluetooth_relayer",
+    srcs: ["lib/libbluetooth_relayer.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libbluetoothem_mtk",
+    srcs: ["lib/libbluetoothem_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libbt-vendor",
+    srcs: ["lib/libbt-vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libbwc",
+    srcs: ["lib/libbwc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcam.feature_utils",
+    srcs: ["lib/libcam.feature_utils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcam.hal3a.cctsvr",
+    srcs: ["lib/libcam.hal3a.cctsvr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcam.hal3a.log",
+    srcs: ["lib/libcam.hal3a.log.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcam.hal3a.v3.dng",
+    srcs: ["lib/libcam.hal3a.v3.dng.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcam.hal3a.v3.lsctbl",
+    srcs: ["lib/libcam.hal3a.v3.lsctbl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcam.hal3a.v3.nvram",
+    srcs: ["lib/libcam.hal3a.v3.nvram.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcam.hal3a.v3",
+    srcs: ["lib/libcam.hal3a.v3.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcam.halisp",
+    srcs: ["lib/libcam.halisp.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcam.halsensor",
+    srcs: ["lib/libcam.halsensor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcam.iopipe",
+    srcs: ["lib/libcam.iopipe.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcam.pdtblgen",
+    srcs: ["lib/libcam.pdtblgen.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcam.utils.sensorprovider",
+    srcs: ["lib/libcam.utils.sensorprovider.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcam.vhdr",
+    srcs: ["lib/libcam.vhdr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcam3a_imem",
+    srcs: ["lib/libcam3a_imem.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamalgo.3dnr",
+    srcs: ["lib/libcamalgo.3dnr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamalgo.asd",
+    srcs: ["lib/libcamalgo.asd.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamalgo.dngop",
+    srcs: ["lib/libcamalgo.dngop.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamalgo.eis",
+    srcs: ["lib/libcamalgo.eis.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamalgo.fdft",
+    srcs: ["lib/libcamalgo.fdft.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamalgo.flicker",
+    srcs: ["lib/libcamalgo.flicker.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamalgo.fsc",
+    srcs: ["lib/libcamalgo.fsc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamalgo.gyro",
+    srcs: ["lib/libcamalgo.gyro.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamalgo.ispfeature",
+    srcs: ["lib/libcamalgo.ispfeature.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamalgo.lmv",
+    srcs: ["lib/libcamalgo.lmv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamalgo.lsc",
+    srcs: ["lib/libcamalgo.lsc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamalgo.nr",
+    srcs: ["lib/libcamalgo.nr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamalgo",
+    srcs: ["lib/libcamalgo.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamalgo.utility",
+    srcs: ["lib/libcamalgo.utility.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamalgo.warp",
+    srcs: ["lib/libcamalgo.warp.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamdrv",
+    srcs: ["lib/libcamdrv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcamdrv_tuning_mgr",
+    srcs: ["lib/libcamdrv_tuning_mgr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcameracustom",
+    srcs: ["lib/libcameracustom.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcares_naptr",
+    srcs: ["lib/libcares_naptr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libccci_util",
+    srcs: ["lib/libccci_util.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_hidl@1.0",
+    srcs: ["lib/libcodec2_hidl@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_hidl@1.1",
+    srcs: ["lib/libcodec2_hidl@1.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_sec_aacenc",
+    srcs: ["lib/libcodec2_sec_aacenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_sec_amrnbdec",
+    srcs: ["lib/libcodec2_sec_amrnbdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_sec_amrwbdec",
+    srcs: ["lib/libcodec2_sec_amrwbdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_sec_flacdec",
+    srcs: ["lib/libcodec2_sec_flacdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_sec_imadec",
+    srcs: ["lib/libcodec2_sec_imadec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_sec_mp3dec",
+    srcs: ["lib/libcodec2_sec_mp3dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_sec_mp43dec",
+    srcs: ["lib/libcodec2_sec_mp43dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_sec_mp4vdec",
+    srcs: ["lib/libcodec2_sec_mp4vdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_sec_soft_common",
+    srcs: ["lib/libcodec2_sec_soft_common.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_sec_vc1dec",
+    srcs: ["lib/libcodec2_sec_vc1dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_sec_wmadec",
+    srcs: ["lib/libcodec2_sec_wmadec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_sec_wmv7dec",
+    srcs: ["lib/libcodec2_sec_wmv7dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_sec_wmv8dec",
+    srcs: ["lib/libcodec2_sec_wmv8dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_simple_component",
+    srcs: ["lib/libcodec2_simple_component.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_soft_ac4dec",
+    srcs: ["lib/libcodec2_soft_ac4dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_soft_common",
+    srcs: ["lib/libcodec2_soft_common.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_soft_eac3dec",
+    srcs: ["lib/libcodec2_soft_eac3dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodec2_vndk",
+    srcs: ["lib/libcodec2_vndk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcodecsolutionhelper_vendor",
+    srcs: ["lib/libcodecsolutionhelper_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcustom_nvram",
+    srcs: ["lib/libcustom_nvram.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libcvsd_mtk",
+    srcs: ["lib/libcvsd_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libdeccfg",
+    srcs: ["lib/libdeccfg.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libdiamondvoice",
+    srcs: ["lib/libdiamondvoice.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libdk_vnd_service_core",
+    srcs: ["lib/libdk_vnd_service_core.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libdpframework",
+    srcs: ["lib/libdpframework.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libdrm",
+    srcs: ["lib/libdrm.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libeffecthal.base",
+    srcs: ["lib/libeffecthal.base.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libeffects",
+    srcs: ["lib/libeffects.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libeffectsconfig",
+    srcs: ["lib/libeffectsconfig.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libengmode15",
+    srcs: ["lib/libengmode15.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libengmode_client",
+    srcs: ["lib/libengmode_client.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libengmode_server",
+    srcs: ["lib/libengmode_server.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libengmode_tlc",
+    srcs: ["lib/libengmode_tlc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libfeature.face",
+    srcs: ["lib/libfeature.face.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libfeature.stereo.provider",
+    srcs: ["lib/libfeature.stereo.provider.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libfeature_3dnr",
+    srcs: ["lib/libfeature_3dnr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libfeature_fsc",
+    srcs: ["lib/libfeature_fsc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libfeature_lmv",
+    srcs: ["lib/libfeature_lmv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libfeature_rss",
+    srcs: ["lib/libfeature_rss.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libfeatureiodrv_mem",
+    srcs: ["lib/libfeatureiodrv_mem.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libfft_vendor",
+    srcs: ["lib/libfft_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libfile_op",
+    srcs: ["lib/libfile_op.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libfloatingfeature",
+    srcs: ["lib/libfloatingfeature.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libforkexecwrap",
+    srcs: ["lib/libforkexecwrap.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libfv",
+    srcs: ["lib/libfv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libged",
+    srcs: ["lib/libged.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libglslcompiler",
+    srcs: ["lib/libglslcompiler.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libgpu_aux",
+    srcs: ["lib/libgpu_aux.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libgpud",
+    srcs: ["lib/libgpud.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libgralloc_extra",
+    srcs: ["lib/libgralloc_extra.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libgralloc_metadata",
+    srcs: ["lib/libgralloc_metadata.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libgralloctypes_mtk",
+    srcs: ["lib/libgralloctypes_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libh264dec_customize",
+    srcs: ["lib/libh264dec_customize.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libh264dec_sa.ca7",
+    srcs: ["lib/libh264dec_sa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libh264dec_sd.ca7",
+    srcs: ["lib/libh264dec_sd.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libh264dec_se.ca7",
+    srcs: ["lib/libh264dec_se.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libh264enc_sa.ca7",
+    srcs: ["lib/libh264enc_sa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libhevce_sb.ca7.android",
+    srcs: ["lib/libhevce_sb.ca7.android.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libhidltransport",
+    srcs: ["lib/libhidltransport.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libhqm_hwparam",
+    srcs: ["lib/libhqm_hwparam.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libhwbinder",
+    srcs: ["lib/libhwbinder.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libhwc2on1adapter",
+    srcs: ["lib/libhwc2on1adapter.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libhwc2onfbadapter",
+    srcs: ["lib/libhwc2onfbadapter.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libhwm",
+    srcs: ["lib/libhwm.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libhwminijail",
+    srcs: ["lib/libhwminijail.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libhyper",
+    srcs: ["lib/libhyper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libifcutils_mtk",
+    srcs: ["lib/libifcutils_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libimageio",
+    srcs: ["lib/libimageio.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libimageio_plat_drv",
+    srcs: ["lib/libimageio_plat_drv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libimageio_plat_pipe",
+    srcs: ["lib/libimageio_plat_pipe.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libimgsensorca",
+    srcs: ["lib/libimgsensorca.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libion_mtk",
+    srcs: ["lib/libion_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libion_ulit",
+    srcs: ["lib/libion_ulit.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libipsec_ims_shr",
+    srcs: ["lib/libipsec_ims_shr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libispcameraca",
+    srcs: ["lib/libispcameraca.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libiwt",
+    srcs: ["lib/libiwt.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libjpeg-alpha-oal_vendor",
+    srcs: ["lib/libjpeg-alpha-oal_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libjpeg-alpha_vendor",
+    srcs: ["lib/libjpeg-alpha_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libkeymaster4",
+    srcs: ["lib/libkeymaster4.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libkeymaster4_1support",
+    srcs: ["lib/libkeymaster4_1support.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libkeymaster4support",
+    srcs: ["lib/libkeymaster4support.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libkeymaster_helper",
+    srcs: ["lib/libkeymaster_helper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libkeymaster_messages",
+    srcs: ["lib/libkeymaster_messages.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libkeymaster_portable",
+    srcs: ["lib/libkeymaster_portable.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libkeystore-engine-wifi-hidl",
+    srcs: ["lib/libkeystore-engine-wifi-hidl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libkeystore-wifi-hidl",
+    srcs: ["lib/libkeystore-wifi-hidl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libladder",
+    srcs: ["lib/libladder.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_liblpcnr",
+    srcs: ["lib/liblpcnr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libmdf",
+    srcs: ["lib/libmdf.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libmemtrack_GL",
+    srcs: ["lib/libmemtrack_GL.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libmhalImageCodec",
+    srcs: ["lib/libmhalImageCodec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libminiui",
+    srcs: ["lib/libminiui.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libmmprofile",
+    srcs: ["lib/libmmprofile.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libmnl",
+    srcs: ["lib/libmnl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libmp4enc_sa.ca7",
+    srcs: ["lib/libmp4enc_sa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libmp4enc_xa.ca7",
+    srcs: ["lib/libmp4enc_xa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libmpvr",
+    srcs: ["lib/libmpvr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libmsbc_mtk",
+    srcs: ["lib/libmsbc_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libmsnr",
+    srcs: ["lib/libmsnr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libmtcloader",
+    srcs: ["lib/libmtcloader.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtk_drvb",
+    srcs: ["lib/libmtk_drvb.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkares",
+    srcs: ["lib/libmtkares.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam.eventcallback",
+    srcs: ["lib/libmtkcam.eventcallback.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam.featurepipe.capture",
+    srcs: ["lib/libmtkcam.featurepipe.capture.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam.featurepipe.streaming",
+    srcs: ["lib/libmtkcam.featurepipe.streaming.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam.featurepipe.vsdof_util",
+    srcs: ["lib/libmtkcam.featurepipe.vsdof_util.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam.logicalmodule",
+    srcs: ["lib/libmtkcam.logicalmodule.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_3rdparty.core",
+    srcs: ["lib/libmtkcam_3rdparty.core.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_3rdparty.customer",
+    srcs: ["lib/libmtkcam_3rdparty.customer.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_3rdparty.mtk",
+    srcs: ["lib/libmtkcam_3rdparty.mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_3rdparty",
+    srcs: ["lib/libmtkcam_3rdparty.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_calibration_convertor",
+    srcs: ["lib/libmtkcam_calibration_convertor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_calibration_provider",
+    srcs: ["lib/libmtkcam_calibration_provider.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_debugutils",
+    srcs: ["lib/libmtkcam_debugutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_device3_app",
+    srcs: ["lib/libmtkcam_device3_app.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_device3_hal",
+    srcs: ["lib/libmtkcam_device3_hal.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_device3_legacy",
+    srcs: ["lib/libmtkcam_device3_legacy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_device3_utils",
+    srcs: ["lib/libmtkcam_device3_utils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_devicesessionpolicy",
+    srcs: ["lib/libmtkcam_devicesessionpolicy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_diputils",
+    srcs: ["lib/libmtkcam_diputils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_exif",
+    srcs: ["lib/libmtkcam_exif.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_featurepolicy",
+    srcs: ["lib/libmtkcam_featurepolicy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_featureutils",
+    srcs: ["lib/libmtkcam_featureutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_fwkutils",
+    srcs: ["lib/libmtkcam_fwkutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_grallocutils",
+    srcs: ["lib/libmtkcam_grallocutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_hwnode",
+    srcs: ["lib/libmtkcam_hwnode.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_hwutils",
+    srcs: ["lib/libmtkcam_hwutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_imgbuf",
+    srcs: ["lib/libmtkcam_imgbuf.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_metadata",
+    srcs: ["lib/libmtkcam_metadata.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_metastore",
+    srcs: ["lib/libmtkcam_metastore.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_modulefactory_aaa",
+    srcs: ["lib/libmtkcam_modulefactory_aaa.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_modulefactory_custom",
+    srcs: ["lib/libmtkcam_modulefactory_custom.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_modulefactory_drv",
+    srcs: ["lib/libmtkcam_modulefactory_drv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_modulefactory_feature",
+    srcs: ["lib/libmtkcam_modulefactory_feature.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_modulefactory_utils",
+    srcs: ["lib/libmtkcam_modulefactory_utils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_modulehelper",
+    srcs: ["lib/libmtkcam_modulehelper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipeline",
+    srcs: ["lib/libmtkcam_pipeline.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipeline_fbm",
+    srcs: ["lib/libmtkcam_pipeline_fbm.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinemodel",
+    srcs: ["lib/libmtkcam_pipelinemodel.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinemodel_adapter",
+    srcs: ["lib/libmtkcam_pipelinemodel_adapter.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinemodel_capture",
+    srcs: ["lib/libmtkcam_pipelinemodel_capture.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinemodel_session",
+    srcs: ["lib/libmtkcam_pipelinemodel_session.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinemodel_utils",
+    srcs: ["lib/libmtkcam_pipelinemodel_utils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinemodel_zsl",
+    srcs: ["lib/libmtkcam_pipelinemodel_zsl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinepolicy-security",
+    srcs: ["lib/libmtkcam_pipelinepolicy-security.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinepolicy-smvr",
+    srcs: ["lib/libmtkcam_pipelinepolicy-smvr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinepolicy",
+    srcs: ["lib/libmtkcam_pipelinepolicy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_pipelinepolicy_factory",
+    srcs: ["lib/libmtkcam_pipelinepolicy_factory.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_prerelease",
+    srcs: ["lib/libmtkcam_prerelease.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_rsc",
+    srcs: ["lib/libmtkcam_rsc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_stdutils",
+    srcs: ["lib/libmtkcam_stdutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_streamutils",
+    srcs: ["lib/libmtkcam_streamutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_synchelper",
+    srcs: ["lib/libmtkcam_synchelper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_sysutils",
+    srcs: ["lib/libmtkcam_sysutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_tuning_utils",
+    srcs: ["lib/libmtkcam_tuning_utils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcam_ulog",
+    srcs: ["lib/libmtkcam_ulog.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkcutils",
+    srcs: ["lib/libmtkcutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkhardware_legacy",
+    srcs: ["lib/libmtkhardware_legacy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtklimiter_vendor",
+    srcs: ["lib/libmtklimiter_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtknetutils",
+    srcs: ["lib/libmtknetutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkperf_client_vendor",
+    srcs: ["lib/libmtkperf_client_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkproperty",
+    srcs: ["lib/libmtkproperty.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkrillog",
+    srcs: ["lib/libmtkrillog.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkshifter_vendor",
+    srcs: ["lib/libmtkshifter_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtksysutils",
+    srcs: ["lib/libmtksysutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libmtkutils",
+    srcs: ["lib/libmtkutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libnbaio_mono",
+    srcs: ["lib/libnbaio_mono.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libneuropilot_hal_utils",
+    srcs: ["lib/libneuropilot_hal_utils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libnvram",
+    srcs: ["lib/libnvram.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libnvram_daemon_callback",
+    srcs: ["lib/libnvram_daemon_callback.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libnvram_platform",
+    srcs: ["lib/libnvram_platform.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libnvram_sec",
+    srcs: ["lib/libnvram_sec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libnvramagentclient",
+    srcs: ["lib/libnvramagentclient.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libopus",
+    srcs: ["lib/libopus.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libpadm",
+    srcs: ["lib/libpadm.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libperfctl_vendor",
+    srcs: ["lib/libperfctl_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libpixelflinger",
+    srcs: ["lib/libpixelflinger.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libpowerhal",
+    srcs: ["lib/libpowerhal.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libpowerhalwrap_vendor",
+    srcs: ["lib/libpowerhalwrap_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libpq_cust_base",
+    srcs: ["lib/libpq_cust_base.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libpq_prot",
+    srcs: ["lib/libpq_prot.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libprofileparamstorage",
+    srcs: ["lib/libprofileparamstorage.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libprotobuf-cpp-full-3.9.1",
+    srcs: ["lib/libprotobuf-cpp-full-3.9.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libprotobuf-cpp-lite-3.9.1",
+    srcs: ["lib/libprotobuf-cpp-lite-3.9.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libpuresoftkeymasterdevice",
+    srcs: ["lib/libpuresoftkeymasterdevice.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libratconfig",
+    srcs: ["lib/libratconfig.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_librecordalive",
+    srcs: ["lib/librecordalive.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libreference-ril",
+    srcs: ["lib/libreference-ril.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_librgbwlightsensor",
+    srcs: ["lib/librgbwlightsensor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libril",
+    srcs: ["lib/libril.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_librilutils",
+    srcs: ["lib/librilutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_librt_extamp_intf",
+    srcs: ["lib/librt_extamp_intf.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsavsac",
+    srcs: ["lib/libsavsac.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsavscmn",
+    srcs: ["lib/libsavscmn.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsavsvc",
+    srcs: ["lib/libsavsvc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsec-ril-dsds",
+    srcs: ["lib/libsec-ril-dsds.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsec-ril",
+    srcs: ["lib/libsec-ril.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsec2mtk_conversion",
+    srcs: ["lib/libsec2mtk_conversion.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsecaudiocoreutils",
+    srcs: ["lib/libsecaudiocoreutils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsecaudioinfo",
+    srcs: ["lib/libsecaudioinfo.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libseccam_util",
+    srcs: ["lib/libseccam_util.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsecnativefeature",
+    srcs: ["lib/libsecnativefeature.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsecril-client",
+    srcs: ["lib/libsecril-client.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsecure_storage",
+    srcs: ["lib/libsecure_storage.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsemnativecarrierfeature",
+    srcs: ["lib/libsemnativecarrierfeature.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsensorndkbridge",
+    srcs: ["lib/libsensorndkbridge.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsfplugin_ccodec_utils",
+    srcs: ["lib/libsfplugin_ccodec_utils.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libskeymaster4device",
+    srcs: ["lib/libskeymaster4device.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsnaace",
+    srcs: ["lib/libsnaace.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsnamrnb",
+    srcs: ["lib/libsnamrnb.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsnamrwb",
+    srcs: ["lib/libsnamrwb.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsoft_attestation_cert",
+    srcs: ["lib/libsoft_attestation_cert.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsomx263dsw",
+    srcs: ["lib/libsomx263dsw.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsomx264dsw",
+    srcs: ["lib/libsomx264dsw.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsomxadpcmd",
+    srcs: ["lib/libsomxadpcmd.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsomxamrd",
+    srcs: ["lib/libsomxamrd.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsomxcmn",
+    srcs: ["lib/libsomxcmn.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsomxcore_vendor",
+    srcs: ["lib/libsomxcore_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsomxflacd",
+    srcs: ["lib/libsomxflacd.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsomxhevcdsw",
+    srcs: ["lib/libsomxhevcdsw.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsomxmp3d",
+    srcs: ["lib/libsomxmp3d.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsomxmp4vdsw",
+    srcs: ["lib/libsomxmp4vdsw.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsomxnaace",
+    srcs: ["lib/libsomxnaace.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsomxvc1dsw",
+    srcs: ["lib/libsomxvc1dsw.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsomxvp8d",
+    srcs: ["lib/libsomxvp8d.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libspeakercalibration",
+    srcs: ["lib/libspeakercalibration.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libspeech_enh_lib",
+    srcs: ["lib/libspeech_enh_lib.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libspeechparser_vendor",
+    srcs: ["lib/libspeechparser_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsrv_um",
+    srcs: ["lib/libsrv_um.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_amrnb_common",
+    srcs: ["lib/libstagefright_amrnb_common.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_bufferpool@2.0.1",
+    srcs: ["lib/libstagefright_bufferpool@2.0.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_bufferqueue_helper_vendor",
+    srcs: ["lib/libstagefright_bufferqueue_helper_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_enc_common",
+    srcs: ["lib/libstagefright_enc_common.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_flacdec",
+    srcs: ["lib/libstagefright_flacdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_omx_vendor",
+    srcs: ["lib/libstagefright_omx_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_aacdec",
+    srcs: ["lib/libstagefright_soft_aacdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_aacenc",
+    srcs: ["lib/libstagefright_soft_aacenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_ac4dec",
+    srcs: ["lib/libstagefright_soft_ac4dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_amrdec",
+    srcs: ["lib/libstagefright_soft_amrdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_amrnbenc",
+    srcs: ["lib/libstagefright_soft_amrnbenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_amrwbenc",
+    srcs: ["lib/libstagefright_soft_amrwbenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_avcdec",
+    srcs: ["lib/libstagefright_soft_avcdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_avcenc",
+    srcs: ["lib/libstagefright_soft_avcenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_ddpdec",
+    srcs: ["lib/libstagefright_soft_ddpdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_flacdec",
+    srcs: ["lib/libstagefright_soft_flacdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_flacenc",
+    srcs: ["lib/libstagefright_soft_flacenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_g711dec",
+    srcs: ["lib/libstagefright_soft_g711dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_gsmdec",
+    srcs: ["lib/libstagefright_soft_gsmdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_hevcdec",
+    srcs: ["lib/libstagefright_soft_hevcdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_mp3dec",
+    srcs: ["lib/libstagefright_soft_mp3dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_mpeg2dec",
+    srcs: ["lib/libstagefright_soft_mpeg2dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_mpeg4dec",
+    srcs: ["lib/libstagefright_soft_mpeg4dec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_mpeg4enc",
+    srcs: ["lib/libstagefright_soft_mpeg4enc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_opusdec",
+    srcs: ["lib/libstagefright_soft_opusdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_rawdec",
+    srcs: ["lib/libstagefright_soft_rawdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_vorbisdec",
+    srcs: ["lib/libstagefright_soft_vorbisdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_vpxdec",
+    srcs: ["lib/libstagefright_soft_vpxdec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_soft_vpxenc",
+    srcs: ["lib/libstagefright_soft_vpxenc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_softomx",
+    srcs: ["lib/libstagefright_softomx.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_softomx_plugin",
+    srcs: ["lib/libstagefright_softomx_plugin.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefrighthw",
+    srcs: ["lib/libstagefrighthw.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstereoinfoaccessor_vsdof",
+    srcs: ["lib/libstereoinfoaccessor_vsdof.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstorage_otp",
+    srcs: ["lib/libstorage_otp.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libsysenv",
+    srcs: ["lib/libsysenv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libteecl",
+    srcs: ["lib/libteecl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libthha",
+    srcs: ["lib/libthha.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libtinycompress",
+    srcs: ["lib/libtinycompress.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libtinyxml",
+    srcs: ["lib/libtinyxml.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libtqvalidate",
+    srcs: ["lib/libtqvalidate.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libudf",
+    srcs: ["lib/libudf.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libufwriter",
+    srcs: ["lib/libufwriter.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libusc",
+    srcs: ["lib/libusc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libuuid",
+    srcs: ["lib/libuuid.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libvc1dec_sa.ca7",
+    srcs: ["lib/libvc1dec_sa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libvcodec_oal",
+    srcs: ["lib/libvcodec_oal.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libvcodec_utility",
+    srcs: ["lib/libvcodec_utility.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libvcodecdrv",
+    srcs: ["lib/libvcodecdrv.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libvkmanager_vendor",
+    srcs: ["lib/libvkmanager_vendor.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libvkservice",
+    srcs: ["lib/libvkservice.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libvorbisidec",
+    srcs: ["lib/libvorbisidec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libvp8dec_sa.ca7",
+    srcs: ["lib/libvp8dec_sa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libvp8enc_sa.ca7",
+    srcs: ["lib/libvp8enc_sa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libvp9dec_sa.ca7",
+    srcs: ["lib/libvp9dec_sa.ca7.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libvpx",
+    srcs: ["lib/libvpx.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libvt_custom",
+    srcs: ["lib/libvt_custom.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libwebrtc_audio_preprocessing",
+    srcs: ["lib/libwebrtc_audio_preprocessing.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libwifi-hal",
+    srcs: ["lib/libwifi-hal.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libwpa_client",
+    srcs: ["lib/libwpa_client.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libwvhidl",
+    srcs: ["lib/libwvhidl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libclearkeycasplugin",
+    srcs: ["lib/mediacas/libclearkeycasplugin.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libdrmclearkeyplugin",
+    srcs: ["lib/mediadrm/libdrmclearkeyplugin.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libmockdrmcryptoplugin",
+    srcs: ["lib/mediadrm/libmockdrmcryptoplugin.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libwvdrmengine",
+    srcs: ["lib/mediadrm/libwvdrmengine.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudioeffectoffload",
+    srcs: ["lib/soundfx/libaudioeffectoffload.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudiopreprocessing",
+    srcs: ["lib/soundfx/libaudiopreprocessing.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudiopreprocessing_mtk",
+    srcs: ["lib/soundfx/libaudiopreprocessing_mtk.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libaudiosaplus_sec",
+    srcs: ["lib/soundfx/libaudiosaplus_sec.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libbundlewrapper",
+    srcs: ["lib/soundfx/libbundlewrapper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libdownmix",
+    srcs: ["lib/soundfx/libdownmix.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libdynproc",
+    srcs: ["lib/soundfx/libdynproc.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libeffectproxy",
+    srcs: ["lib/soundfx/libeffectproxy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libgearvr",
+    srcs: ["lib/soundfx/libgearvr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libldnhncr",
+    srcs: ["lib/soundfx/libldnhncr.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libmysound",
+    srcs: ["lib/soundfx/libmysound.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libmyspace",
+    srcs: ["lib/soundfx/libmyspace.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libplaybackrecorder",
+    srcs: ["lib/soundfx/libplaybackrecorder.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libreverbwrapper",
+    srcs: ["lib/soundfx/libreverbwrapper.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "libsamsungSoundbooster_plus",
+    srcs: ["lib/soundfx/libsamsungSoundbooster_plus.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libswdap",
+    srcs: ["lib/soundfx/libswdap.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libvisualizer",
+    srcs: ["lib/soundfx/libvisualizer.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.audio@6.1",
+    srcs: ["lib/vendor.mediatek.hardware.audio@6.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.bluetooth.audio@2.1",
+    srcs: ["lib/vendor.mediatek.hardware.bluetooth.audio@2.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.camera.isphal@1.0",
+    srcs: ["lib/vendor.mediatek.hardware.camera.isphal@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.camera.lomoeffect@1.0",
+    srcs: ["lib/vendor.mediatek.hardware.camera.lomoeffect@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.gpu@1.0",
+    srcs: ["lib/vendor.mediatek.hardware.gpu@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mdmonitor@1.0",
+    srcs: ["lib/vendor.mediatek.hardware.mdmonitor@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mms@1.0",
+    srcs: ["lib/vendor.mediatek.hardware.mms@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mms@1.1",
+    srcs: ["lib/vendor.mediatek.hardware.mms@1.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mms@1.2",
+    srcs: ["lib/vendor.mediatek.hardware.mms@1.2.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mms@1.3",
+    srcs: ["lib/vendor.mediatek.hardware.mms@1.3.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mms@1.4",
+    srcs: ["lib/vendor.mediatek.hardware.mms@1.4.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mms@1.5",
+    srcs: ["lib/vendor.mediatek.hardware.mms@1.5.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mtkpower@1.0",
+    srcs: ["lib/vendor.mediatek.hardware.mtkpower@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.mtkpower@1.1",
+    srcs: ["lib/vendor.mediatek.hardware.mtkpower@1.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.netdagent@1.0",
+    srcs: ["lib/vendor.mediatek.hardware.netdagent@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.nvram@1.0",
+    srcs: ["lib/vendor.mediatek.hardware.nvram@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.nvram@1.1",
+    srcs: ["lib/vendor.mediatek.hardware.nvram@1.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.mediatek.hardware.power@2.0",
+    srcs: ["lib/vendor.mediatek.hardware.power@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.audio@1.0",
+    srcs: ["lib/vendor.samsung.hardware.audio@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.bluetooth@2.0",
+    srcs: ["lib/vendor.samsung.hardware.bluetooth@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.camera.device@5.0-impl",
+    srcs: ["lib/vendor.samsung.hardware.camera.device@5.0-impl.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.camera.device@5.0",
+    srcs: ["lib/vendor.samsung.hardware.camera.device@5.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.camera.provider@4.0-legacy",
+    srcs: ["lib/vendor.samsung.hardware.camera.provider@4.0-legacy.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.camera.provider@4.0",
+    srcs: ["lib/vendor.samsung.hardware.camera.provider@4.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.gnss@2.0",
+    srcs: ["lib/vendor.samsung.hardware.gnss@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.health@2.0",
+    srcs: ["lib/vendor.samsung.hardware.health@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.hqm@1.0",
+    srcs: ["lib/vendor.samsung.hardware.hqm@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.hyper-V1-ndk_platform",
+    srcs: ["lib/vendor.samsung.hardware.hyper-V1-ndk_platform.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.light-V1-ndk_platform",
+    srcs: ["lib/vendor.samsung.hardware.light-V1-ndk_platform.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.miscpower@2.0",
+    srcs: ["lib/vendor.samsung.hardware.miscpower@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.radio.bridge@2.0",
+    srcs: ["lib/vendor.samsung.hardware.radio.bridge@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.radio.channel@2.0",
+    srcs: ["lib/vendor.samsung.hardware.radio.channel@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.radio@2.0",
+    srcs: ["lib/vendor.samsung.hardware.radio@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.radio@2.1",
+    srcs: ["lib/vendor.samsung.hardware.radio@2.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.security.drk@2.0",
+    srcs: ["lib/vendor.samsung.hardware.security.drk@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.security.engmode@1.0",
+    srcs: ["lib/vendor.samsung.hardware.security.engmode@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.security.vaultkeeper@2.0",
+    srcs: ["lib/vendor.samsung.hardware.security.vaultkeeper@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.security.widevine.keyprov@1.0",
+    srcs: ["lib/vendor.samsung.hardware.security.widevine.keyprov@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.sysinput@1.0",
+    srcs: ["lib/vendor.samsung.hardware.sysinput@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.sysinput@1.1",
+    srcs: ["lib/vendor.samsung.hardware.sysinput@1.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.thermal@1.0",
+    srcs: ["lib/vendor.samsung.hardware.thermal@1.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.vibrator@2.0",
+    srcs: ["lib/vendor.samsung.hardware.vibrator@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.vibrator@2.1",
+    srcs: ["lib/vendor.samsung.hardware.vibrator@2.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.vibrator@2.2",
+    srcs: ["lib/vendor.samsung.hardware.vibrator@2.2.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.wifi.hostapd@3.0",
+    srcs: ["lib/vendor.samsung.hardware.wifi.hostapd@3.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.wifi.supplicant@3.0",
+    srcs: ["lib/vendor.samsung.hardware.wifi.supplicant@3.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.wifi@2.0",
+    srcs: ["lib/vendor.samsung.hardware.wifi@2.0.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor.samsung.hardware.wifi@2.1",
+    srcs: ["lib/vendor.samsung.hardware.wifi@2.1.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_vintf-codecsolution-V1-ndk_platform",
+    srcs: ["lib/vintf-codecsolution-V1-ndk_platform.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
+
+cc_prebuilt_library_shared {
+    name: "vendor_a02_libstagefright_foundation",
+    srcs: ["lib/vndk/libstagefright_foundation.so"],
+    vendor: true,
+    strip: { none: true },
+    check_elf_files: false,
+    prefer: true,
+}
