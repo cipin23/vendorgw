@@ -10,40 +10,33 @@ jobs:
   setup-trees:
     runs-on: ubuntu-22.04
     steps:
-    - name: Checkout target repo
+    - name: Checkout repo
       uses: actions/checkout@v4
       with:
         path: out_repo
+        ref: build # Paksa ke branch build biar gak nyasar
 
-    - name: Clone vendor blobs
+    - name: Clone blobs
       run: git clone --depth=1 https://github.com/$VENDOR_REPO.git vendor_src
 
     - name: Generate Trees
       run: |
-        # Bersihin folder lama biar gak tumpang tindih
         rm -rf out_repo/vendor/samsung/a02
-        rm -rf out_repo/device/samsung/a02
-        mkdir -p out_repo/vendor/samsung/a02
-        mkdir -p out_repo/device/samsung/a02
-
-        # Eksekusi script generator
         python3 out_repo/scripts/setup/setup_vendor.py \
-          --src vendor_src \
-          --dst out_repo/vendor/samsung/a02
+          --src $(pwd)/vendor_src \
+          --dst $(pwd)/out_repo/vendor/samsung/a02
         
         python3 out_repo/scripts/setup/gen_device_tree.py \
-          --vendor-src vendor_src \
-          --out out_repo/device/samsung/a02
+          --vendor-src $(pwd)/vendor_src \
+          --out $(pwd)/out_repo/device/samsung/a02
 
-    - name: Deteksi File (Fail if missing)
+    - name: Verifikasi
       run: |
-        echo "=== LIST FILE VENDOR ==="
-        ls -F out_repo/vendor/samsung/a02/
-        if [ ! -f out_repo/vendor/samsung/a02/a02-vendor.mk ]; then
-          echo "!! ERROR: a02-vendor.mk TIDAK DITEMUKAN !!"
-          exit 1
+        if [ -f out_repo/vendor/samsung/a02/a02-vendor.mk ]; then
+          echo "BINGGO! File ada."
+        else
+          echo "GAK ADA!" && exit 1
         fi
-        echo ">> OK: File a02-vendor.mk aman."
 
     - name: Commit & Push
       run: |
@@ -51,5 +44,5 @@ jobs:
         git config user.name "Arrow Tree Bot"
         git config user.email "bot@arrow.local"
         git add .
-        git commit -m "Fix: Full sync vendor with a02-vendor.mk [skip ci]" || exit 0
-        git push
+        git commit -m "Fix: Final sync on branch build [skip ci]" || exit 0
+        git push origin build
