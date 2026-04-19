@@ -1,61 +1,44 @@
 #!/usr/bin/env python3
-import argparse, shutil, os
+import argparse, shutil
 from pathlib import Path
 
-CONFLICT_LIBS = {
-    "libalsautils.so", "libril.so", "libvpx.so", "libdrm.so", "libz.so", 
-    "libjpeg.so", "libpng.so", "libbase.so", "libc++.so",
-    "android.hardware.camera.provider@2.4.so", "android.hardware.camera.provider@2.5.so"
-}
+CONFLICT_LIBS = {"libalsautils.so", "libril.so", "libvpx.so", "libdrm.so", "libz.so", "libjpeg.so", "libpng.so"}
 
 def write_bp(dst: Path, so_libs: list):
-    lines = ["// Auto-generated Vendor Blobs BP - SM-A022F", ""]
+    lines = ["// Auto-generated BP", ""]
     for lib in so_libs:
-        lines += [
-            "cc_prebuilt_library_shared {",
-            f'    name: "vendor_a02_{lib.stem}",',
-            f'    srcs: ["{str(lib)}"],',
-            "    vendor: true,",
-            "    strip: { none: true },",
-            "    check_elf_files: false,",
-            "    prefer: true,",
-            "}", ""
-        ]
+        lines += ["cc_prebuilt_library_shared {", f'    name: "vendor_a02_{lib.stem}",', f'    srcs: ["{lib.name}"],', "    vendor: true, check_elf_files: false, prefer: true,", "}", ""]
     (dst / "Android.bp").write_text("\n".join(lines))
 
 def write_vendor_mk(dst: Path, etc_files: list):
-    lines = ["# Auto-generated Vendor Copy Files", "PRODUCT_COPY_FILES += \\"]
-    entries = [f"    vendor/samsung/a02/{str(f)}:$(TARGET_COPY_OUT_VENDOR)/{str(f)}" for f in etc_files]
-    lines.append(" \\\n".join(entries) if entries else "    # No files")
+    # INI YANG BIKIN a02-vendor.mk
+    lines = ["PRODUCT_COPY_FILES += \\"]
+    entries = [f"    vendor/samsung/a02/{f}:$(TARGET_COPY_OUT_VENDOR)/{f}" for f in etc_files]
+    lines.append(" \\\n".join(entries) if entries else " # empty")
     (dst / "a02-vendor.mk").write_text("\n".join(lines))
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--src", required=True) # Folder vendor_src (sumber blobs)
-    ap.add_argument("--dst", required=True) # Folder out_repo/vendor/samsung/a02 (tujuan)
+    ap.add_argument("--src", required=True)
+    ap.add_argument("--dst", required=True)
     args = ap.parse_args()
-
-    src = Path(args.src).resolve()
     dst = Path(args.dst).resolve()
-    dst.mkdir(parents=True, exist_ok=True)
-
-    # 1. Copy Files dari sumber ke tujuan
+    src = Path(args.src).resolve()
+    
+    # Logic copy file dari src ke dst
     for f in src.rglob("*"):
-        if f.is_file() and ".git" not in f.parts and f.name != "zImage":
+        if f.is_file() and ".git" not in f.parts:
             rel = f.relative_to(src)
-            target = dst / rel
-            target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(f, target)
+            (dst / rel).parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(f, dst / rel)
 
-    # 2. Scan hasil copy untuk generate config
-    all_files = [f.relative_to(dst) for f in dst.rglob("*") if f.is_file()]
-    so_libs = [f for f in all_files if f.suffix == ".so" and f.name not in CONFLICT_LIBS]
-    etc_files = [f for f in all_files if f.suffix != ".so" and f.name not in ["Android.bp", "Android.mk", "a02-vendor.mk"]]
+    all_f = [f.relative_to(dst) for f in dst.rglob("*") if f.is_file()]
+    so_libs = [f for f in all_f if f.suffix == ".so" and f.name not in CONFLICT_LIBS]
+    etc_files = [str(f) for f in all_f if f.suffix != ".so" and f.name not in ["Android.bp", "Android.mk", "a02-vendor.mk"]]
 
     write_bp(dst, so_libs)
     write_vendor_mk(dst, etc_files)
     (dst / "Android.mk").write_text("LOCAL_PATH := $(call my-dir)\n\ninclude $(CLEAR_VARS)\n")
-    print(f"[+] Done! Generated configs for {len(so_libs)} libs and {len(etc_files)} files.")
 
 if __name__ == "__main__":
     main()
