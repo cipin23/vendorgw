@@ -11,7 +11,6 @@ def write_bp(dst: Path, so_libs: list):
     (dst / "Android.bp").write_text("\n".join(lines))
 
 def write_vendor_mk(dst: Path, etc_files: list):
-    # INI YANG BIKIN a02-vendor.mk
     lines = ["PRODUCT_COPY_FILES += \\"]
     entries = [f"    vendor/samsung/a02/{f}:$(TARGET_COPY_OUT_VENDOR)/{f}" for f in etc_files]
     lines.append(" \\\n".join(entries) if entries else " # empty")
@@ -25,9 +24,8 @@ def main():
     dst = Path(args.dst).resolve()
     src = Path(args.src).resolve()
     
-    # Logic copy file dari src ke dst
     for f in src.rglob("*"):
-        if f.is_file() and ".git" not in f.parts:
+        if f.is_file() and ".git" not in f.parts and f.name != "zImage":
             rel = f.relative_to(src)
             (dst / rel).parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(f, dst / rel)
