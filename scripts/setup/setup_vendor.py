@@ -1,45 +1,55 @@
-#!/usr/bin/env python3
-import argparse, shutil, os
-from pathlib import Path
+name: 1. Setup Vendor & Device Tree
 
-CONFLICT_LIBS = {"libalsautils.so", "libril.so", "libvpx.so", "libdrm.so", "libz.so", "libjpeg.so", "libpng.so"}
+on:
+  workflow_dispatch:
 
-def write_bp(dst: Path, so_libs: list):
-    lines = ["// Auto-generated BP", ""]
-    for lib in so_libs:
-        lines += ["cc_prebuilt_library_shared {", f'    name: "vendor_a02_{lib.stem}",', f'    srcs: ["{lib.name}"],', "    vendor: true, check_elf_files: false, prefer: true,", "}", ""]
-    (dst / "Android.bp").write_text("\n".join(lines))
+env:
+  VENDOR_REPO: cipin23/vendorgw
 
-def write_vendor_mk(dst: Path, etc_files: list):
-    lines = ["PRODUCT_COPY_FILES += \\"]
-    entries = [f"    vendor/samsung/a02/{f}:$(TARGET_COPY_OUT_VENDOR)/{f}" for f in etc_files]
-    lines.append(" \\\n".join(entries) if entries else " # empty")
-    (dst / "a02-vendor.mk").write_text("\n".join(lines))
+jobs:
+  setup-trees:
+    runs-on: ubuntu-22.04
+    steps:
+    - name: Checkout target repo
+      uses: actions/checkout@v4
+      with:
+        path: out_repo
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--src", required=True)
-    ap.add_argument("--dst", required=True)
-    args = ap.parse_args()
-    dst = Path(args.dst).resolve()
-    src = Path(args.src).resolve()
-    
-    # Force copy semua dari vendor_src ke out_repo
-    for f in src.rglob("*"):
-        if f.is_file() and ".git" not in f.parts and f.name != "zImage":
-            rel = f.relative_to(src)
-            target = dst / rel
-            target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(f, target)
+    - name: Clone vendor blobs
+      run: git clone --depth=1 https://github.com/$VENDOR_REPO.git vendor_src
 
-    all_f = [f.relative_to(dst) for f in dst.rglob("*") if f.is_file()]
-    so_libs = [f for f in all_f if f.suffix == ".so" and f.name not in CONFLICT_LIBS]
-    etc_files = [str(f) for f in all_f if f.suffix != ".so" and f.name not in ["Android.bp", "Android.mk", "a02-vendor.mk"]]
+    - name: Generate Trees
+      run: |
+        # Bersihin folder lama
+        rm -rf out_repo/vendor/samsung/a02
+        rm -rf out_repo/device/samsung/a02
+        mkdir -p out_repo/vendor/samsung/a02
+        mkdir -p out_repo/device/samsung/a02
 
-    write_bp(dst, so_libs)
-    write_vendor_mk(dst, etc_files)
-    (dst / "Android.mk").write_text("LOCAL_PATH := $(call my-dir)\n\ninclude $(CLEAR_VARS)\n")
-    print(f"DONE: BP={len(so_libs)}, ETC={len(etc_files)}")
+        # Run Setup (Pastikan --src ke vendor_src)
+        python3 out_repo/scripts/setup/setup_vendor.py \
+          --src vendor_src \
+          --dst out_repo/vendor/samsung/a02
+        
+        # Run Device Tree Gen
+        python3 out_repo/scripts/setup/gen_device_tree.py \
+          --vendor-src vendor_src \
+          --out out_repo/device/samsung/a02
 
-if __name__ == "__main__":
-    main()
+    - name: Copy zImage
+      run: |
+        mkdir -p out_repo/device/samsung/a02/prebuilt
+        cp vendor_src/zImage out_repo/device/samsung/a02/prebuilt/zImage || echo "No zImage"
+
+    - name: Commit & Push
+      run: |
+        cd out_repo
+        git config user.name "Arrow Tree Bot"
+        git config user.email "bot@arrow.local"
+        # Force add semua file baru
+        git add .
+        # Cek status buat debug di log
+        git status
+        # Commit & Push
+        git commit -m "Fix: Re-generate vendor tree with a02-vendor.mk [skip ci]" || exit 0
+        git push
