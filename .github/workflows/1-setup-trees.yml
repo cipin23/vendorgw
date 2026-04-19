@@ -20,12 +20,9 @@ jobs:
     - name: Clone vendor blobs repo
       run: git clone --depth=1 https://github.com/$VENDOR_REPO.git vendor_src
 
-    - name: Generate trees
+    - name: Generate vendor tree
       run: |
-        # Generate Vendor Tree (Pake vendor_src sebagai sumber)
-        python3 out_repo/scripts/setup/setup_vendor.py \
-          --src vendor_src \
-          --dst out_repo/vendor/samsung/a02
+        python3 out_repo/scripts/setup/setup_vendor.py --src out_repo/vendor/samsung/a02
         
         # Generate Device Tree
         python3 out_repo/scripts/setup/gen_device_tree.py \
