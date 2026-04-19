@@ -30,9 +30,11 @@ jobs:
 
     - name: Generate vendor tree
       run: |
+        # Hapus hasil generate lama dulu biar bersih
+        rm -rf out_repo/vendor/samsung
         mkdir -p out_repo/vendor/samsung/a02
         python3 out_repo/scripts/setup/setup_vendor.py \
-          --src vendor_src \
+          --src out_repo \
           --dst out_repo/vendor/samsung/a02
 
     - name: Generate device tree
