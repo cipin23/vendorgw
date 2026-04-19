@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""
-setup_vendor.py - FIXED: Memisahkan Android.mk dan a02-vendor.mk
-"""
-import argparse
+import argparse, shutil
 from pathlib import Path
 
 CONFLICT_LIBS = {
@@ -27,50 +24,42 @@ def write_bp(dst: Path, so_libs: list):
     (dst / "Android.bp").write_text("\n".join(lines))
 
 def write_mk(dst: Path):
-    lines = [
-        "LOCAL_PATH := $(call my-dir)",
-        "",
-        "include $(CLEAR_VARS)",
-        "# File ini sengaja dikosongkan dari PRODUCT_COPY_FILES untuk fix readonly error",
-        ""
-    ]
+    lines = ["LOCAL_PATH := $(call my-dir)", "", "include $(CLEAR_VARS)", ""]
     (dst / "Android.mk").write_text("\n".join(lines))
 
 def write_vendor_mk(dst: Path, etc_files: list):
-    # File ini yang bakal di-inherit di device/samsung/a02/arrow_a02.mk
-    lines = [
-        "# Vendor blobs copy files - SM-A022F",
-        "PRODUCT_COPY_FILES += \\"
-    ]
-    entries = []
-    for fname, rel_str in etc_files:
-        entries.append(f"    vendor/samsung/a02/{rel_str}:$(TARGET_COPY_OUT_VENDOR)/{rel_str}")
-    
-    if entries:
-        lines.append(" \\\n".join(entries))
-    else:
-        lines.append(" # No files to copy")
-        
+    lines = ["# Vendor blobs copy files", "PRODUCT_COPY_FILES += \\"]
+    entries = [f"    vendor/samsung/a02/{rel}:$(TARGET_COPY_OUT_VENDOR)/{rel}" for rel in etc_files]
+    lines.append(" \\\n".join(entries) if entries else " # No files")
     (dst / "a02-vendor.mk").write_text("\n".join(lines))
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--src", required=True)
-    ap.add_argument("--dst", required=True)
+    ap.add_argument("--src", required=True) # Folder hasil clone (vendor_src)
+    ap.add_argument("--dst", required=True) # Folder tujuan (out_repo/vendor/...)
     args = ap.parse_args()
 
+    src = Path(args.src).resolve()
     dst = Path(args.dst).resolve()
-    # Pastikan folder tujuan ada
     dst.mkdir(parents=True, exist_ok=True)
-    
-    all_files = [f for f in dst.rglob("*") if f.is_file()]
+
+    # 1. Copy semua file dari src ke dst (kecuali junk git)
+    for f in src.rglob("*"):
+        if f.is_file() and ".git" not in f.parts:
+            rel_path = f.relative_to(src)
+            target = dst / rel_path
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(f, target)
+
+    # 2. List file buat generate .mk & .bp
+    all_files = [f.relative_to(dst) for f in dst.rglob("*") if f.is_file()]
     so_libs = [f for f in all_files if f.suffix == ".so" and f.name not in CONFLICT_LIBS]
-    etc_files = [(f.name, str(f.relative_to(dst))) for f in all_files if f.suffix != ".so" and f.name not in ["Android.bp", "Android.mk", "a02-vendor.mk"]]
+    etc_files = [str(f) for f in all_files if f.suffix != ".so" and f.name not in ["Android.bp", "Android.mk", "a02-vendor.mk"]]
 
     write_bp(dst, so_libs)
     write_mk(dst)
     write_vendor_mk(dst, etc_files)
-    print("[+] Generated: Android.bp, Android.mk, and a02-vendor.mk")
+    print(f"[+] Done. Copied files and generated configs in {dst}")
 
 if __name__ == "__main__":
     main()
