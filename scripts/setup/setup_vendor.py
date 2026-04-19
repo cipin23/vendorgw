@@ -1,23 +1,20 @@
 #!/usr/bin/env python3
-import argparse
+import argparse, shutil, os
 from pathlib import Path
 
-# Daftar library yang biasanya bentrok sama AOSP/ArrowOS
 CONFLICT_LIBS = {
     "libalsautils.so", "libril.so", "libvpx.so", "libdrm.so", "libz.so", 
-    "libjpeg.so", "libpng.so", "libbase.so", "libc++.so"
+    "libjpeg.so", "libpng.so", "libbase.so", "libc++.so",
+    "android.hardware.camera.provider@2.4.so", "android.hardware.camera.provider@2.5.so"
 }
 
 def write_bp(dst: Path, so_libs: list):
-    """Bikin Android.bp buat semua .so yang ketemu"""
     lines = ["// Auto-generated Vendor Blobs BP - SM-A022F", ""]
-    for lib_rel_path in so_libs:
-        # Pake nama file tanpa .so sebagai nama module, tambahin prefix biar aman
-        mod_name = f"vendor_a02_{lib_rel_path.stem}"
+    for lib in so_libs:
         lines += [
             "cc_prebuilt_library_shared {",
-            f'    name: "{mod_name}",',
-            f'    srcs: ["{str(lib_rel_path)}"],',
+            f'    name: "vendor_a02_{lib.stem}",',
+            f'    srcs: ["{str(lib)}"],',
             "    vendor: true,",
             "    strip: { none: true },",
             "    check_elf_files: false,",
@@ -25,65 +22,40 @@ def write_bp(dst: Path, so_libs: list):
             "}", ""
         ]
     (dst / "Android.bp").write_text("\n".join(lines))
-    print(f"[+] Android.bp generated with {len(so_libs)} modules.")
 
 def write_vendor_mk(dst: Path, etc_files: list):
-    """Bikin a02-vendor.mk buat copy file non-biner"""
-    lines = [
-        "# Auto-generated Vendor Copy Files",
-        "PRODUCT_COPY_FILES += \\"
-    ]
-    entries = []
-    for rel_path in etc_files:
-        entries.append(f"    vendor/samsung/a02/{str(rel_path)}:$(TARGET_COPY_OUT_VENDOR)/{str(rel_path)}")
-    
-    if entries:
-        lines.append(" \\\n".join(entries))
-    else:
-        lines.append("    # No files to copy")
-        
+    lines = ["# Auto-generated Vendor Copy Files", "PRODUCT_COPY_FILES += \\"]
+    entries = [f"    vendor/samsung/a02/{str(f)}:$(TARGET_COPY_OUT_VENDOR)/{str(f)}" for f in etc_files]
+    lines.append(" \\\n".join(entries) if entries else "    # No files")
     (dst / "a02-vendor.mk").write_text("\n".join(lines))
-    print(f"[+] a02-vendor.mk generated with {len(etc_files)} files.")
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--src", required=True, help="Path ke folder vendor/samsung/a02")
+    ap.add_argument("--src", required=True) # Folder vendor_src (sumber blobs)
+    ap.add_argument("--dst", required=True) # Folder out_repo/vendor/samsung/a02 (tujuan)
     args = ap.parse_args()
 
-    # Kita kerja langsung di dalam folder vendor tersebut
-    base_path = Path(args.src).resolve()
-    
-    if not base_path.exists():
-        print(f"[!] Path {base_path} ga ketemu!")
-        return
+    src = Path(args.src).resolve()
+    dst = Path(args.dst).resolve()
+    dst.mkdir(parents=True, exist_ok=True)
 
-    # Scan semua file di dalam folder vendor
-    all_files = [f for f in base_path.rglob("*") if f.is_file()]
-    
-    # Pisahin mana yang library (.so) mana yang file biasa (etc, bin, dll)
-    # Kita skip file manifest yang mau kita bikin sendiri
-    skip_names = ["Android.bp", "Android.mk", "a02-vendor.mk"]
-    
-    so_libs = []
-    etc_files = []
-    
-    for f in all_files:
-        rel = f.relative_to(base_path)
-        if rel.name in skip_names:
-            continue
-            
-        if f.suffix == ".so":
-            if rel.name not in CONFLICT_LIBS:
-                so_libs.append(rel)
-        else:
-            etc_files.append(rel)
+    # 1. Copy Files dari sumber ke tujuan
+    for f in src.rglob("*"):
+        if f.is_file() and ".git" not in f.parts and f.name != "zImage":
+            rel = f.relative_to(src)
+            target = dst / rel
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(f, target)
 
-    # Tulis file konfigurasinya
-    write_bp(base_path, so_libs)
-    write_vendor_mk(base_path, etc_files)
-    
-    # Bikin Android.mk kosong (cuma boilerplate)
-    (base_path / "Android.mk").write_text("LOCAL_PATH := $(call my-dir)\n\ninclude $(CLEAR_VARS)\n")
+    # 2. Scan hasil copy untuk generate config
+    all_files = [f.relative_to(dst) for f in dst.rglob("*") if f.is_file()]
+    so_libs = [f for f in all_files if f.suffix == ".so" and f.name not in CONFLICT_LIBS]
+    etc_files = [f for f in all_files if f.suffix != ".so" and f.name not in ["Android.bp", "Android.mk", "a02-vendor.mk"]]
+
+    write_bp(dst, so_libs)
+    write_vendor_mk(dst, etc_files)
+    (dst / "Android.mk").write_text("LOCAL_PATH := $(call my-dir)\n\ninclude $(CLEAR_VARS)\n")
+    print(f"[+] Done! Generated configs for {len(so_libs)} libs and {len(etc_files)} files.")
 
 if __name__ == "__main__":
     main()
