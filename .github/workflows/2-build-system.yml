@@ -86,13 +86,21 @@ jobs:
 
     - name: Inject device & vendor tree into AOSP source
       run: |
-        # Vendor tree
-        mkdir -p $BUILD_DIR/vendor/samsung/a02
-        cp -r device_vendor_src/vendor/samsung/a02/. $BUILD_DIR/vendor/samsung/a02/
-
         # Device tree
         mkdir -p $BUILD_DIR/device/samsung/a02
         cp -r device_vendor_src/device/samsung/a02/. $BUILD_DIR/device/samsung/a02/
+
+        # Vendor tree: copy blobs ke vendor/samsung/a02/ di dalam AOSP
+        # Blobs asli ada di device_vendor_src/vendor/ (root repo)
+        mkdir -p $BUILD_DIR/vendor/samsung/a02
+        # Copy semua blobs kecuali generated files dan subfolder samsung/
+        rsync -a --exclude='samsung/' --exclude='Android.bp' --exclude='Android.mk' \
+          device_vendor_src/vendor/ $BUILD_DIR/vendor/samsung/a02/
+
+        # Generate Android.bp + Android.mk dengan path lokal (tanpa ../)
+        python3 device_vendor_src/scripts/setup/setup_vendor.py \
+          --src $BUILD_DIR/vendor/samsung/a02 \
+          --dst $BUILD_DIR/vendor/samsung/a02
 
         echo "[+] Vendor tree:"
         ls $BUILD_DIR/vendor/samsung/a02/
