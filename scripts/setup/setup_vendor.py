@@ -90,12 +90,14 @@ CONFLICT_LIBS = {
 SKIP_ETC = {
     "etc/init", "etc/selinux", "etc/group", "etc/passwd",
     "etc/fs_config_files", "etc/fs_config_dirs", "etc/vintf",
+    "lost+found",  # recovery artifact, bukan bagian vendor
 }
 
+# Extensions yang tidak boleh masuk PRODUCT_COPY_FILES
+SKIP_EXTENSIONS = {".apk", ".apex"}
+
 def is_conflict(filename):
-    """Prefix semua lib dengan vendor_a02_ kecuali yang udah punya namespace unik"""
     stem = Path(filename).stem
-    # Lib yang namanya udah unik (vendor-specific), gak perlu prefix
     SAFE_PREFIXES = (
         "vendor.samsung", "vendor.mediatek", "vendor_samsung", "vendor_mediatek",
         "libsec", "libsamsung", "libmtk", "libmedia_", "libril-mtk",
@@ -103,7 +105,6 @@ def is_conflict(filename):
     for p in SAFE_PREFIXES:
         if stem.startswith(p) or stem.startswith(p.replace(".", "_")):
             return False
-    # Semua lib lain dapat prefix vendor_a02_
     return True
 
 def should_skip_etc(rel_str):
@@ -130,6 +131,11 @@ def collect(root: Path):
             continue
         if f.name in seen:
             continue
+
+        # Skip APK dan APEX — tidak boleh masuk PRODUCT_COPY_FILES
+        if f.suffix in SKIP_EXTENSIONS:
+            continue
+
         seen.add(f.name)
 
         if f.suffix == ".so":
