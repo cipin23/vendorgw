@@ -10,57 +10,38 @@ env:
 jobs:
   setup-trees:
     runs-on: ubuntu-22.04
-    timeout-minutes: 30
-
     steps:
-    - name: Checkout this repo (device tree target)
+    - name: Checkout this repo
       uses: actions/checkout@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         path: out_repo
 
     - name: Clone vendor blobs repo
-      run: |
-        git clone --depth=1 https://github.com/$VENDOR_REPO.git vendor_src
-        echo "[+] vendor_src contents:"
-        ls vendor_src/
+      run: git clone --depth=1 https://github.com/$VENDOR_REPO.git vendor_src
 
-    - name: Install Python deps
-      run: pip install --quiet pathlib
-
-    - name: Generate vendor tree
+    - name: Generate trees
       run: |
-        # Hapus hasil generate lama dulu biar bersih
-        rm -rf out_repo/vendor/samsung
-        mkdir -p out_repo/vendor/samsung/a02
+        # Generate Vendor Tree (Pake vendor_src sebagai sumber)
         python3 out_repo/scripts/setup/setup_vendor.py \
-          --src out_repo \
+          --src vendor_src \
           --dst out_repo/vendor/samsung/a02
-
-    - name: Generate device tree
-      run: |
-        mkdir -p out_repo/device/samsung/a02
+        
+        # Generate Device Tree
         python3 out_repo/scripts/setup/gen_device_tree.py \
           --vendor-src vendor_src \
           --out out_repo/device/samsung/a02
 
-    - name: Copy zImage to device prebuilt
+    - name: Copy zImage
       run: |
         mkdir -p out_repo/device/samsung/a02/prebuilt
         cp vendor_src/zImage out_repo/device/samsung/a02/prebuilt/zImage
-        echo "[+] zImage: $(ls -lh out_repo/device/samsung/a02/prebuilt/zImage)"
 
-    - name: Commit & push trees
+    - name: Commit & Push
       run: |
         cd out_repo
         git config user.email "bot@arrow.local"
         git config user.name "Arrow Tree Bot"
-        git add vendor/samsung/a02 device/samsung/a02
-        git status
-        git diff --cached --stat
-        git commit -m "chore: add vendor & device tree for SM-A022F (MT6739)
-
-        - vendor/samsung/a02: blobs + Android.bp + Android.mk
-        - device/samsung/a02: BoardConfig, device.mk, manifest.xml, overlay
-        - prebuilt/zImage from $VENDOR_RELEASE" || echo "Nothing to commit"
+        git add .
+        git commit -m "Update vendor and device trees [skip ci]" || exit 0
         git push
