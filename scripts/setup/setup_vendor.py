@@ -47,8 +47,44 @@ CONFLICT_LIBS = {
     "libpcre.so",
     "libpcre2.so",
     "libsqlite.so",
-    "libc++.so",
-    "libunwind.so",
+    # Stagefright soft codecs (ada di frameworks/av)
+    "libstagefright_soft_vpxdec.so",
+    "libstagefright_soft_vpxenc.so",
+    "libstagefright_soft_hevcdec.so",
+    "libstagefright_soft_mpeg4dec.so",
+    "libstagefright_soft_mpeg4enc.so",
+    "libstagefright_soft_mp3dec.so",
+    "libstagefright_soft_aacdec.so",
+    "libstagefright_soft_aacenc.so",
+    "libstagefright_soft_amrdec.so",
+    "libstagefright_soft_amrnbenc.so",
+    "libstagefright_soft_amrwbenc.so",
+    "libstagefright_soft_avcdec.so",
+    "libstagefright_soft_avcenc.so",
+    "libstagefright_soft_flacdec.so",
+    "libstagefright_soft_flacenc.so",
+    "libstagefright_soft_g711dec.so",
+    "libstagefright_soft_gsmdec.so",
+    "libstagefright_soft_mpeg2dec.so",
+    "libstagefright_soft_opusdec.so",
+    "libstagefright_soft_rawdec.so",
+    "libstagefright_soft_vorbisdec.so",
+    "libstagefright_soft_ddpdec.so",
+    "libstagefright_soft_ac4dec.so",
+    "libstagefright_softomx.so",
+    "libstagefright_softomx_plugin.so",
+    "libstagefright_flacdec.so",
+    "libstagefright_bufferpool@2.0.1.so",
+    "libstagefright_bufferqueue_helper_vendor.so",
+    "libstagefright_enc_common.so",
+    "libstagefright_omx_vendor.so",
+    "libstagefright_foundation.so",
+    # Codec2
+    "libcodec2_vndk.so",
+    "libcodec2_hidl@1.1.so",
+    "libcodec2_hidl@1.0.so",
+    "libsfplugin_ccodec_utils.so",
+    "libvkmanager_vendor.so",
 }
 
 SKIP_ETC = {
@@ -57,7 +93,18 @@ SKIP_ETC = {
 }
 
 def is_conflict(filename):
-    return filename in CONFLICT_LIBS
+    """Prefix semua lib dengan vendor_a02_ kecuali yang udah punya namespace unik"""
+    stem = Path(filename).stem
+    # Lib yang namanya udah unik (vendor-specific), gak perlu prefix
+    SAFE_PREFIXES = (
+        "vendor.samsung", "vendor.mediatek", "vendor_samsung", "vendor_mediatek",
+        "libsec", "libsamsung", "libmtk", "libmedia_", "libril-mtk",
+    )
+    for p in SAFE_PREFIXES:
+        if stem.startswith(p) or stem.startswith(p.replace(".", "_")):
+            return False
+    # Semua lib lain dapat prefix vendor_a02_
+    return True
 
 def should_skip_etc(rel_str):
     for skip in SKIP_ETC:
