@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """
-setup_vendor.py - Generate vendor/samsung/a02/Android.bp + Android.mk
-Blobs TIDAK dicopy - path di Android.bp/mk nunjuk ke vendor/ root langsung
-Usage: python3 setup_vendor.py --src <repo_root> --dst <vendor/samsung/a02>
+setup_vendor.py - Generate Android.bp + Android.mk dari blobs lokal
+--src dan --dst nunjuk ke folder yang SAMA (vendor/samsung/a02/)
+Blobs udah ada di sana, script cuma generate manifest files
+Usage: python3 setup_vendor.py --src <vendor/samsung/a02> --dst <vendor/samsung/a02>
 """
 
 import argparse
@@ -33,22 +34,20 @@ def should_skip_etc(rel_str):
             return True
     return False
 
-def collect(vendor_root: Path):
+def collect(root: Path):
     so_libs = []
     etc_files = []
     seen = set()
 
-    for f in sorted(vendor_root.rglob("*")):
+    for f in sorted(root.rglob("*")):
         if not f.is_file():
             continue
         try:
-            rel = f.relative_to(vendor_root)
+            rel = f.relative_to(root)
         except ValueError:
             continue
         rel_str = str(rel).replace("\\", "/")
 
-        if rel_str.startswith("samsung/"):
-            continue
         if f.name in ("Android.bp", "Android.mk"):
             continue
         if f.name in seen:
@@ -62,7 +61,7 @@ def collect(vendor_root: Path):
 
     return so_libs, etc_files
 
-def write_bp(dst: Path, so_libs: list, prefix: str):
+def write_bp(dst: Path, so_libs: list):
     lines = [
         "// AUTO-GENERATED - DO NOT EDIT",
         'soong_namespace {}',
@@ -74,7 +73,7 @@ def write_bp(dst: Path, so_libs: list, prefix: str):
         lines += [
             "cc_prebuilt_library_shared {",
             f'    name: "{module_name}",',
-            f'    srcs: ["{prefix}{rel_str}"],',
+            f'    srcs: ["{rel_str}"],',
             "    vendor: true,",
             "    strip: { none: true },",
             "    check_elf_files: false,",
@@ -85,7 +84,7 @@ def write_bp(dst: Path, so_libs: list, prefix: str):
     (dst / "Android.bp").write_text("\n".join(lines))
     print(f"[+] Android.bp: {len(so_libs)} libs")
 
-def write_mk(dst: Path, etc_files: list, prefix: str):
+def write_mk(dst: Path, etc_files: list):
     lines = [
         "LOCAL_PATH := $(call my-dir)",
         "",
@@ -97,7 +96,7 @@ def write_mk(dst: Path, etc_files: list, prefix: str):
         lines.append("PRODUCT_COPY_FILES += \\")
         entries = []
         for fname, rel_str in etc_files:
-            entries.append(f"    $(LOCAL_PATH)/{prefix}{rel_str}:$(TARGET_COPY_OUT_VENDOR)/{rel_str}")
+            entries.append(f"    $(LOCAL_PATH)/{rel_str}:$(TARGET_COPY_OUT_VENDOR)/{rel_str}")
         lines.append(" \\\n".join(entries))
     lines.append("")
     (dst / "Android.mk").write_text("\n".join(lines))
@@ -105,33 +104,21 @@ def write_mk(dst: Path, etc_files: list, prefix: str):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--src", required=True, help="repo root (contains vendor/)")
-    ap.add_argument("--dst", required=True, help="output: vendor/samsung/a02")
+    ap.add_argument("--src", required=True, help="folder blobs (vendor/samsung/a02)")
+    ap.add_argument("--dst", required=True, help="output folder (sama dengan --src)")
     args = ap.parse_args()
 
     src = Path(args.src).resolve()
     dst = Path(args.dst)
     dst.mkdir(parents=True, exist_ok=True)
 
-    vendor_root = src / "vendor"
-    if not vendor_root.exists():
-        print(f"[!] vendor/ not found in {src}")
-        raise SystemExit(1)
-
-    # dst = vendor/samsung/a02, vendor/ ada di ../../ dari sini
-    prefix = "../../"
-
-    print(f"[*] vendor root : {vendor_root}")
-    print(f"[*] dst         : {dst}")
-    print(f"[*] prefix      : {prefix}")
-
-    so_libs, etc_files = collect(vendor_root)
+    print(f"[*] Scanning blobs from: {src}")
+    so_libs, etc_files = collect(src)
     print(f"[*] Found: {len(so_libs)} .so, {len(etc_files)} etc files")
 
-    write_bp(dst, so_libs, prefix)
-    write_mk(dst, etc_files, prefix)
-
-    print("[*] Done. No blobs copied.")
+    write_bp(dst, so_libs)
+    write_mk(dst, etc_files)
+    print("[*] Done.")
 
 if __name__ == "__main__":
     main()
