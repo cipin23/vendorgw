@@ -145,6 +145,9 @@ TARGET_BOARD_PLATFORM := mt6739
 TARGET_BOOTLOADER_BOARD_NAME := k39tv1_bsp_titan_hamster
 TARGET_NO_BOOTLOADER := true
 
+# Binder
+TARGET_USES_64_BIT_BINDER := true
+
 # ARM 32-bit (NO lib64)
 TARGET_ARCH         := arm
 TARGET_ARCH_VARIANT := armv8-a
