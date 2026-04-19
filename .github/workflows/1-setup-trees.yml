@@ -33,11 +33,12 @@ jobs:
         rm -rf out_repo/vendor/samsung/a02
         mkdir -p out_repo/vendor/samsung/a02
 
-        # Copy blobs dari vendor_src ke vendor/samsung/a02 dulu
-        rsync -a --exclude='samsung/' \
-          vendor_src/ out_repo/vendor/samsung/a02/
+        # Blobs ada di vendor_src/vendor/samsung/a02/vendor/
+        rsync -a vendor_src/vendor/samsung/a02/vendor/ out_repo/vendor/samsung/a02/
 
-        # Generate Android.bp + Android.mk dari blobs yang udah ada
+        echo "[+] Blob count: $(find out_repo/vendor/samsung/a02 -type f | wc -l)"
+
+        # Generate Android.bp + Android.mk dari blobs
         python3 out_repo/scripts/setup/setup_vendor.py \
           --src out_repo/vendor/samsung/a02 \
           --dst out_repo/vendor/samsung/a02
