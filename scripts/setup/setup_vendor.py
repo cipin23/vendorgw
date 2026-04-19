@@ -12,31 +12,33 @@ def main():
     
     src = Path(args.src).resolve()
     dst = Path(args.dst).resolve()
-    
     dst.mkdir(parents=True, exist_ok=True)
 
-    # 1. Copy smua blobs
+    # 1. Copy Blobs - Pake penanganan folder yang bener
     for root, dirs, files in os.walk(src):
         for file in files:
             if file == "zImage" or ".git" in root: continue
             s_file = Path(root) / file
+            if not s_file.is_file(): continue # Skip kalo bukan file
+            
             rel = s_file.relative_to(src)
             d_file = dst / rel
             d_file.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(s_file, d_file)
+            try:
+                shutil.copy2(s_file, d_file)
+            except Exception as e:
+                print(f"Skip error file: {e}")
 
-    # 2. Scan buat config
-    so_libs = []
-    etc_files = []
+    # 2. Scan hasil copy buat config
+    all_f = []
     for root, dirs, files in os.walk(dst):
         for file in files:
             if file in ["Android.bp", "Android.mk", "a02-vendor.mk"]: continue
             p = Path(root) / file
-            rel = p.relative_to(dst)
-            if p.suffix == ".so" and file not in CONFLICT_LIBS:
-                so_libs.append(rel)
-            elif p.suffix != ".so":
-                etc_files.append(rel)
+            all_f.append(p.relative_to(dst))
+
+    so_libs = [f for f in all_f if f.suffix == ".so" and f.name not in CONFLICT_LIBS]
+    etc_files = [f for f in all_f if f.suffix != ".so"]
 
     # 3. Write Configs
     bp = ["// Auto-generated BP\n"]
@@ -50,7 +52,7 @@ def main():
     (dst / "a02-vendor.mk").write_text("\n".join(mk))
 
     (dst / "Android.mk").write_text("LOCAL_PATH := $(call my-dir)\n\ninclude $(CLEAR_VARS)\n")
-    print(f"DONE! BP: {len(so_libs)}, MK: {len(etc_files)}")
+    print(f"BINGGO! BP: {len(so_libs)}, MK: {len(etc_files)}")
 
 if __name__ == "__main__":
     main()
