@@ -2,6 +2,7 @@
 import argparse, shutil, os
 from pathlib import Path
 
+# Daftar lib yang sering bikin build error
 CONFLICT_LIBS = {"libalsautils.so", "libril.so", "libvpx.so", "libdrm.so", "libz.so", "libjpeg.so", "libpng.so"}
 
 def write_bp(dst: Path, so_libs: list):
@@ -12,7 +13,7 @@ def write_bp(dst: Path, so_libs: list):
 
 def write_vendor_mk(dst: Path, etc_files: list):
     lines = ["PRODUCT_COPY_FILES += \\"]
-    # Pake list comprehension biar cepet
+    # Daftarin semua file non-so ke PRODUCT_COPY_FILES
     entries = [f"    vendor/samsung/a02/{f}:$(TARGET_COPY_OUT_VENDOR)/{f}" for f in etc_files]
     if entries:
         lines.append(" \\\n".join(entries))
@@ -28,7 +29,7 @@ def main():
     dst = Path(args.dst).resolve()
     src = Path(args.src).resolve()
     
-    # 1. Copy smua dari vendor_src ke out_repo
+    # 1. Copy smua file beneran dari sumber ke folder repo
     if src.exists():
         for f in src.rglob("*"):
             if f.is_file() and ".git" not in f.parts and f.name != "zImage":
@@ -37,18 +38,20 @@ def main():
                 target.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(f, target)
 
-    # 2. Ambil list file yg udah di-copy buat jadi config
-    # Jangan skip filenya di sini, skip pas udah jadi list aja
+    # 2. Ambil list file yang udah di-copy buat dibikin config
+    # Scan ulang folder dst setelah copy selesai
     all_f = [f.relative_to(dst) for f in dst.rglob("*") if f.is_file()]
     
+    # Pisahin mana .so mana yang bukan
     so_libs = [f for f in all_f if f.suffix == ".so" and f.name not in CONFLICT_LIBS]
-    # Filter biar a02-vendor.mk ga masuk ke dalem list copy-nya sendiri
+    # Kecualikan file meta (bp/mk) dari daftar copy
     etc_files = [str(f) for f in all_f if f.suffix != ".so" and f.name not in ["Android.bp", "Android.mk", "a02-vendor.mk"]]
 
+    # 3. Tulis file-file sakti
     write_bp(dst, so_libs)
     write_vendor_mk(dst, etc_files)
     (dst / "Android.mk").write_text("LOCAL_PATH := $(call my-dir)\n\ninclude $(CLEAR_VARS)\n")
-    print(f"DONE: BP={len(so_libs)}, MK={len(etc_files)}")
+    print(f"DONE -> BP: {len(so_libs)} | MK: {len(etc_files)}")
 
 if __name__ == "__main__":
     main()
