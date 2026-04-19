@@ -5,65 +5,37 @@ on:
 
 env:
   VENDOR_REPO: cipin23/vendorgw
-  VENDOR_RELEASE: v0.1
 
 jobs:
   setup-trees:
     runs-on: ubuntu-22.04
-    timeout-minutes: 30
-
     steps:
-    - name: Checkout this repo
+    - name: Checkout target repo
       uses: actions/checkout@v4
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
         path: out_repo
 
-    - name: Clone vendor blobs repo
-      run: |
-        git clone --depth=1 https://github.com/$VENDOR_REPO.git vendor_src
-        echo "[+] vendor_src contents:"
-        ls vendor_src/
+    - name: Clone vendor blobs
+      run: git clone --depth=1 https://github.com/$VENDOR_REPO.git vendor_src
 
-    - name: Install Python deps
-      run: pip install --quiet pathlib
-
-    - name: Generate trees
+    - name: Generate Trees
       run: |
-        # Bersihin folder lama biar ga tumpang tindih
         rm -rf out_repo/vendor/samsung/a02
-        rm -rf out_repo/device/samsung/a02
         mkdir -p out_repo/vendor/samsung/a02
-        mkdir -p out_repo/device/samsung/a02
-
-        # 1. Setup Vendor Tree (Copy blobs + Generate .bp & .mk)
-        # Pointing --src ke vendor_src biar script bisa baca file aslinya
+        # --src nembak ke vendor_src biar ada isinya
         python3 out_repo/scripts/setup/setup_vendor.py \
           --src vendor_src \
           --dst out_repo/vendor/samsung/a02
-
-        # 2. Generate Device Tree Skeleton
+        
         python3 out_repo/scripts/setup/gen_device_tree.py \
           --vendor-src vendor_src \
           --out out_repo/device/samsung/a02
 
-    - name: Copy zImage to device prebuilt
-      run: |
-        mkdir -p out_repo/device/samsung/a02/prebuilt
-        if [ -f vendor_src/zImage ]; then
-          cp vendor_src/zImage out_repo/device/samsung/a02/prebuilt/zImage
-          echo "[+] zImage copied successfully"
-        else
-          echo "[!] zImage not found in vendor_src!"
-        fi
-
-    - name: Commit & push trees
+    - name: Commit & Push
       run: |
         cd out_repo
-        git config user.email "bot@arrow.local"
         git config user.name "Arrow Tree Bot"
+        git config user.email "bot@arrow.local"
         git add .
-        git status
-        # Commit cuma kalau ada perubahan
-        git commit -m "Fix: Re-generate vendor and device trees with proper blobs [skip ci]" || exit 0
+        git commit -m "Fix: Re-generate vendor tree with a02-vendor.mk [skip ci]" || exit 0
         git push
