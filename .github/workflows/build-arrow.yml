@@ -1,4 +1,4 @@
-name: Build System
+name: Build ArrowOS A02 system.img
 
 on:
   workflow_dispatch:
@@ -73,6 +73,15 @@ jobs:
         done
         ls -lh .downloads/
 
+    - name: Copy zImage to device prebuilt
+      run: |
+        mkdir -p /mnt/arrow/device/samsung/a02/prebuilt
+        # zImage ada di root repo (bukan release asset), clone dulu
+        git clone --depth=1 https://github.com/$VENDOR_REPO.git .vendor_src_tmp
+        cp .vendor_src_tmp/zImage /mnt/arrow/device/samsung/a02/prebuilt/zImage
+        echo "[+] zImage copied: $(ls -lh /mnt/arrow/device/samsung/a02/prebuilt/zImage)"
+        rm -rf .vendor_src_tmp
+
     - name: Checkout device tree generator
       uses: actions/checkout@v3
       with:
@@ -82,7 +91,6 @@ jobs:
       run: |
         cd /mnt/arrow
         mkdir -p vendor/samsung/a02
-        # Clone vendor blobs repo
         git clone --depth=1 https://github.com/$VENDOR_REPO.git .vendor_src
 
         # Copy blobs into vendor tree
