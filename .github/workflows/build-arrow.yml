@@ -84,16 +84,17 @@ jobs:
 
         # Inject local manifest buat exclude project gak perlu
         mkdir -p .repo/local_manifests
-        cat > .repo/local_manifests/remove.xml << 'EOF'
-<?xml version="1.0" encoding="UTF-8"?>
+        python3 -c "
+content = '''<?xml version=\"1.0\" encoding=\"UTF-8\"?>
 <manifest>
-  <remove-project name="platform/external/chromium-webview"/>
-  <remove-project name="platform/packages/apps/Camera2"/>
-  <remove-project name="platform/packages/apps/Music"/>
-  <remove-project name="platform/packages/apps/Gallery2"/>
-  <remove-project name="platform/packages/apps/QuickSearchBox"/>
-</manifest>
-EOF
+  <remove-project name=\"platform/external/chromium-webview\"/>
+  <remove-project name=\"platform/packages/apps/Camera2\"/>
+  <remove-project name=\"platform/packages/apps/Music\"/>
+  <remove-project name=\"platform/packages/apps/Gallery2\"/>
+  <remove-project name=\"platform/packages/apps/QuickSearchBox\"/>
+</manifest>'''
+open('.repo/local_manifests/remove.xml', 'w').write(content)
+"
 
         repo sync -c -j$(nproc) --force-sync --no-clone-bundle --no-tags
 
