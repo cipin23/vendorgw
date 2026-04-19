@@ -1,4 +1,4 @@
-name: Build system.img
+name: Build ArrowOS A02 system.img
 
 on:
   workflow_dispatch:
@@ -83,7 +83,7 @@ jobs:
         rm -rf .vendor_src_tmp
 
     - name: Checkout device tree generator
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         path: /mnt/arrow/scripts/setup
 
@@ -107,7 +107,7 @@ jobs:
           --out device/samsung/a02
 
     - name: Setup ccache
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.ccache
         key: ccache-arrow-a02-${{ github.run_number }}
@@ -150,7 +150,7 @@ jobs:
         fi
 
     - name: Upload system.img
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: system-img-${{ github.run_number }}
         path: /mnt/arrow/out/target/product/a02/system.img
@@ -158,7 +158,7 @@ jobs:
 
     - name: Upload build log
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: build-log-${{ github.run_number }}
         path: /tmp/build.log
