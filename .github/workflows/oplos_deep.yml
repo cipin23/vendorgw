@@ -1,10 +1,10 @@
-name: Operasi Bedah Services Jar (Transplantasi Method from crDroid)
+name: Operasi Bedah Services Jar (Delegation Method - Aman Total)
 
 on:
   workflow_dispatch:
 
 jobs:
-  transplant:
+  delegation-patch:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -17,77 +17,70 @@ jobs:
           wget -q "https://github.com/baksmali/smali/releases/download/3.0.9/baksmali-3.0.9-fat.jar" -O baksmali.jar
           wget -q "https://github.com/baksmali/smali/releases/download/3.0.9/smali-3.0.9-fat.jar" -O smali.jar
 
-      - name: Disassemble Both ROMs
+      - name: Disassemble ArrowOS Services
         run: |
-          mkdir -p out/arrowos out/crdroid
+          mkdir -p out/arrowos
           java -jar baksmali.jar d files/arrowos_services.jar -o out/arrowos/services_smali/
-          java -jar baksmali.jar d files/crdroid_services.jar -o out/crdroid/services_smali/
 
-      - name: Extract Method from crDroid (dengan parameter int)
+      - name: Tambah Method Delegasi (dengan parameter int)
         run: |
-          cat > extract_method.py << 'PYTHON_SCRIPT'
+          TARGET="out/arrowos/services_smali/com/android/server/audio/AudioDeviceBroker.smali"
+          
+          cat > add_delegation.py << 'PYTHON_SCRIPT'
           import re
           import sys
-
-          crdroid_file = "out/crdroid/services_smali/com/android/server/audio/AudioDeviceBroker.smali"
-          with open(crdroid_file, 'r') as f:
+          
+          file_path = "out/arrowos/services_smali/com/android/server/audio/AudioDeviceBroker.smali"
+          with open(file_path, 'r') as f:
               content = f.read()
-
-          # Cari method removeScheduledA2dpEvents dengan parameter (Landroid/bluetooth/BluetoothDevice;I)V
-          pattern = r'(\.method (?:public|private|protected) (?:static )?removeScheduledA2dpEvents\(Landroid/bluetooth/BluetoothDevice;I\)V.*?\.end method)'
-          match = re.search(pattern, content, re.DOTALL)
+          
+          # Cek apakah method dengan parameter int sudah ada (biar gak dobel)
+          if 'removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;I)V' in content:
+              print("⚠️ Method dengan int sudah ada, skip penambahan")
+              sys.exit(0)
+          
+          # Cari method asli (tanpa int) untuk dijadikan target delegasi
+          # Kita akan inject method baru setelah method asli
+          old_method_pattern = r'(\.method (?:public|private|protected) removeScheduledA2dpEvents\(Landroid/bluetooth/BluetoothDevice;\)V.*?\.end method)'
+          match = re.search(old_method_pattern, content, re.DOTALL)
           if not match:
-              print("❌ Method dengan parameter int tidak ditemukan di crDroid")
+              print("❌ Method asli tidak ditemukan")
               sys.exit(1)
           
-          method_body = match.group(0)
-          # Simpan ke file
-          with open("crdroid_method_body.smali", "w") as f:
-              f.write(method_body)
-          print("✅ Method body dari crDroid berhasil diekstrak")
-          PYTHON_SCRIPT
+          old_method_block = match.group(0)
           
-          python3 extract_method.py
-
-      - name: Replace Method di ArrowOS
-        run: |
-          cat > replace_method.py << 'PYTHON_SCRIPT'
-          import re
-          import sys
-
-          arrow_file = "out/arrowos/services_smali/com/android/server/audio/AudioDeviceBroker.smali"
-          with open(arrow_file, 'r') as f:
-              content = f.read()
-
-          # Cari method lama di ArrowOS (tanpa int) -> signature (Landroid/bluetooth/BluetoothDevice;)V
-          old_pattern = r'(\.method (?:public|private|protected) (?:static )?removeScheduledA2dpEvents\(Landroid/bluetooth/BluetoothDevice;\)V.*?\.end method)'
-          match = re.search(old_pattern, content, re.DOTALL)
-          if not match:
-              print("❌ Method lama tanpa int tidak ditemukan di ArrowOS")
-              sys.exit(1)
+          # Buat method delegasi
+          delegation_method = '''
+      .method private removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;I)V
+          .registers 3
+          .param p1, "device"  # Landroid/bluetooth/BluetoothDevice;
+          .param p2, "codec"   # I (tidak dipakai)
           
-          # Baca method body dari crDroid
-          with open("crdroid_method_body.smali", 'r') as f:
-              new_method = f.read()
+          invoke-direct {p0, p1}, Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;)V
           
-          # Replace
-          new_content = re.sub(old_pattern, new_method, content, count=1, flags=re.DOTALL)
+          return-void
+      .end method
+          '''
           
-          with open(arrow_file, 'w') as f:
+          # Inject delegation method tepat setelah method asli
+          new_content = content.replace(old_method_block, old_method_block + delegation_method)
+          
+          with open(file_path, 'w') as f:
               f.write(new_content)
-          print("✅ Method di ArrowOS berhasil diganti dengan versi crDroid (sudah berparameter int)")
+          
+          print("✅ Method delegasi berhasil ditambahkan")
           PYTHON_SCRIPT
           
-          python3 replace_method.py
+          python3 add_delegation.py
 
-      - name: Patch Semua Caller untuk Kirim Parameter Int (nilai 0)
+      - name: Patch Semua Caller ke Method dengan Parameter Int
         run: |
           TARGET_DIR="out/arrowos/services_smali"
           cat > patch_callers.py << 'PYTHON_SCRIPT'
           import re
           import os
           import sys
-
+          
           target_dir = sys.argv[1]
           for root, dirs, files in os.walk(target_dir):
               for file in files:
@@ -101,18 +94,16 @@ jobs:
                   if 'removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;)V' not in content:
                       continue
                   
-                  print(f"Patching caller di: {filepath}")
+                  print(f"Patching: {filepath}")
                   backup = filepath + '.bak'
                   with open(backup, 'w') as f:
                       f.write(content)
                   
-                  # Ubah invoke signature dan tambah argumen int (const/4 v0, 0x0)
-                  # Pattern invoke-virtual/direct dengan args { ... }
+                  # Ubah signature invoke jadi pake int, tambah register v0
                   pattern = r'(invoke-(?:virtual|direct|static|interface)\s+\{([^}]+)\},\s*Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents\(Landroid/bluetooth/BluetoothDevice;\)V)'
                   
                   def replacer(match):
                       args = match.group(2).strip()
-                      # Tambahkan register baru (v0) di akhir
                       new_args = args + ", v0"
                       return f'invoke-virtual {{{new_args}}}, Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;I)V'
                   
@@ -124,10 +115,8 @@ jobs:
                   for i, line in enumerate(lines):
                       new_lines.append(line)
                       if 'invoke-' in line and 'removeScheduledA2dpEvents' in line and '(Landroid/bluetooth/BluetoothDevice;I)V' in line:
-                          # Cek apakah baris sebelumnya sudah ada const v0
                           if i > 0 and 'const/4 v0,' in lines[i-1]:
                               continue
-                          # Inject
                           new_lines.insert(i, '    const/4 v0, 0x0')
                   
                   with open(filepath, 'w') as f:
@@ -136,7 +125,7 @@ jobs:
           PYTHON_SCRIPT
           
           python3 patch_callers.py "$TARGET_DIR"
-          echo "✅ Semua caller dipatch"
+          echo "✅ Semua caller dipatch ke method delegasi"
 
       - name: Reassemble & Package
         run: |
@@ -149,6 +138,6 @@ jobs:
       - name: Upload Patched Result
         uses: actions/upload-artifact@v4
         with:
-          name: ArrowOS-Services-Patched-Final
+          name: ArrowOS-Services-Patched-Delegation
           path: out/arrowos/arrowos_services_patched.jar
           retention-days: 7
