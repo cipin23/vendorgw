@@ -1,0 +1,58 @@
+name: Operasi Bedah Services Jar
+
+on:
+  workflow_dispatch:
+
+jobs:
+  patch-audio-broker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java & Tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y zip unzip
+          wget https://bitbucket.org/JesusFreke/smali/downloads/baksmali-2.5.2.jar -O baksmali.jar
+          wget https://bitbucket.org/JesusFreke/smali/downloads/smali-2.5.2.jar -O smali.jar
+
+      - name: Disassemble Patients & Donors
+        run: |
+          mkdir -p out/arrowos out/crdroid
+          # Bongkar ArrowOS (Pasien)
+          java -jar baksmali.jar d files/arrowos_services.jar -o out/arrowos/services_smali/
+          # Bongkar crDroid (Donor)
+          java -jar baksmali.jar d files/crdroid_services.jar -o out/crdroid/services_smali/
+
+      - name: Patching Logic (Transplantasi)
+        run: |
+          TARGET="out/arrowos/services_smali/com/android/server/audio/AudioDeviceBroker.smali"
+          
+          # 1. Update Method Signature: tambah parameter int (I) [cite: 3]
+          sed -i 's/removeScheduledA2dpEvents(Landroid\/bluetooth\/BluetoothDevice;)V/removeScheduledA2dpEvents(Landroid\/bluetooth\/BluetoothDevice;I)V/g' $TARGET
+          
+          # 2. Update .registers dari 10 ke 11 [cite: 3]
+          # Cari method yang baru diubah tadi, lalu ganti baris .registers di bawahnya
+          sed -i '/removeScheduledA2dpEvents(Landroid\/bluetooth\/BluetoothDevice;I)V/,/\.registers/ s/\.registers 10/\.registers 11/' $TARGET
+
+          # 3. Ubah hardcode 0x0 jadi p2 (codec parameter) [cite: 4, 5]
+          # Kita pakai sed untuk cari baris const/4 v5, 0x0 yang ada di dekat BtDeviceConnectionInfo
+          sed -i '/BtDeviceConnectionInfo;-><init>/ {N; s/const\/4 v5, 0x0/move v5, p2/}' $TARGET
+          
+          # 4. Patch Caller (Baris 2916-ish) 
+          # Mengubah pemanggil agar mengirim register codec (p3)
+          sed -i 's/invoke-direct {p0, p1}, Lcom/android/server/audio\/AudioDeviceBroker;->removeScheduledA2dpEvents(Landroid\/bluetooth\/BluetoothDevice;)V/invoke-direct {p0, p1, p3}, Lcom/android/server/audio\/AudioDeviceBroker;->removeScheduledA2dpEvents(Landroid\/bluetooth\/BluetoothDevice;I)V/g' $TARGET
+
+      - name: Reassemble & Package
+        run: |
+          cd out/arrowos/
+          java -jar ../../smali.jar a services_smali/ -o classes.dex
+          cp ../../files/arrowos_services.jar arrowos_services_patched.jar
+          zip -u arrowos_services_patched.jar classes.dex
+
+      - name: Upload Patched Result
+        uses: actions/upload-artifact@v4
+        with:
+          name: ArrowOS-Services-Patched
+          path: out/arrowos/arrowos_services_patched.jar
