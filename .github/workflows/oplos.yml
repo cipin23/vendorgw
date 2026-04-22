@@ -15,9 +15,9 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y zip unzip wget
           # Download smali & baksmali sebagai executable jar
-          # Harus pakai -fatjar variant, yang biasa gak ada Main manifest!
-          wget -q "https://repo1.maven.org/maven2/org/smali/baksmali/2.5.2/baksmali-2.5.2-fatjar.jar" -O baksmali.jar
-          wget -q "https://repo1.maven.org/maven2/org/smali/smali/2.5.2/smali-2.5.2-fatjar.jar" -O smali.jar
+          # Harus pakai -sources variant, yang biasa gak ada Main manifest!
+          wget -q "https://repo1.maven.org/maven2/org/smali/baksmali/2.5.2/baksmali-2.5.2-sources.jar" -O baksmali.jar
+          wget -q "https://repo1.maven.org/maven2/org/smali/smali/2.5.2/smali-2.5.2-sources.jar" -O smali.jar
           java -jar baksmali.jar --version
           java -jar smali.jar --version
 
