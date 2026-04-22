@@ -29,10 +29,10 @@ jobs:
       - name: Download Frameworks from Google Drive
         run: |
           # GANTI <ID_FILE_1> dengan ID file arrowos_framework.jar lo
-          gdown --id <ID_FILE_1> -O files/arrowos_framework.jar
+          gdown --id 13WDzen7QUqq5F4nvpnGGJTk5XCppH99z -O files/arrowos_framework.jar
           
           # GANTI <ID_FILE_2> dengan ID file crdroid_framework.jar lo
-          gdown --id <ID_FILE_2> -O files/crdroid_framework.jar
+          gdown --id 1PALnDaTiooR2t3cwg9J4FGstHgtqG9Kz -O files/crdroid_framework.jar
 
       - name: Commit and Push Changes
         run: |
