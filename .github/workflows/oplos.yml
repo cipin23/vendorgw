@@ -1,4 +1,4 @@
-name: Operasi Bedah Services Jar
+name: Oplos
 
 on:
   workflow_dispatch:
@@ -12,45 +12,98 @@ jobs:
 
       - name: Setup Java & Tools
         run: |
-          sudo apt-get update
-          sudo apt-get install -y zip unzip
-          # Download smali & baksmali
-          wget https://repo1.maven.org/maven2/org/smali/baksmali/2.5.2/baksmali-2.5.2.jar -O baksmali.jar
-          wget https://repo1.maven.org/maven2/org/smali/smali/2.5.2/smali-2.5.2.jar -O smali.jar
+          sudo apt-get update -qq
+          sudo apt-get install -y zip unzip wget
+          # Download smali & baksmali sebagai executable jar
+          wget -q https://repo1.maven.org/maven2/org/smali/baksmali/2.5.2/baksmali-2.5.2.jar -O baksmali.jar
+          wget -q https://repo1.maven.org/maven2/org/smali/smali/2.5.2/smali-2.5.2.jar -O smali.jar
+          java -jar baksmali.jar --version
+          java -jar smali.jar --version
 
       - name: Disassemble Patients & Donors
         run: |
           mkdir -p out/arrowos out/crdroid
-          # Panggil class main-nya langsung biar gak error manifest
-          java -cp baksmali.jar org.jf.baksmali.Main d files/arrowos_services.jar -o out/arrowos/services_smali/ [cite: 3, 8]
-          java -cp baksmali.jar org.jf.baksmali.Main d files/crdroid_services.jar -o out/crdroid/services_smali/ 
+          # Pakai java -jar bukan -cp, ini yang bikin error sebelumnya
+          java -jar baksmali.jar d files/arrowos_services.jar -o out/arrowos/services_smali/
+          java -jar baksmali.jar d files/crdroid_services.jar -o out/crdroid/services_smali/
 
-      - name: Patching Logic (Transplantasi)
+      - name: Verify Target File Exists
         run: |
           TARGET="out/arrowos/services_smali/com/android/server/audio/AudioDeviceBroker.smali"
-          
-          # Update Method Signature [cite: 3]
-          [cite_start]sed -i 's/removeScheduledA2dpEvents(Landroid\/bluetooth\/BluetoothDevice;)V/removeScheduledA2dpEvents(Landroid\/bluetooth\/BluetoothDevice;I)V/g' $TARGET [cite: 3]
-          
-          # Update .registers [cite: 3]
-          [cite_start]sed -i '/removeScheduledA2dpEvents(Landroid\/bluetooth\/BluetoothDevice;I)V/,/\.registers/ s/\.registers 10/\.registers 11/' $TARGET [cite: 3]
+          if [ ! -f "$TARGET" ]; then
+            echo "❌ ERROR: AudioDeviceBroker.smali tidak ditemukan!"
+            echo "Isi folder audio:"
+            find out/arrowos/services_smali/com/android/server/audio/ -name "*.smali" || echo "(folder tidak ada)"
+            exit 1
+          fi
+          echo "✅ Target ditemukan: $TARGET"
+          # Tampilkan method signature asli buat debug
+          grep -n "removeScheduledA2dpEvents" "$TARGET" || echo "(method tidak ditemukan, cek nama method)"
 
-          # Ganti 0x0 ke p2 (codec) [cite: 3, 4, 5]
-          [cite_start]sed -i 's/const\/4 v5, 0x0/move v5, p2/g' $TARGET [cite: 4, 5]
+      - name: Patching Logic (Transplantasi AudioDeviceBroker)
+        run: |
+          TARGET="out/arrowos/services_smali/com/android/server/audio/AudioDeviceBroker.smali"
 
-          # Patch Caller (p3 as codec register) 
-          [cite_start]sed -i 's/invoke-direct {p0, p1}, Lcom\/android\/server\/audio\/AudioDeviceBroker;->removeScheduledA2dpEvents(Landroid\/bluetooth\/BluetoothDevice;)V/invoke-direct {p0, p1, p3}, Lcom\/android\/server\/audio\/AudioDeviceBroker;->removeScheduledA2dpEvents(Landroid\/bluetooth\/BluetoothDevice;I)V/g' $TARGET [cite: 6]
+          # Backup dulu sebelum dioperasi
+          cp "$TARGET" "${TARGET}.bak"
+
+          # 1. Update Method Signature: tambah parameter int (codec)
+          sed -i 's/\.method.*removeScheduledA2dpEvents(Landroid\/bluetooth\/BluetoothDevice;)V/.method private removeScheduledA2dpEvents(Landroid\/bluetooth\/BluetoothDevice;I)V/g' "$TARGET"
+
+          # 2. Update .registers: naikan 1 buat tampung param baru
+          # Cari block method removeScheduledA2dpEvents dan patch .registers di dalamnya
+          python3 - <<'PYEOF'
+          import re
+
+          with open("out/arrowos/services_smali/com/android/server/audio/AudioDeviceBroker.smali", "r") as f:
+              content = f.read()
+
+          # Tambah register di method removeScheduledA2dpEvents yang sudah dipatch
+          # Pattern: cari method signature baru, lalu .registers N -> .registers N+1
+          def bump_registers(match):
+              block = match.group(0)
+              def inc_reg(m):
+                  n = int(m.group(1))
+                  return f".registers {n + 1}"
+              return re.sub(r'\.registers (\d+)', inc_reg, block, count=1)
+
+          content = re.sub(
+              r'(\.method private removeScheduledA2dpEvents\(Landroid/bluetooth/BluetoothDevice;I\)V.*?\.end method)',
+              bump_registers,
+              content,
+              flags=re.DOTALL
+          )
+
+          with open("out/arrowos/services_smali/com/android/server/audio/AudioDeviceBroker.smali", "w") as f:
+              f.write(content)
+
+          print("✅ .registers berhasil di-bump")
+          PYEOF
+
+          # 3. Ganti const/4 v5, 0x0 -> move v5, p2 (pakai codec dari parameter)
+          sed -i 's/const\/4 v5, 0x0/move v5, p2/g' "$TARGET"
+
+          # 4. Patch semua caller internal yang invoke method lama (tanpa codec param)
+          sed -i 's/invoke-direct {p0, p1}, Lcom\/android\/server\/audio\/AudioDeviceBroker;->removeScheduledA2dpEvents(Landroid\/bluetooth\/BluetoothDevice;)V/invoke-direct {p0, p1, p3}, Lcom\/android\/server\/audio\/AudioDeviceBroker;->removeScheduledA2dpEvents(Landroid\/bluetooth\/BluetoothDevice;I)V/g' "$TARGET"
+
+          echo "✅ Patch selesai, diff hasil operasi:"
+          diff "${TARGET}.bak" "$TARGET" || true
 
       - name: Reassemble & Package
         run: |
           cd out/arrowos/
-          # Panggil class main smali buat assemble 
-          java -cp ../../smali.jar org.jf.smali.Main a services_smali/ -o classes.dex 
+          # Pakai java -jar untuk smali juga
+          java -jar ../../smali.jar a services_smali/ -o classes.dex
+          echo "✅ classes.dex size: $(du -sh classes.dex)"
+
           cp ../../files/arrowos_services.jar arrowos_services_patched.jar
+          # Update classes.dex di dalam jar
           zip -u arrowos_services_patched.jar classes.dex
+          echo "✅ Jar patched: $(du -sh arrowos_services_patched.jar)"
 
       - name: Upload Patched Result
         uses: actions/upload-artifact@v4
         with:
           name: ArrowOS-Services-Patched
           path: out/arrowos/arrowos_services_patched.jar
+          retention-days: 7
