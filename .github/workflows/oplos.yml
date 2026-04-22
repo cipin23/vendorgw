@@ -1,4 +1,4 @@
-name: Oplos
+name: Operasi Bedah Services Jar
 
 on:
   workflow_dispatch:
@@ -15,9 +15,9 @@ jobs:
           sudo apt-get update -qq
           sudo apt-get install -y zip unzip wget
           # Download smali & baksmali sebagai executable jar
-          # Harus pakai -sources variant, yang biasa gak ada Main manifest!
-          wget -q "https://repo1.maven.org/maven2/org/smali/baksmali/2.5.2/baksmali-2.5.2-sources.jar" -O baksmali.jar
-          wget -q "https://repo1.maven.org/maven2/org/smali/smali/2.5.2/smali-2.5.2-sources.jar" -O smali.jar
+          # Pakai GitHub Releases fat jar, bukan Maven (Maven gak punya executable jar)
+          wget -q "https://github.com/baksmali/smali/releases/download/3.0.9/baksmali-3.0.9-fat.jar" -O baksmali.jar
+          wget -q "https://github.com/baksmali/smali/releases/download/3.0.9/smali-3.0.9-fat.jar" -O smali.jar
           java -jar baksmali.jar --version
           java -jar smali.jar --version
 
