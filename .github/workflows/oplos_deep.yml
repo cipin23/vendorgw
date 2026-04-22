@@ -1,4 +1,4 @@
-name: Operasi Bedah Services Jar (Safe Mode)
+name: Operasi Bedah Services Jar (Safe Mode - Fixed)
 
 on:
   workflow_dispatch:
@@ -35,72 +35,71 @@ jobs:
       - name: Patch All Callers to Pass Codec=0 (tanpa ubah signature)
         run: |
           TARGET_DIR="out/arrowos/services_smali"
+          # Buat skrip Python terpisah
+          cat > patch_callers.py << 'PYTHON_SCRIPT'
+          import re
+          import os
+          import sys
+
+          target_dir = sys.argv[1]
+          for root, dirs, files in os.walk(target_dir):
+              for file in files:
+                  if not file.endswith('.smali'):
+                      continue
+                  filepath = os.path.join(root, file)
+                  with open(filepath, 'r') as f:
+                      content = f.read()
+                  
+                  # Cek apakah ada invoke ke method lama
+                  if 'removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;)V' not in content:
+                      continue
+                  
+                  print(f"Patching: {filepath}")
+                  backup = filepath + '.bak'
+                  with open(backup, 'w') as f:
+                      f.write(content)
+                  
+                  # Pattern invoke-virtual / invoke-direct
+                  pattern = r'(invoke-(?:virtual|direct|static|interface)\s+\{([^}]+)\},\s*Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents\(Landroid/bluetooth/BluetoothDevice;\)V)'
+                  
+                  def replacer(match):
+                      args = match.group(2).strip()
+                      new_args = args + ", v0"
+                      return f'invoke-virtual {{{new_args}}}, Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;I)V'
+                  
+                  new_content = re.sub(pattern, replacer, content)
+                  
+                  # Juga untuk invoke-direct (walau sebenarnya udah ke-cover pattern di atas)
+                  pattern2 = r'(invoke-direct\s+\{([^}]+)\},\s*Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents\(Landroid/bluetooth/BluetoothDevice;\)V)'
+                  new_content = re.sub(pattern2, replacer, new_content)
+                  
+                  # Inject const/4 v0, 0x0 sebelum invoke
+                  lines = new_content.split('\n')
+                  new_lines = []
+                  for i, line in enumerate(lines):
+                      new_lines.append(line)
+                      if 'invoke-' in line and 'removeScheduledA2dpEvents' in line and '(Landroid/bluetooth/BluetoothDevice;I)V' in line:
+                          # Cek baris sebelumnya apakah sudah ada const v0
+                          if i > 0 and 'const/4 v0,' in lines[i-1]:
+                              continue
+                          # Inject
+                          new_lines.insert(i, '    const/4 v0, 0x0')
+                  
+                  with open(filepath, 'w') as f:
+                      f.write('\n'.join(new_lines))
+                  print(f"✅ Patched: {filepath}")
+          PYTHON_SCRIPT
           
-          # Cari semua file .smali yang manggil removeScheduledA2dpEvents
-          grep -rl "removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;)V" "$TARGET_DIR" | while read file; do
-            echo "Patching: $file"
-            
-            # Backup dulu
-            cp "$file" "$file.bak"
-            
-            # Ubah invoke jadi panggilan dengan tambahan argumen 0 (int)
-            # Dari: invoke-virtual {p0, p1}, ...;->removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;)V
-            # Jadi:   invoke-virtual {p0, p1, v0}, ...;->removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;I)V
-            # Dengan v0 yang berisi const/4 v0, 0x0
-            
-            python3 <<EOF
-            import re, sys
-            
-            with open("$file", "r") as f:
-                content = f.read()
-            
-            # Cari invoke ke method lama
-            pattern = r'(invoke-(?:virtual|direct|static|interface)\s+\{([^}]+)\},\s*Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents\(Landroid/bluetooth/BluetoothDevice;\)V)'
-            
-            def replacer(match):
-                args = match.group(2).strip()
-                # Args existing: misal {p0, p1}
-                # Tambahin register baru di akhir, misal jadi {p0, p1, v0}
-                # Kita perlu cari register bebas, asumsikan v0 aman (karena biasanya .registers cukup)
-                new_args = args + ", v0"
-                return f'invoke-virtual {{{new_args}}}, Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;I)V'
-            
-            new_content = re.sub(pattern, replacer, content)
-            
-            # Juga cari kemungkinan invoke-direct
-            pattern2 = r'(invoke-direct\s+\{([^}]+)\},\s*Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents\(Landroid/bluetooth/BluetoothDevice;\)V)'
-            new_content = re.sub(pattern2, replacer, new_content)
-            
-            # Tambahin const/4 v0, 0x0 SEBELUM invoke jika belum ada
-            lines = new_content.split('\n')
-            new_lines = []
-            for i, line in enumerate(lines):
-                new_lines.append(line)
-                if 'invoke-' in line and 'removeScheduledA2dpEvents' in line and '(Landroid/bluetooth/BluetoothDevice;I)V' in line:
-                    # Cek apakah sebelumnya sudah ada const v0
-                    prev_line = lines[i-1] if i > 0 else ""
-                    if 'const/4 v0,' not in prev_line:
-                        # Inject const/4 v0, 0x0 sebelum invoke
-                        new_lines.insert(i, '    const/4 v0, 0x0')
-            
-            with open("$file", "w") as f:
-                f.write('\n'.join(new_lines))
-            
-            print(f"✅ Patched: $file")
-            EOF
-          done
-          
-          echo "✅ Semua caller berhasil dipatch tanpa modifikasi signature method"
+          python3 patch_callers.py "$TARGET_DIR"
+          echo "✅ Semua caller berhasil dipatch"
 
       - name: Reassemble & Package
         run: |
           cd out/arrowos/
           java -jar ../../smali.jar a services_smali/ -o classes.dex
-          
           cp ../../files/arrowos_services.jar arrowos_services_patched.jar
           zip -u arrowos_services_patched.jar classes.dex
-          
-          echo "✅ Patched JAR siap"
+          echo "✅ Patched JAR siap: $(du -sh arrowos_services_patched.jar)"
 
       - name: Upload Patched Result
         uses: actions/upload-artifact@v4
