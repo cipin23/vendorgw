@@ -1,0 +1,110 @@
+name: Operasi Bedah Services Jar (Safe Mode)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  safe-patch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java & Tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y zip unzip wget python3
+          wget -q "https://github.com/baksmali/smali/releases/download/3.0.9/baksmali-3.0.9-fat.jar" -O baksmali.jar
+          wget -q "https://github.com/baksmali/smali/releases/download/3.0.9/smali-3.0.9-fat.jar" -O smali.jar
+
+      - name: Disassemble Both ROMs
+        run: |
+          mkdir -p out/arrowos out/crdroid
+          java -jar baksmali.jar d files/arrowos_services.jar -o out/arrowos/services_smali/
+          java -jar baksmali.jar d files/crdroid_services.jar -o out/crdroid/services_smali/
+
+      - name: Verify Method di ArrowOS
+        run: |
+          TARGET="out/arrowos/services_smali/com/android/server/audio/AudioDeviceBroker.smali"
+          if ! grep -q "removeScheduledA2dpEvents" "$TARGET"; then
+            echo "❌ Method removeScheduledA2dpEvents ga ada di ArrowOS"
+            exit 1
+          fi
+          echo "✅ Method ada, siap di-patch"
+
+      - name: Patch All Callers to Pass Codec=0 (tanpa ubah signature)
+        run: |
+          TARGET_DIR="out/arrowos/services_smali"
+          
+          # Cari semua file .smali yang manggil removeScheduledA2dpEvents
+          grep -rl "removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;)V" "$TARGET_DIR" | while read file; do
+            echo "Patching: $file"
+            
+            # Backup dulu
+            cp "$file" "$file.bak"
+            
+            # Ubah invoke jadi panggilan dengan tambahan argumen 0 (int)
+            # Dari: invoke-virtual {p0, p1}, ...;->removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;)V
+            # Jadi:   invoke-virtual {p0, p1, v0}, ...;->removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;I)V
+            # Dengan v0 yang berisi const/4 v0, 0x0
+            
+            python3 <<EOF
+            import re, sys
+            
+            with open("$file", "r") as f:
+                content = f.read()
+            
+            # Cari invoke ke method lama
+            pattern = r'(invoke-(?:virtual|direct|static|interface)\s+\{([^}]+)\},\s*Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents\(Landroid/bluetooth/BluetoothDevice;\)V)'
+            
+            def replacer(match):
+                args = match.group(2).strip()
+                # Args existing: misal {p0, p1}
+                # Tambahin register baru di akhir, misal jadi {p0, p1, v0}
+                # Kita perlu cari register bebas, asumsikan v0 aman (karena biasanya .registers cukup)
+                new_args = args + ", v0"
+                return f'invoke-virtual {{{new_args}}}, Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;I)V'
+            
+            new_content = re.sub(pattern, replacer, content)
+            
+            # Juga cari kemungkinan invoke-direct
+            pattern2 = r'(invoke-direct\s+\{([^}]+)\},\s*Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents\(Landroid/bluetooth/BluetoothDevice;\)V)'
+            new_content = re.sub(pattern2, replacer, new_content)
+            
+            # Tambahin const/4 v0, 0x0 SEBELUM invoke jika belum ada
+            lines = new_content.split('\n')
+            new_lines = []
+            for i, line in enumerate(lines):
+                new_lines.append(line)
+                if 'invoke-' in line and 'removeScheduledA2dpEvents' in line and '(Landroid/bluetooth/BluetoothDevice;I)V' in line:
+                    # Cek apakah sebelumnya sudah ada const v0
+                    prev_line = lines[i-1] if i > 0 else ""
+                    if 'const/4 v0,' not in prev_line:
+                        # Inject const/4 v0, 0x0 sebelum invoke
+                        new_lines.insert(i, '    const/4 v0, 0x0')
+            
+            with open("$file", "w") as f:
+                f.write('\n'.join(new_lines))
+            
+            print(f"✅ Patched: $file")
+            EOF
+          done
+          
+          echo "✅ Semua caller berhasil dipatch tanpa modifikasi signature method"
+
+      - name: Reassemble & Package
+        run: |
+          cd out/arrowos/
+          java -jar ../../smali.jar a services_smali/ -o classes.dex
+          
+          cp ../../files/arrowos_services.jar arrowos_services_patched.jar
+          zip -u arrowos_services_patched.jar classes.dex
+          
+          echo "✅ Patched JAR siap"
+
+      - name: Upload Patched Result
+        uses: actions/upload-artifact@v4
+        with:
+          name: ArrowOS-Services-Patched-Safe
+          path: out/arrowos/arrowos_services_patched.jar
+          retention-days: 7
