@@ -1,10 +1,10 @@
-name: Sync and Organize Jars
+name: Sync Framework Jars from Google Drive
 
 on:
-  workflow_dispatch: # Jalankan manual dari tab Actions
+  workflow_dispatch: # Biar bisa lo klik "Run workflow" manual dari tab Actions
 
 jobs:
-  organize-files:
+  download-frameworks:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -18,14 +18,6 @@ jobs:
       - name: Install gdown
         run: pip install gdown
 
-      - name: Create Directory and Move Existing Jars
-        run: |
-          mkdir -p files
-          # Pindahin services.jar yang udah ada di root ke folder files/
-          # Pakai || true biar nggak error kalo filenya ternyata udah dipindah sebelumnya
-          mv arrowos_services.jar files/ 2>/dev/null || true
-          mv crdroid_services.jar files/ 2>/dev/null || true
-
       - name: Download Frameworks from Google Drive
         run: |
           # GANTI <ID_FILE_1> dengan ID file arrowos_framework.jar lo
@@ -34,10 +26,10 @@ jobs:
           # GANTI <ID_FILE_2> dengan ID file crdroid_framework.jar lo
           gdown --id 1PALnDaTiooR2t3cwg9J4FGstHgtqG9Kz -O files/crdroid_framework.jar
 
-      - name: Commit and Push Changes
+      - name: Commit and Push to Repo
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add files/*.jar
-          git commit -m "Move services jars to /files and sync framework jars from GDrive" || echo "No changes to commit"
+          git commit -m "Update framework jars from Google Drive" || echo "No changes to commit"
           git push
