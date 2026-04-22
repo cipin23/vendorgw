@@ -51,7 +51,7 @@ jobs:
           
           # Buat method delegasi
           delegation_method = '''
-      .method private removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;I)V
+          .method private removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;I)V
           .registers 3
           .param p1, "device"  # Landroid/bluetooth/BluetoothDevice;
           .param p2, "codec"   # I (tidak dipakai)
@@ -59,7 +59,7 @@ jobs:
           invoke-direct {p0, p1}, Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;)V
           
           return-void
-      .end method
+          .end method
           '''
           
           # Inject delegation method tepat setelah method asli
