@@ -1,10 +1,10 @@
-name: Operasi Bedah Services Jar (Safe Mode - Fixed)
+name: Operasi Bedah Services Jar (Transplantasi Method from crDroid)
 
 on:
   workflow_dispatch:
 
 jobs:
-  safe-patch:
+  transplant:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
@@ -23,19 +23,66 @@ jobs:
           java -jar baksmali.jar d files/arrowos_services.jar -o out/arrowos/services_smali/
           java -jar baksmali.jar d files/crdroid_services.jar -o out/crdroid/services_smali/
 
-      - name: Verify Method di ArrowOS
+      - name: Extract Method from crDroid (dengan parameter int)
         run: |
-          TARGET="out/arrowos/services_smali/com/android/server/audio/AudioDeviceBroker.smali"
-          if ! grep -q "removeScheduledA2dpEvents" "$TARGET"; then
-            echo "❌ Method removeScheduledA2dpEvents ga ada di ArrowOS"
-            exit 1
-          fi
-          echo "✅ Method ada, siap di-patch"
+          cat > extract_method.py << 'PYTHON_SCRIPT'
+          import re
+          import sys
 
-      - name: Patch All Callers to Pass Codec=0 (tanpa ubah signature)
+          crdroid_file = "out/crdroid/services_smali/com/android/server/audio/AudioDeviceBroker.smali"
+          with open(crdroid_file, 'r') as f:
+              content = f.read()
+
+          # Cari method removeScheduledA2dpEvents dengan parameter (Landroid/bluetooth/BluetoothDevice;I)V
+          pattern = r'(\.method (?:public|private|protected) (?:static )?removeScheduledA2dpEvents\(Landroid/bluetooth/BluetoothDevice;I\)V.*?\.end method)'
+          match = re.search(pattern, content, re.DOTALL)
+          if not match:
+              print("❌ Method dengan parameter int tidak ditemukan di crDroid")
+              sys.exit(1)
+          
+          method_body = match.group(0)
+          # Simpan ke file
+          with open("crdroid_method_body.smali", "w") as f:
+              f.write(method_body)
+          print("✅ Method body dari crDroid berhasil diekstrak")
+          PYTHON_SCRIPT
+          
+          python3 extract_method.py
+
+      - name: Replace Method di ArrowOS
+        run: |
+          cat > replace_method.py << 'PYTHON_SCRIPT'
+          import re
+          import sys
+
+          arrow_file = "out/arrowos/services_smali/com/android/server/audio/AudioDeviceBroker.smali"
+          with open(arrow_file, 'r') as f:
+              content = f.read()
+
+          # Cari method lama di ArrowOS (tanpa int) -> signature (Landroid/bluetooth/BluetoothDevice;)V
+          old_pattern = r'(\.method (?:public|private|protected) (?:static )?removeScheduledA2dpEvents\(Landroid/bluetooth/BluetoothDevice;\)V.*?\.end method)'
+          match = re.search(old_pattern, content, re.DOTALL)
+          if not match:
+              print("❌ Method lama tanpa int tidak ditemukan di ArrowOS")
+              sys.exit(1)
+          
+          # Baca method body dari crDroid
+          with open("crdroid_method_body.smali", 'r') as f:
+              new_method = f.read()
+          
+          # Replace
+          new_content = re.sub(old_pattern, new_method, content, count=1, flags=re.DOTALL)
+          
+          with open(arrow_file, 'w') as f:
+              f.write(new_content)
+          print("✅ Method di ArrowOS berhasil diganti dengan versi crDroid (sudah berparameter int)")
+          PYTHON_SCRIPT
+          
+          python3 replace_method.py
+
+      - name: Patch Semua Caller untuk Kirim Parameter Int (nilai 0)
         run: |
           TARGET_DIR="out/arrowos/services_smali"
-          # Buat skrip Python terpisah
           cat > patch_callers.py << 'PYTHON_SCRIPT'
           import re
           import os
@@ -50,36 +97,34 @@ jobs:
                   with open(filepath, 'r') as f:
                       content = f.read()
                   
-                  # Cek apakah ada invoke ke method lama
+                  # Cek apakah ada invoke ke method lama (tanpa int)
                   if 'removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;)V' not in content:
                       continue
                   
-                  print(f"Patching: {filepath}")
+                  print(f"Patching caller di: {filepath}")
                   backup = filepath + '.bak'
                   with open(backup, 'w') as f:
                       f.write(content)
                   
-                  # Pattern invoke-virtual / invoke-direct
+                  # Ubah invoke signature dan tambah argumen int (const/4 v0, 0x0)
+                  # Pattern invoke-virtual/direct dengan args { ... }
                   pattern = r'(invoke-(?:virtual|direct|static|interface)\s+\{([^}]+)\},\s*Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents\(Landroid/bluetooth/BluetoothDevice;\)V)'
                   
                   def replacer(match):
                       args = match.group(2).strip()
+                      # Tambahkan register baru (v0) di akhir
                       new_args = args + ", v0"
                       return f'invoke-virtual {{{new_args}}}, Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents(Landroid/bluetooth/BluetoothDevice;I)V'
                   
                   new_content = re.sub(pattern, replacer, content)
                   
-                  # Juga untuk invoke-direct (walau sebenarnya udah ke-cover pattern di atas)
-                  pattern2 = r'(invoke-direct\s+\{([^}]+)\},\s*Lcom/android/server/audio/AudioDeviceBroker;->removeScheduledA2dpEvents\(Landroid/bluetooth/BluetoothDevice;\)V)'
-                  new_content = re.sub(pattern2, replacer, new_content)
-                  
-                  # Inject const/4 v0, 0x0 sebelum invoke
+                  # Inject const/4 v0, 0x0 sebelum setiap invoke yang sudah diubah
                   lines = new_content.split('\n')
                   new_lines = []
                   for i, line in enumerate(lines):
                       new_lines.append(line)
                       if 'invoke-' in line and 'removeScheduledA2dpEvents' in line and '(Landroid/bluetooth/BluetoothDevice;I)V' in line:
-                          # Cek baris sebelumnya apakah sudah ada const v0
+                          # Cek apakah baris sebelumnya sudah ada const v0
                           if i > 0 and 'const/4 v0,' in lines[i-1]:
                               continue
                           # Inject
@@ -91,7 +136,7 @@ jobs:
           PYTHON_SCRIPT
           
           python3 patch_callers.py "$TARGET_DIR"
-          echo "✅ Semua caller berhasil dipatch"
+          echo "✅ Semua caller dipatch"
 
       - name: Reassemble & Package
         run: |
@@ -104,6 +149,6 @@ jobs:
       - name: Upload Patched Result
         uses: actions/upload-artifact@v4
         with:
-          name: ArrowOS-Services-Patched-Safe
+          name: ArrowOS-Services-Patched-Final
           path: out/arrowos/arrowos_services_patched.jar
           retention-days: 7
